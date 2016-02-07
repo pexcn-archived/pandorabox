@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if pidof ss-redir>/dev/null; then
-	/etc/init.d/shadowsocks rules
-fi

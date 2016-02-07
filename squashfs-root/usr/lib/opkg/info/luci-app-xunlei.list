@@ -1,8 +1,0 @@
-/usr/lib/lua/luci/model/cbi/xunlei.lua
-/etc/xware/xlatest
-/etc/xware/cfg
-/etc/xware/xlup
-/usr/lib/lua/luci/controller/xunlei.lua
-/etc/init.d/xunlei
-/etc/config/xunlei
-/etc/uci-defaults/luci-xunlei

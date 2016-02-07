@@ -1,5 +1,0 @@
-#!/bin/sh
-/etc/init.d/phddns2 stop
-/etc/init.d/phddns2 disable
-rm -f /tmp/luci-indexcache
-exit 0

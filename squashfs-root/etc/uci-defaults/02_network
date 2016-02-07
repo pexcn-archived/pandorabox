@@ -1,11 +1,4 @@
 #!/bin/sh
-# Copyright (c) 2013 OpenWrt
-# Copyright (C) 2014 D-Team Technology Co.,Ltd. ShenZhen
-# Copyright (c) 2005-2014, lintel <lintel.huang@gmail.com>
-#
-#
-#     警告:对着屏幕的哥们,我们允许你使用此脚本，但不允许你抹去作者的信息,请保留这段话。
-#
 
 . /lib/functions.sh
 . /lib/ralink.sh
@@ -20,7 +13,6 @@ fi
 ralink_setup_mt7620_vlans_wllll()
 {
 	if [ ! -x /sbin/swconfig ]; then
-		# legacy default
 		echo "$0: swconfig not found!"
 		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
 		return
@@ -34,7 +26,6 @@ ralink_setup_mt7620_vlans_wllll()
 ralink_setup_mt7620_vlans_llllw()
 {
 	if [ ! -x /sbin/swconfig ]; then
-		# legacy default
 		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
 		return
 	fi
@@ -47,7 +38,6 @@ ralink_setup_mt7620_vlans_llllw()
 ralink_setup_mt7621_vlans_wllll()
 {
 	if [ ! -x /sbin/swconfig ]; then
-		# legacy default
 		echo "$0: swconfig not found!"
 		ucidef_set_interfaces_lan_wan "eth0.2" "eth0.2"
 		return
@@ -61,7 +51,6 @@ ralink_setup_mt7621_vlans_wllll()
 ralink_setup_mt7621_vlans_llllw()
 {
 	if [ ! -x /sbin/swconfig ]; then
-		# legacy default
 		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
 		return
 	fi
@@ -74,7 +63,6 @@ ralink_setup_mt7621_vlans_llllw()
 ralink_setup_rt305x_vlans_wllll()
 {
 	if [ ! -x /sbin/swconfig ]; then
-		# legacy default
 		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
 		return
 	fi
@@ -87,7 +75,6 @@ ralink_setup_rt305x_vlans_wllll()
 ralink_setup_rt305x_vlans_llllw()
 {
 	if [ ! -x /sbin/swconfig ]; then
-		# legacy default
 		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
 		return
 	fi
@@ -99,28 +86,28 @@ ralink_setup_rt305x_vlans_llllw()
 
 ap7620a_setup_wwan()
 {
-uci set network.wwan=interface
-uci set network.wwan.proto=3g
-uci set network.wwan.device=/dev/ttyUSB0
-uci set network.wwan.service=umts_only
-uci set network.wwan.apn=3gnet
-uci set network.wwan.pincode=1234
-uci set network.wwan.username=card
-uci set network.wwan.password=card
+	uci set network.wwan=interface
+	uci set network.wwan.proto=3g
+	uci set network.wwan.device=/dev/ttyUSB0
+	uci set network.wwan.service=umts_only
+	uci set network.wwan.apn=3gnet
+	uci set network.wwan.pincode=1234
+	uci set network.wwan.username=card
+	uci set network.wwan.password=card
 
-uci set firewall.@zone[1].network="wan wwan"
-uci commit firewall
+	uci set firewall.@zone[1].network="wan wwan"
+	uci commit firewall
 }
 
 vg100_setup_wwan()
 {
-uci set network.wwan=interface
-uci set network.wwan.proto=3g
-uci set network.wwan.device=/dev/ttyUSB3
-uci set network.wwan.service=umts
-uci set network.wwan.apn=CMNET
-uci set firewall.@zone[1].network="wan wwan"
-uci commit firewall
+	uci set network.wwan=interface
+	uci set network.wwan.proto=3g
+	uci set network.wwan.device=/dev/ttyUSB3
+	uci set network.wwan.service=umts
+	uci set network.wwan.apn=CMNET
+	uci set firewall.@zone[1].network="wan wwan"
+	uci commit firewall
 }
 
 ralink_setup_interfaces()

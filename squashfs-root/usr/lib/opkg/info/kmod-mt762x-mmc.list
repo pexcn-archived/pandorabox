@@ -1,3 +1,0 @@
-/etc/modules-boot.d/92-mt762x-mmc
-/etc/modules.d/92-mt762x-mmc
-/lib/modules/3.14.56/mtk_sd.ko

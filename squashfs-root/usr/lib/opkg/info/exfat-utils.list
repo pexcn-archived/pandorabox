@@ -1,6 +1,0 @@
-/usr/sbin/exfatlabel
-/usr/sbin/dumpexfat
-/usr/sbin/exfatfsck
-/usr/sbin/fsck.exfat
-/usr/sbin/mkfs.exfat
-/usr/sbin/mkexfatfs

@@ -1,8 +1,0 @@
-/usr/lib/lua/luci/i18n/redsocks2.zh-cn.lmo
-/usr/share/redsocks2/firewall.include
-/usr/lib/lua/luci/controller/redsocks2.lua
-/etc/config/redsocks2
-/etc/uci-defaults/luci-redsocks2
-/usr/lib/lua/luci/model/cbi/redsocks2/general.lua
-/usr/lib/lua/luci/model/cbi/redsocks2/advanced.lua
-/etc/init.d/redsocks2

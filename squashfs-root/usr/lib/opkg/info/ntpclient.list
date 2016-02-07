@@ -1,5 +1,0 @@
-/etc/config/ntpclient
-/etc/hotplug.d/iface/20-ntpclient
-/usr/sbin/adjtimex
-/usr/sbin/rate.awk
-/usr/sbin/ntpclient

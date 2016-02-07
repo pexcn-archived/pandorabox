@@ -1,9 +1,0 @@
-Package: kmod-fs-ufsd
-Version: 3.14.56-1
-Depends: kmod-nls-base
-Source: package/pandorabox/drivers/ufsd-driver
-Section: kernel
-Maintainer: Weijie Gao <hackpascal@gmail.com>
-Architecture: ralink
-Installed-Size: 365446
-Description:  Paragon Universal File System Driver

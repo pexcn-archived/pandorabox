@@ -1,9 +1,0 @@
-Package: luci-app-cpulimit
-Version: 0.12+git-4d0a20b-1
-Depends: libc, cpulimit-ng
-Source: package/pandorabox/webs/luci-addons
-Section: luci
-Maintainer: LuCI Development Team <luci@lists.subsignal.org>
-Architecture: ralink
-Installed-Size: 1831
-Description:  CPU limit configuration module

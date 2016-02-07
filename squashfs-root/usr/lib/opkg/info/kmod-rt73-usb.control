@@ -1,9 +1,0 @@
-Package: kmod-rt73-usb
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-rt2x00-usb
-Source: package/kernel/mac80211
-Section: kernel
-Maintainer: Felix Fietkau <nbd@openwrt.org>
-Architecture: ralink
-Installed-Size: 12490
-Description:  Ralink Drivers for RT2x00 cards (RT73 USB)

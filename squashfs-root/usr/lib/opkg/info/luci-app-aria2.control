@@ -1,9 +1,0 @@
-Package: luci-app-aria2
-Version: 0.12+git-4d0a20b-1
-Depends: libc, aria2, curl, wget, openssl-util
-Source: package/pandorabox/webs/luci
-Section: luci
-Maintainer: LuCI Development Team <luci@lists.subsignal.org>
-Architecture: ralink
-Installed-Size: 8003
-Description:  LuCI Support for aria2

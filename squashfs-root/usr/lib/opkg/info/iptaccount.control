@@ -1,9 +1,0 @@
-Package: iptaccount
-Version: 2.3-1
-Depends: libc, iptables, iptables-mod-account
-Source: package/network/utils/xtables-addons
-Section: net
-Maintainer: Jo-Philipp Wich <jow@openwrt.org>
-Architecture: ralink
-Installed-Size: 4663
-Description:  iptables-mod-account control utility

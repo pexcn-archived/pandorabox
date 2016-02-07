@@ -1,9 +1,0 @@
-Package: kmod-input-core
-Version: 3.14.56-1
-Source: package/kernel/linux
-License: GPLv2
-Section: kernel
-Status: unknown hold not-installed
-Architecture: ralink
-Installed-Size: 16919
-Description:  Kernel modules for support of input device

@@ -1,9 +1,0 @@
-Package: vsftpd-pandorabox
-Version: 3.0.3-5
-Depends: libc
-Source: package/pandorabox/network/vsftpd-pandorabox
-Section: net
-Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
-Architecture: ralink
-Installed-Size: 41893
-Description:  A fast and secure FTP server (no TLS)

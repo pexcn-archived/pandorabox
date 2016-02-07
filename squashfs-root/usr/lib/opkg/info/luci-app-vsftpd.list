@@ -1,6 +1,0 @@
-/usr/lib/lua/luci/controller/vsftpd.lua
-/etc/config/vsftpd
-/etc/vsftpd.conf.template
-/usr/lib/lua/luci/i18n/vsftpd.zh-cn.lmo
-/usr/lib/lua/luci/model/cbi/vsftpd.lua
-/etc/init.d/vsftpd

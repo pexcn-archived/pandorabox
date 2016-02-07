@@ -1,8 +1,0 @@
-/usr/share/shadowsocks/firewall.include
-/usr/bin/ss-local
-/etc/config/shadowsocks
-/usr/bin/ss-rules
-/usr/bin/ss-redir
-/etc/uci-defaults/shadowsocks-libev-spec
-/etc/init.d/shadowsocks
-/usr/bin/ss-tunnel

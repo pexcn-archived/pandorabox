@@ -1,9 +1,0 @@
-Package: luci-app-w8021x
-Version: 0.12+git-4d0a20b-1
-Depends: libc
-Source: package/pandorabox/webs/luci-addons
-Section: luci
-Maintainer: LuCI Development Team <luci@lists.subsignal.org>
-Architecture: ralink
-Installed-Size: 5789
-Description:  Wired 802.1X Authentication

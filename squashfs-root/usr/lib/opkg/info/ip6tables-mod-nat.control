@@ -1,9 +1,0 @@
-Package: ip6tables-mod-nat
-Version: 1.4.21-1
-Depends: libc, ip6tables, kmod-ipt-nat6
-Source: package/network/utils/iptables
-License: GPL-2.0
-Section: net
-Architecture: ralink
-Installed-Size: 1736
-Description:  iptables extensions for IPv6-NAT targets.

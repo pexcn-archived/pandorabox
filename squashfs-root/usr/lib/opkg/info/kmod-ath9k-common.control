@@ -1,9 +1,0 @@
-Package: kmod-ath9k-common
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-ath
-Source: package/kernel/mac80211
-Section: kernel
-Maintainer: Felix Fietkau <nbd@openwrt.org>
-Architecture: ralink
-Installed-Size: 125026
-Description:  Atheros 802.11n wireless devices (common code for ath9k and ath9k_htc)

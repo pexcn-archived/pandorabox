@@ -1,9 +1,0 @@
-Package: luci-app-hd-idle
-Version: 0.12+git-4d0a20b-1
-Depends: libc, hd-idle
-Source: package/pandorabox/webs/luci-addons
-Section: luci
-Maintainer: LuCI Development Team <luci@lists.subsignal.org>
-Architecture: ralink
-Installed-Size: 6178
-Description:  Hard Disk Idle Spin-Down module

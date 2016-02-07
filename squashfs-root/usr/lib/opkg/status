@@ -1,13 +1,7 @@
-Package: iptables-mod-chaos
-Version: 2.3-1
-Depends: libc, iptables, kmod-ipt-chaos
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
 Package: kmod-usb-storage
 Version: 3.14.56-1
 Depends: kmod-scsi-core, kmod-usb-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -16,44 +10,24 @@ Auto-Installed: yes
 Package: terminfo
 Version: 5.9-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
 Auto-Installed: yes
 
-Package: kmod-sched-connmark
-Version: 3.14.56-1
-Depends: kmod-sched-core, kmod-ipt-core, kmod-ipt-conntrack-extra
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
 Package: libuci-lua
 Version: 2015-04-09.1-1
 Depends: libc, libuci, liblua
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
-
-Package: luci-app-arpbind
-Version: 0.12+git-4d0a20b-1
-Depends: libc, ip-full
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
-Package: shadowsocks-libev
-Version: 2.4.1-1
-Depends: libc, libopenssl, resolveip, ipset, ip, iptables-mod-tproxy
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-Auto-Installed: yes
 
 Package: luci-theme-material
 Version: 0.12+git-4d0a20b-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -61,73 +35,34 @@ Installed-Time: 1448181153
 Package: iwinfo
 Version: 2015-06-01-ade8b1b299cbd5748db1acf80dd3e9f567938371
 Depends: libc, libiwinfo
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 
-Package: kmod-stp
-Version: 3.14.56-1
-Depends: kmod-llc
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: samba36-server
-Version: 3.6.25-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: luci-theme-xeye
 Version: 0.12+git-4d0a20b-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
-Auto-Installed: yes
-
-Package: kmod-lib-textsearch
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
 Auto-Installed: yes
 
 Package: libc
 Version: 0.9.33.2-1
 Depends: libgcc
+Provides:
 Status: install hold installed
 Essential: yes
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: kmod-ebtables
-Version: 3.14.56-1
-Depends: kmod-ipt-core, kmod-bridge
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: kmod-l2tp
-Version: 3.14.56-1
-Depends: kmod-ipv6
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-macvlan
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: opkg
 Version: 9c97d5ecd795709c8584e972bfdf3aee3a5b846d-10
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -135,32 +70,10 @@ Conffiles:
  /etc/opkg/customfeeds.conf 61d1f3aa62fe977614ed0c2f0ad3b2ee2f
 Installed-Time: 1448181153
 
-Package: ntpclient
-Version: 2010_365-1
-Depends: libc, librt
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/config/ntpclient e0d47fa0e075466d0cf49e9fd6a21a4826
-Installed-Time: 1448181153
-
-Package: iptables-mod-extra
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-extra
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: iperf
-Version: 2.0.5-1
-Depends: libc, uclibcxx
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
 Package: wget
 Version: 1.16.3-1
 Depends: libc, libpcre, libopenssl, librt
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -169,6 +82,7 @@ Auto-Installed: yes
 Package: kmod-usb-core
 Version: 3.14.56-1
 Depends: kmod-nls-base
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
@@ -177,23 +91,17 @@ Auto-Installed: yes
 Package: ip
 Version: 3.15.0-1
 Depends: libc, libnl-tiny
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
  /etc/iproute2/rt_tables 08c418b8469951cd5c59da91e4b116cd62
 Installed-Time: 1448181149
 
-Package: kmod-ipt-imq
-Version: 3.14.56-1
-Depends: kmod-ipt-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
 Package: kmod-sched-esfq
 Version: 3.14.56-1
 Depends: kmod-sched-core, kmod-ipt-core, kmod-ipt-conntrack
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -202,6 +110,7 @@ Auto-Installed: yes
 Package: libpthread
 Version: 0.9.33.2-1
 Depends: libgcc
+Provides:
 Status: install hold installed
 Essential: yes
 Architecture: ralink
@@ -211,52 +120,24 @@ Auto-Installed: yes
 Package: ubus
 Version: 2015-07-07-7ec9b8dec77b969bfc860995f96fe91fd40ba5e4
 Depends: libc, libubus, libblobmsg-json, ubusd
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: ralink-utils
-Version: 1
-Depends: libc, kmod-ipt-nathelper-extra
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: iw
 Version: 3.15-1
 Depends: libc, libnl-tiny
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
-
-Package: kmod-crypto-manager
-Version: 3.14.56-1
-Depends: kmod-crypto-hash, kmod-crypto-pcompress, kmod-crypto-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-crypto-pcompress
-Version: 3.14.56-1
-Depends: kmod-crypto-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-bridge
-Version: 3.14.56-1
-Depends: kmod-stp
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181148
-Auto-Installed: yes
 
 Package: rpcd
 Version: 2015-01-10-f00890cd6eb47ad9bb5da0fb6c50aedc8406e7c5
 Depends: libc, libubus, libubox, libuci, libblobmsg-json
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -267,59 +148,33 @@ Auto-Installed: yes
 Package: busybox
 Version: 1.22.1-3
 Depends: libc
+Provides:
 Status: install user installed
 Essential: yes
 Architecture: ralink
 Installed-Time: 1448181148
 
-Package: bandwidth-pandorabox
-Version: 2
-Depends: libc, kmod-showspeed, tc, kmod-sched-core, kmod-sched-connmark, kmod-ifb, iptables, iptables-mod-filter, iptables-mod-conntrack-extra, kmod-sched-esfq, kmod-sched-hfsc, libnl-tiny, libuci, iptables-mod-u32, iptables-mod-nat-extra, iptables-mod-iface, iptables-mod-ipmark, iptables-mod-nat-extra, iptables-mod-ipopt
-Status: install user installed
-Architecture: all
-Installed-Time: 1448181147
-
 Package: odhcpd
 Version: 2015-08-20-5b12eeba475a3301c362cf59f138ec7aa60d2dd9
 Depends: libc, libubox, libuci, libubus
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: ip-full
-Version: 3.15.0-1
-Depends: libc, libnl-tiny
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/iproute2/rt_tables 08c418b8469951cd5c59da91e4b116cd62
-Installed-Time: 1448181148
-
-Package: chat
-Version: 2.4.7-8
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
 Package: kmod-nfnetlink
 Version: 3.14.56-1
 Depends: kmod-ipt-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: kmod-rtl8187
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-eeprom-93cx6, kmod-mac80211, kmod-usb-core
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: libubus-lua
 Version: 2015-07-07-7ec9b8dec77b969bfc860995f96fe91fd40ba5e4
 Depends: libc, libubus, liblua
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -327,6 +182,7 @@ Installed-Time: 1448181151
 Package: kmod-ipt-tproxy
 Version: 3.14.56-1
 Depends: kmod-ipt-conntrack, kmod-ipv6, kmod-ip6tables, kmod-ipt-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
@@ -335,20 +191,15 @@ Auto-Installed: yes
 Package: kmod-crypto-hash
 Version: 3.14.56-1
 Depends: kmod-crypto-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: luci-app-hwacc
-Version: 0.12+git-4d0a20b-1
-Depends: libc, hwnat
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: kmod-tun
 Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -356,41 +207,23 @@ Installed-Time: 1448181150
 Package: libiwinfo-lua
 Version: 2015-06-01-ade8b1b299cbd5748db1acf80dd3e9f567938371
 Depends: libc, libiwinfo, liblua
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
 
-Package: kmod-mt762x-mmc
-Version: 3.14.56-1
-Depends: kmod-mmc
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-rt2800-usb
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-rt2x00-usb, kmod-rt2800-lib, kmod-lib-crc-ccitt
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: swconfig
 Version: 10
 Depends: libc, libuci, libnl-tiny
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: ebtables
-Version: 2.0.10-4-1
-Depends: libc, kmod-ebtables
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
 Package: libiwinfo
 Version: 2015-06-01-ade8b1b299cbd5748db1acf80dd3e9f567938371
 Depends: libc, libnl-tiny, libuci
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
@@ -399,21 +232,16 @@ Auto-Installed: yes
 Package: libdbus
 Version: 1.10.0-1
 Depends: libc, libpthread
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 Auto-Installed: yes
 
-Package: luci-app-samba
-Version: 0.12+git-4d0a20b-1
-Depends: libc, samba3-pandorabox
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: libcurl
 Version: 7.38.0-1
 Depends: libc, libpolarssl
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -422,6 +250,7 @@ Auto-Installed: yes
 Package: openssl-util
 Version: 1.0.2d-1
 Depends: libc, libopenssl
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -429,51 +258,9 @@ Conffiles:
 Installed-Time: 1448181151
 Auto-Installed: yes
 
-Package: kmod-usb-serial-sierrawireless
-Version: 3.14.56-1
-Depends: kmod-usb-serial
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-usb-printer
-Version: 3.14.56-1
-Depends: kmod-usb-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-video-gspca-zc3xx
-Version: 3.14.56-1
-Depends: kmod-video-gspca-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181151
-
-Package: luci-app-aria2
-Version: 0.12+git-4d0a20b-1
-Depends: libc, aria2, curl, wget, openssl-util
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
 Package: kmod-lib-crc-ccitt
 Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-ipt-filter
-Version: 3.14.56-1
-Depends: kmod-ipt-core, kmod-lib-textsearch, kmod-ipt-conntrack
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-ledtrig-usbdev
-Version: 3.14.56-1
-Depends: kmod-usb-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -481,37 +268,16 @@ Installed-Time: 1448181150
 Package: kmod-rtlwifi
 Version: 3.14.56+2015-06-22-1
 Depends: kmod-mac80211
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181150
 Auto-Installed: yes
-
-Package: iptables-mod-iface
-Version: 2.3-1
-Depends: libc, iptables, kmod-ipt-iface
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-ipt-nat-extra
-Version: 3.14.56-1
-Depends: kmod-ipt-core, kmod-ipt-nat
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-gre
-Version: 3.14.56-1
-Depends: kmod-ipv6, kmod-iptunnel
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
 
 Package: luci-theme-bootstrap
 Version: 0.12+git-4d0a20b-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -519,28 +285,15 @@ Installed-Time: 1448181153
 Package: kmod-pppoe
 Version: 3.14.56-1
 Depends: kmod-ppp, kmod-pppox
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
-
-Package: kmod-rt2x00-usb
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-rt2x00-lib, kmod-usb-core
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
-
-Package: kmod-video-core
-Version: 3.14.56-1
-Depends: kmod-i2c-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181151
 
 Package: kmod-pppox
 Version: 3.14.56-1
 Depends: kmod-ppp
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -549,6 +302,7 @@ Auto-Installed: yes
 Package: kmod-ipt-conntrack
 Version: 3.14.56-1
 Depends: kmod-ipt-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -557,24 +311,16 @@ Auto-Installed: yes
 Package: shellsync
 Version: 0.2-1
 Depends: libc, libpthread
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 Auto-Installed: yes
 
-Package: hd-idle
-Version: 1.04-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/config/hd-idle 4733fa40955720209aaba3fbd194b2b89c
-Installed-Time: 1448181152
-Auto-Installed: yes
-
 Package: base-files
 Version: 157-r1696
 Depends: libc, netifd, procd, jsonfilter
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -596,13 +342,7 @@ Installed-Time: 1448181148
 
 Package: kmod-lib-crc16
 Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-input-core
-Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
@@ -611,49 +351,16 @@ Auto-Installed: yes
 Package: libpcre
 Version: 8.37-2
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
 Auto-Installed: yes
 
-Package: kmod-fs-msdos
-Version: 3.14.56-1
-Depends: kmod-fs-vfat, kmod-nls-base
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: kmod-crypto-crc32c
-Version: 3.14.56-1
-Depends: kmod-crypto-hash, kmod-crypto-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: kmod-rt2800-lib
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-rt2x00-lib, kmod-lib-crc-ccitt
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-usb-atm
-Version: 3.14.56-1
-Depends: kmod-atm, kmod-usb-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: agentx1
-Version: 1
-Depends: libc, libpthread
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-
 Package: netifd
 Version: 2015-08-25-e057fcb4a260c70f0271f8fdcd7140775a09791f
 Depends: libc, libuci, libnl-tiny, libubus, ubus, ubusd, jshn, libubox
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -662,35 +369,16 @@ Auto-Installed: yes
 Package: libmnl
 Version: 1.0.3-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: kmod-usb-serial-pl2303
-Version: 3.14.56-1
-Depends: kmod-usb-serial
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: 6in4
-Version: 17-1
-Depends: libc, kmod-ipv6, kmod-sit
-Status: install user installed
-Architecture: all
-Installed-Time: 1448181147
-
-Package: luci-app-uhttpd
-Version: 0.12+git-4d0a20b-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: uboot-envtools
 Version: 2014.04-4
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -698,6 +386,7 @@ Installed-Time: 1448181153
 Package: kmod-usb-ohci
 Version: 3.14.56-1
 Depends: kmod-usb-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -705,6 +394,7 @@ Installed-Time: 1448181150
 Package: dnsmasq
 Version: 2.75-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -715,6 +405,7 @@ Installed-Time: 1448181148
 Package: procd
 Version: 2015-10-26-d5fddd91b966424bb63e943e789704d52382cc18
 Depends: libc, ubusd, ubus, libjson-script, ubox, libubox, libubus, procd-nand
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -723,149 +414,34 @@ Auto-Installed: yes
 Package: resolveip
 Version: 2
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181152
 Auto-Installed: yes
-
-Package: ddns-scripts-pandorabox
-Version: 2.4.3-1
-Status: install user installed
-Architecture: all
-Conffiles:
- /etc/config/ddns c306c2be446f8034ae6d1e8d80ff9dcb25
-Installed-Time: 1448181148
 
 Package: libblkid
 Version: 2.24.1-1
 Depends: libc, libuuid
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
 Auto-Installed: yes
-
-Package: kmod-ledtrig-heartbeat
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: iptables-mod-nat-extra
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-nat-extra
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: luci-app-xware3
-Version: 0.12+git-4d0a20b-1
-Depends: libc, wget
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
 
 Package: ubusd
 Version: 2015-07-07-7ec9b8dec77b969bfc860995f96fe91fd40ba5e4
 Depends: libc, libubox, libblobmsg-json
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
-
-Package: kmod-ipt-geoip
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: ChinaDNS
-Version: 1.3.2-9e4261c78e-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/chinadns_chnroute.txt 8965eabea34e4c787733933b719df393f7
-Installed-Time: 1448181147
-
-Package: kmod-video-uvc
-Version: 3.14.56-1
-Depends: kmod-usb-core, kmod-video-videobuf2, kmod-video-core, kmod-input-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181151
-
-Package: kmod-carl9170
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-mac80211, kmod-ath, kmod-usb-core, kmod-input-core
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: kmod-rt2x00-lib
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-mac80211, kmod-lib-crc-itu-t
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
-
-Package: redsocks2
-Version: 02a53ce-1
-Depends: libc, libevent2, libopenssl
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-Auto-Installed: yes
-
-Package: hostapd-utils
-Version: 2015-03-25-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
-Package: libwrap
-Version: 7.6-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: iptables-mod-ipmark
-Version: 2.3-1
-Depends: libc, iptables, kmod-ipt-ipmark
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-llc
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: kmod-usb-serial-qualcomm
-Version: 3.14.56-1
-Depends: kmod-usb-serial, kmod-usb-serial-wwan
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-lib-crc32c
-Version: 3.14.56-1
-Depends: kmod-crypto-crc32c
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
 
 Package: p910nd
 Version: 0.97-4
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -873,148 +449,44 @@ Conffiles:
 Installed-Time: 1448181152
 Auto-Installed: yes
 
-Package: kmod-ledtrig-gpio
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: etherwake
-Version: 1.09-4
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/config/etherwake 0134423d8bcdf2992ac9c6744c295b2396
-Installed-Time: 1448181153
-Auto-Installed: yes
-
-Package: kmod-usb-hid
-Version: 3.14.56-1
-Depends: kmod-usb-core, kmod-hid, kmod-hid-generic, kmod-input-core, kmod-input-evdev
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-iptunnel
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-i2c-core
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: exfat-utils
-Version: 1.2.1-1
-Depends: libc, kmod-fs-exfat
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
-Package: kmod-ipt-condition
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-pptp
-Version: 3.14.56-1
-Depends: kmod-ppp, kmod-gre, kmod-pppox
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-ipt-delude
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core, kmod-ipt-compat-xtables
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: cpulimit-ng
-Version: 1.2-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
 Package: block-mount
 Version: 2015-04-14-e6004000ff15d7bd32cf5663e8690fc94d7ec747
 Depends: libc, ubox, libubox, libuci
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
-
-Package: luci-app-ngrokc
-Version: 0.12+git-4d0a20b-1
-Depends: libc, ngrokc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
 
 Package: kmod-fs-vfat
 Version: 3.14.56-1
 Depends: kmod-nls-base, kmod-nls-utf8, kmod-nls-base, kmod-nls-cp936
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
-
-Package: luci-app-ddns
-Version: 0.12+git-4d0a20b-1
-Depends: libc, luci-mod-admin-full, ddns-scripts-pandorabox
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
-Package: iptables-mod-iprange
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-iprange
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
 
 Package: kmod-usb2
 Version: 3.14.56-1
 Depends: kmod-usb-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181151
 
-Package: kmod-usb-serial-option
-Version: 3.14.56-1
-Depends: kmod-usb-serial-wwan, kmod-usb-serial
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: kmod-fs-exfat
 Version: 3.14.56-1
 Depends: kmod-nls-cp936, kmod-nls-utf8, kmod-nls-cp437, kmod-nls-iso8859-1
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: kmod-ipt-compat-xtables
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core, kmod-ip6tables
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
 Auto-Installed: yes
 
 Package: firewall
 Version: 2015-07-27
 Depends: libc, libubox, libubus, libuci, libip4tc, libip6tc, libxtables, kmod-ipt-core, kmod-ipt-nat
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -1022,54 +494,18 @@ Conffiles:
  /etc/firewall.user bd68324966481011f5e36570258ad97dd4
 Installed-Time: 1448181148
 
-Package: comgt
-Version: 0.32-23
-Depends: libc, chat
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
-Package: libxml2
-Version: 2.9.2-3
-Depends: libc, libpthread, zlib
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-Auto-Installed: yes
-
-Package: luci-app-phddns2
-Version: 2-1
-Depends: libc, libpthread, librt, libstdcpp
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: luci-app-firewall
 Version: 0.12+git-4d0a20b-1
 Depends: libc, firewall
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181152
-
-Package: kmod-ipt-chaos
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core, kmod-ipt-compat-xtables, kmod-ipt-delude, kmod-ipt-tarpit
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-ipt-conntrack-extra
-Version: 3.14.56-1
-Depends: kmod-ipt-core, kmod-ipt-conntrack
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
 
 Package: libevent2
 Version: 2.0.21-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -1077,20 +513,16 @@ Installed-Time: 1448181151
 Package: kmod-rtlwifi-usb
 Version: 3.14.56+2015-06-22-1
 Depends: kmod-usb-core, kmod-rtlwifi
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181150
 Auto-Installed: yes
 
-Package: kmod-mmc
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: tc
 Version: 3.15.0-1
 Depends: libc, kmod-sched-core
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1099,6 +531,7 @@ Auto-Installed: yes
 Package: libuci
 Version: 2015-04-09.1-1
 Depends: libc, libubox
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1107,6 +540,7 @@ Auto-Installed: yes
 Package: liblua
 Version: 5.1.5-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -1115,21 +549,16 @@ Auto-Installed: yes
 Package: libip4tc
 Version: 1.4.21-1
 Depends: libc, libxtables
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: luci-app-bandwidth
-Version: 0.12+git-4d0a20b-1
-Depends: libc, bandwidth-pandorabox
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
 Package: ubi-utils
 Version: 1.5.1-2
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -1138,21 +567,16 @@ Auto-Installed: yes
 Package: kmod-ip6tables
 Version: 3.14.56-1
 Depends: kmod-ipv6, kmod-ipt-core, kmod-ipt-conntrack
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: portmap
-Version: 6.0-4
-Depends: libc, libwrap, librpc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: odhcp6c
 Version: 2015-07-29-dc186d6d2b0dd4ad23ca5fc69c00e81f796ff6d9
 Depends: libc, kmod-ipv6
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -1160,50 +584,15 @@ Installed-Time: 1448181153
 Package: fstools
 Version: 2015-04-14-e6004000ff15d7bd32cf5663e8690fc94d7ec747
 Depends: libc, ubox, ubi-utils
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
 
-Package: luci-app-chinadns
-Version: 0.12+git-4d0a20b-1
-Depends: libc, ChinaDNS
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
-Package: kmod-ipt-extra
-Version: 3.14.56-1
-Depends: kmod-ipt-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-ath9k
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-ath9k-common
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: iptables-mod-ipopt
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-ipopt
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: luci-app-webshell
-Version: 0.12+git-4d0a20b-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: uci
 Version: 2015-04-09.1-1
 Depends: libc, libuci
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -1211,6 +600,7 @@ Installed-Time: 1448181153
 Package: lua
 Version: 5.1.5-1
 Depends: libc, liblua
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -1218,42 +608,15 @@ Installed-Time: 1448181151
 Package: kmod-fs-ext4
 Version: 3.14.56-1
 Depends: kmod-lib-crc16, kmod-crypto-hash
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
 
-Package: ppp-mod-pppol2tp
-Version: 2.4.7-8
-Depends: libc, kmod-pppol2tp
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: luci-ssl
-Version: 0.12+git-4d0a20b-1
-Depends: libc, luci, libustream-polarssl, px5g
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: dbus
-Version: 1.10.0-1
-Depends: libc, libexpat, libdbus
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: kmod-input-evdev
-Version: 3.14.56-1
-Depends: kmod-input-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
-
 Package: dropbear
 Version: 2015.67-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -1262,58 +625,10 @@ Conffiles:
  /etc/config/dropbear 1a8a7b0ed5575b4cfd4deb42c3b0ed8a7f
 Installed-Time: 1448181148
 
-Package: transmission-pandorabox-web
-Version: 2.84-4
-Depends: libc, transmission-pandorabox-daemon
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: kmod-ledtrig-timer
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: libustream-polarssl
-Version: 2014-03-25-fc0b5ec804ee43c532978dd04ab0509c34baefb0
-Depends: libc, libubox, libpolarssl
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
-Package: iptables-mod-condition
-Version: 2.3-1
-Depends: libc, iptables, kmod-ipt-condition
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: luci-proto-3g
-Version: 0.12+git-4d0a20b-1
-Depends: libc, comgt
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: curl
-Version: 7.38.0-1
-Depends: libc, libcurl
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
-Package: kmod-usb-serial-wwan
-Version: 3.14.56-1
-Depends: kmod-usb-serial
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
-
 Package: kmod-nls-utf8
 Version: 3.14.56-1
 Depends: kmod-nls-base
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -1322,21 +637,16 @@ Auto-Installed: yes
 Package: kmod-crypto-aes
 Version: 3.14.56-1
 Depends: kmod-crypto-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: luci-app-vsftpd
-Version: 0.12+git-4d0a20b-1
-Depends: libc, vsftpd-pandorabox
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: kmod-nls-cp437
 Version: 3.14.56-1
 Depends: kmod-nls-base
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -1344,6 +654,7 @@ Auto-Installed: yes
 
 Package: libstdcpp
 Version: 4.8-linaro-1
+Provides:
 Status: install hold installed
 Essential: yes
 Architecture: ralink
@@ -1352,34 +663,22 @@ Installed-Time: 1448181151
 Package: mtd
 Version: 20
 Depends: libc, libubox
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: ip6tables-mod-nat
-Version: 1.4.21-1
-Depends: libc, ip6tables, kmod-ipt-nat6
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
 Package: wpad
 Version: 2015-03-25-1
 Depends: libc, libnl-tiny, hostapd-common, libubus
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
 Package: kmod-crypto-core
 Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-ipt-hashlimit
-Version: 3.14.56-1
-Depends: kmod-ipt-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
@@ -1388,33 +687,23 @@ Auto-Installed: yes
 Package: ipbandwidth-app
 Version: 1
 Depends: libc, kmod-showspeed
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 
-Package: kmod-lib-oid-registry
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: kmod-sched
 Version: 3.14.56-1
 Depends: kmod-sched-core, kmod-ipt-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
-
-Package: kmod-video-gspca-core
-Version: 3.14.56-1
-Depends: kmod-usb-core, kmod-input-core, kmod-video-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181151
 
 Package: libjson-c
 Version: 0.11-2
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1422,6 +711,7 @@ Auto-Installed: yes
 
 Package: libgcc
 Version: 4.8-linaro-1
+Provides:
 Status: install hold installed
 Essential: yes
 Architecture: ralink
@@ -1430,6 +720,7 @@ Auto-Installed: yes
 
 Package: kmod-showspeed
 Version: 3.14.56-1
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1438,20 +729,15 @@ Auto-Installed: yes
 Package: usb-modeswitch
 Version: 2014-07-18-01ecc3b9764d1dd89cf36ede0a2d98f9adb0cd33
 Depends: libc, libubox, libblobmsg-json, libusb-1.0
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: luci-app-sqm
-Version: 3-1
-Depends: libc, lua, luci-base, sqm-scripts
-Status: install user installed
-Architecture: all
-Installed-Time: 1448181152
-
 Package: libip6tc
 Version: 1.4.21-1
 Depends: libc, libxtables
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1460,21 +746,15 @@ Auto-Installed: yes
 Package: ipset
 Version: 6.20.1-1
 Depends: libc, kmod-ipt-ipset, libmnl
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 
-Package: kmod-ipt-iface
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
 Package: luci-proto-ppp
 Version: 0.12+git-4d0a20b-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -1482,6 +762,7 @@ Installed-Time: 1448181153
 Package: libuuid
 Version: 2.24.1-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -1490,6 +771,7 @@ Auto-Installed: yes
 Package: luci-mod-admin-full
 Version: 0.12+git-4d0a20b-1
 Depends: libc, luci-base, ipbandwidth-app
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181152
@@ -1498,6 +780,7 @@ Auto-Installed: yes
 Package: ppp
 Version: 2.4.7-8
 Depends: libc, kmod-ppp, libpthread, shellsync, libubox, libubus, libblobmsg_json, ubusd, ubus, jshn
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -1506,16 +789,10 @@ Conffiles:
  /etc/ppp/options 8838d5b4209a3ff5be9d1837dda1e5ef84
 Installed-Time: 1448181153
 
-Package: cfdisk
-Version: 2.24.1-1
-Depends: libc, libblkid, libncurses
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
 Package: libubox
 Version: 2015-09-15-136a5196266d03d537f822c4e67d2fde2ed59505
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1524,6 +801,7 @@ Auto-Installed: yes
 Package: luci-base
 Version: 0.12+git-4d0a20b-1
 Depends: libc, lua, libuci-lua, libubus-lua, rpcd, liblua, libnl-tiny
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -1531,22 +809,9 @@ Conffiles:
 Installed-Time: 1448181152
 Auto-Installed: yes
 
-Package: kmod-sound-core
-Version: 3.14.56-1
-Depends: kmod-input-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: luci-app-redsocks2
-Version: 0.12+git-4d0a20b-1
-Depends: libc, redsocks2, kmod-ipt-nat, kmod-ipt-nat-extra, kmod-ipt-ipset, ipset
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: kmod-leds-gpio
 Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -1554,83 +819,24 @@ Installed-Time: 1448181150
 Package: libusb-1.0
 Version: 1.0.19-1
 Depends: libc, libpthread, librt
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
 
-Package: kmod-ipt-account
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core, kmod-ipt-compat-xtables
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: mwan3-pandorabox
-Version: 2.0-0
-Depends: libc, ip, ipset, iptables, iptables-mod-conntrack-extra, iptables-mod-ipopt
-Status: install user installed
-Architecture: all
-Installed-Time: 1448181152
-Auto-Installed: yes
-
-Package: kmod-ralink-hwnat
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: luci-app-mwan3-pandorabox
-Version: 1.4-4
-Depends: libc, mwan3-pandorabox, luci-mod-admin-full, luci-app-firewall, luci-lib-nixio
-Status: install user installed
-Architecture: all
-Installed-Time: 1448181152
-
-Package: ppp-mod-pptp
-Version: 2.4.7-8
-Depends: libc, kmod-pptp, kmod-mppe, resolveip
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: vsftpd-pandorabox
-Version: 3.0.3-5
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/vsftpd.conf f7e2d5431c1346f30cd9beb5ec1e85f5bf
-Installed-Time: 1448181152
-Auto-Installed: yes
-
-Package: kmod-rtl8192c-common
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-rtlwifi
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: librt
 Version: 0.9.33.2-1
 Depends: libpthread
+Provides:
 Status: install hold installed
 Essential: yes
 Architecture: ralink
 Installed-Time: 1448181151
 
-Package: kmod-video-videobuf2
-Version: 3.14.56-1
-Depends: kmod-video-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181151
-Auto-Installed: yes
-
 Package: iptables-mod-tproxy
 Version: 1.4.21-1
 Depends: libc, iptables, kmod-ipt-tproxy
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
@@ -1638,70 +844,25 @@ Installed-Time: 1448181149
 Package: kmod-mac80211
 Version: 3.14.56+2015-06-22-1
 Depends: kmod-crypto-core, kmod-crypto-arc4, kmod-crypto-aes, kmod-cfg80211, hostapd-common
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
-
-Package: kmod-usb-serial
-Version: 3.14.56-1
-Depends: kmod-usb-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
-
-Package: kmod-dnsresolver
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: iptables-mod-hashlimit
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-hashlimit
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
 
 Package: libjson-script
 Version: 2015-09-15-136a5196266d03d537f822c4e67d2fde2ed59505
 Depends: libc, libubox
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: kmod-gpio-dev
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-rtl8192cu
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-rtlwifi-usb, kmod-rtl8192c-common
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-leds-tca6507
-Version: 3.14.56-1
-Depends: kmod-i2c-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: swap-utils
-Version: 2.24.1-1
-Depends: libc, libblkid
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: librpc
 Version: 0.9.32-rc2-0a2179bbc0844928f2a0ec01dba93d9b5d6d41a7
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -1709,110 +870,49 @@ Installed-Time: 1448181151
 Package: luci-proto-ipv6
 Version: 0.12+git-4d0a20b-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: kmod-usb-audio
-Version: 3.14.56-1
-Depends: kmod-usb-core, kmod-sound-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: uclibcxx
 Version: 0.2.4-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
-
-Package: hwnat
-Version: 4320
-Depends: libc, kmod-ralink-hwnat
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
 
 Package: libblobmsg-json
 Version: 2015-09-15-136a5196266d03d537f822c4e67d2fde2ed59505
 Depends: libc, libjson-c, libubox
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
-
-Package: kmod-gpio-button-pandorabox
-Version: 3.14.56-1
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-crypto-ecb
-Version: 3.14.56-1
-Depends: kmod-crypto-manager, kmod-crypto-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
 
 Package: iptables
 Version: 1.4.21-1
 Depends: libc, kmod-ipt-core, libip4tc, libip6tc, libxtables
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
-
-Package: iptables-mod-filter
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-filter
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-ipt-nathelper
-Version: 3.14.56-1
-Depends: kmod-ipt-core, kmod-ipt-nat
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
 
 Package: kmod-mt76x2e
 Version: 3.14.56-1
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181150
-
-Package: kmod-ralink-i2c
-Version: 3.14.56-1
-Depends: kmod-i2c-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: sqm-scripts
-Version: 8-4
-Depends: libc, tc, kmod-sched, kmod-ifb, iptables, ip, iptables-mod-ipopt, iptables-mod-conntrack-extra
-Status: install user installed
-Architecture: all
-Conffiles:
- /etc/config/sqm 4bc2719b7fd31bf0997a5f71a07b5226a2
-Installed-Time: 1448181152
-Auto-Installed: yes
-
-Package: kmod-sit
-Version: 3.14.56-1
-Depends: kmod-ipv6, kmod-iptunnel, kmod-iptunnel4
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
 
 Package: jshn
 Version: 2015-09-15-136a5196266d03d537f822c4e67d2fde2ed59505
 Depends: libc, libjson-c, libubox, libblobmsg-json
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1821,6 +921,7 @@ Auto-Installed: yes
 Package: libncurses
 Version: 5.9-1
 Depends: libc, terminfo
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -1828,35 +929,24 @@ Auto-Installed: yes
 
 Package: kmod-ipt-core
 Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
-
-Package: e2fsprogs
-Version: 1.42.4-1
-Depends: libc, libuuid, libext2fs
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
 
 Package: kmod-ipv6
 Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
-
-Package: kmod-usb-acm
-Version: 3.14.56-1
-Depends: kmod-usb-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
 
 Package: procd-nand
 Version: 2015-10-26-d5fddd91b966424bb63e943e789704d52382cc18
 Depends: libc, ubi-utils
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -1865,6 +955,7 @@ Auto-Installed: yes
 Package: libpolarssl
 Version: 1.3.9-2
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -1873,6 +964,7 @@ Auto-Installed: yes
 Package: kmod-ppp
 Version: 3.14.56-1
 Depends: kmod-lib-crc-ccitt, kmod-slhc
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -1881,6 +973,7 @@ Auto-Installed: yes
 Package: pbmsa-utils
 Version: 1.0-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -1888,28 +981,16 @@ Installed-Time: 1448181153
 Package: kmod-ipt-ipset
 Version: 3.14.56+6.20.1-1
 Depends: kmod-ipt-core, kmod-nfnetlink
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: luci-app-wol
-Version: 0.12+git-4d0a20b-1
-Depends: libc, etherwake
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: luci-app-syncdial
-Version: 0.12+git-4d0a20b-1
-Depends: libc, kmod-macvlan, luci-app-mwan3-pandorabox
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: libnfnetlink
 Version: 1.0.1-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
@@ -1917,27 +998,15 @@ Installed-Time: 1448181151
 Package: maccalc
 Version: 1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: luci-app-upnp
-Version: 0.12+git-4d0a20b-1
-Depends: libc, miniupnpd-pandorabox
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
-Package: luci-app-cpulimit
-Version: 0.12+git-4d0a20b-1
-Depends: libc, cpulimit-ng
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
 Package: libubus
 Version: 2015-07-07-7ec9b8dec77b969bfc860995f96fe91fd40ba5e4
 Depends: libc, libubox
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -1946,6 +1015,7 @@ Auto-Installed: yes
 Package: uhttpd
 Version: 2015-05-31-daeea305298197bb50c1e63cdd842ee1d9461d80
 Depends: libc, libubox
+Provides:
 Status: install user installed
 Architecture: ralink
 Conffiles:
@@ -1953,93 +1023,37 @@ Conffiles:
 Installed-Time: 1448181153
 Auto-Installed: yes
 
-Package: kmod-iptunnel4
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: iptables-mod-conntrack-extra
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-conntrack-extra
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-usb-serial-ftdi
-Version: 3.14.56-1
-Depends: kmod-usb-serial
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: luci-app-usb-printer
-Version: 0.12+git-4d0a20b-1
-Depends: libc, p910nd, kmod-usb-printer
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
-Package: iptables-mod-u32
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-u32
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
 Package: libxtables
 Version: 1.4.21-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: ip6tables
-Version: 1.4.21-1
-Depends: libc, kmod-ip6tables, iptables
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
 Auto-Installed: yes
 
 Package: zlib
 Version: 1.2.8-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
 Auto-Installed: yes
 
-Package: kmod-hid-generic
-Version: 3.14.56-1
-Depends: kmod-hid
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: luci-lib-nixio
 Version: 0.12+git-4d0a20b-1
 Depends: libc, luci-base
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181152
 Auto-Installed: yes
 
-Package: kmod-ipt-tarpit
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core, kmod-ipt-compat-xtables, kmod-ipv6
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
 Package: luci-i18n-chinese
 Version: 0.12+git-4d0a20b-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -2047,149 +1061,78 @@ Installed-Time: 1448181153
 Package: kmod-nls-cp936
 Version: 3.14.56-1
 Depends: kmod-nls-base
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: kmod-ipt-ipmark
-Version: 3.14.56+2.3-1
-Depends: kmod-ipt-core, kmod-ipt-compat-xtables
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
 Auto-Installed: yes
 
 Package: kmod-nls-iso8859-1
 Version: 3.14.56-1
 Depends: kmod-nls-base
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: kmod-ipt-ipopt
-Version: 3.14.56-1
-Depends: kmod-ipt-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-ipt-nathelper-extra
-Version: 3.14.56-1
-Depends: kmod-ipt-core, kmod-ipt-nat, kmod-lib-textsearch
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: transmission-pandorabox-daemon
-Version: 2.84-4
-Depends: libc, libcurl, libopenssl, libpthread, libevent2, librt
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/config/transmission 0caf0ef7d210079e168424f92b64b3e0a3
-Installed-Time: 1448181152
 Auto-Installed: yes
 
 Package: luci
 Version: 0.12+git-4d0a20b-1
 Depends: libc, uhttpd, uhttpd-mod-ubus, luci-mod-admin-full, luci-theme-xeye, luci-app-firewall, luci-proto-ppp, libiwinfo-lua, luci-lib-nixio
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 Auto-Installed: yes
 
-Package: kmod-fs-ufsd
-Version: 3.14.56-1
-Depends: kmod-nls-base
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: fdisk
 Version: 2.24.1-1
 Depends: libc, libblkid
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
-
-Package: samba3-pandorabox
-Version: 4.0.26-5
-Depends: libc, libpthread, libpopt, libattr
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/config/samba efbafce0e7e25e21c1cf270ed4c949a4c6
- /etc/samba/smb.conf.template 8b688ca61756712dd9f77bceb543ed9690
-Installed-Time: 1448181152
-Auto-Installed: yes
 
 Package: ngrokc
 Version: b123ae70b3-1
 Depends: libc, libpthread, libpolarssl, libstdcpp
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181152
-Auto-Installed: yes
-
-Package: kmod-ipt-nat6
-Version: 3.14.56-1
-Depends: kmod-ipt-core, kmod-ipt-conntrack, kmod-ipt-core, kmod-ipt-nat, kmod-ipt-core, kmod-ip6tables
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181148
 Auto-Installed: yes
 
 Package: libext2fs
 Version: 1.42.4-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
 Auto-Installed: yes
 
-Package: kmod-ath
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-mac80211
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
 Package: libexpat
 Version: 2.1.0-3
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 Auto-Installed: yes
 
-Package: kmod-atm
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-
 Package: ubox
 Version: 2015-07-14-907d046c8929fb74e5a3502a9498198695e62ad8
 Depends: libc, libubox, ubusd, ubus, libubus, libuci
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: kmod-rt73-usb
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-rt2x00-usb
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: kernel
 Version: 3.14.56-1-68708d7666a3ce07d7064814d94c4576
 Depends: libc
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
@@ -2197,36 +1140,8 @@ Installed-Time: 1448181149
 Package: libnl-tiny
 Version: 0.1-3
 Depends: libc
+Provides:
 Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: luci-app-w8021x
-Version: 0.12+git-4d0a20b-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
-Package: kmod-ath9k-htc
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-ath9k-common, kmod-usb-core
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: blkid
-Version: 2.24.1-1
-Depends: libc, libblkid
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-
-Package: kmod-ipt-u32
-Version: 3.14.56-1
-Depends: kmod-ipt-core
-Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
@@ -2234,78 +1149,32 @@ Auto-Installed: yes
 Package: usbreset
 Version: 4
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
-
-Package: aria2
-Version: 1.18.7-1
-Depends: libc, zlib, libxml2, libstdcpp, libopenssl
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-Auto-Installed: yes
-
-Package: luci-app-transmission
-Version: 0.12+git-4d0a20b-1
-Depends: libc, transmission-pandorabox-daemon
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
-Package: iptables-mod-geoip
-Version: 2.3-1
-Depends: libc, iptables, kmod-ipt-geoip
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
 
 Package: px5g
 Version: 3
 Depends: libc, libpolarssl
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 Auto-Installed: yes
 
-Package: kmod-usb-storage-extras
-Version: 3.14.56-1
-Depends: kmod-usb-storage
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181151
-
-Package: kmod-ifb
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: kmod-mppe
-Version: 3.14.56-1
-Depends: kmod-ppp, kmod-crypto-core, kmod-crypto-arc4, kmod-crypto-sha1, kmod-crypto-ecb
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: kmod-nls-base
 Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181148
 Auto-Installed: yes
 
-Package: luci-app-shadowsocks
-Version: 0.12+git-4d0a20b-1
-Depends: libc, shadowsocks-libev
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: luci-i18n-english
 Version: 0.12+git-4d0a20b-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -2313,6 +1182,7 @@ Installed-Time: 1448181153
 Package: uhttpd-mod-ubus
 Version: 2015-05-31-daeea305298197bb50c1e63cdd842ee1d9461d80
 Depends: libc, uhttpd, libubus, libblobmsg-json
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
@@ -2321,41 +1191,23 @@ Auto-Installed: yes
 Package: libusb-compat
 Version: 0.1.4-1
 Depends: libc, libusb-1.0
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
-
-Package: iptables-mod-imq
-Version: 1.4.21-1
-Depends: libc, iptables, kmod-ipt-imq
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
 
 Package: libpopt
 Version: 1.16-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
 
-Package: iptables-mod-account
-Version: 2.3-1
-Depends: libc, iptables, kmod-ipt-account
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: luci-app-xunlei
-Version: 0.12+git-4d0a20b-1
-Depends: libc, wget
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: jsonfilter
 Version: 2014-06-19-cdc760c58077f44fc40adbbe41e1556a67c1b9a9
 Depends: libc, libubox, libjson-c
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
@@ -2364,101 +1216,39 @@ Auto-Installed: yes
 Package: hostapd-common
 Version: 2015-03-25-1
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
 
-Package: kmod-eeprom-93cx6
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-
 Package: wireless-tools
 Version: 29-5
 Depends: libc
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: kmod-hid
-Version: 3.14.56-1
-Depends: kmod-input-core, kmod-input-evdev
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
-
-Package: kmod-ath9k-common
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-ath
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: miniupnpd-pandorabox
-Version: 1.8.20140523-4
-Depends: libc, iptables, libip4tc, libip6tc, ip6tables, libnfnetlink
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/config/upnpd 2a34a04aa2d2d0603627c5df3f9ba5e34e
-Installed-Time: 1448181152
-Auto-Installed: yes
-
 Package: kmod-crypto-arc4
 Version: 3.14.56-1
 Depends: kmod-crypto-core
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
-
-Package: libattr
-Version: 20150922-1
-Depends: libc
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-Auto-Installed: yes
-
-Package: kmod-crypto-sha1
-Version: 3.14.56-1
-Depends: kmod-crypto-hash, kmod-crypto-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-
-Package: kmod-pppol2tp
-Version: 3.14.56-1
-Depends: kmod-ppp, kmod-pppox, kmod-l2tp
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: iptaccount
-Version: 2.3-1
-Depends: libc, iptables, iptables-mod-account
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
 
 Package: libopenssl
 Version: 1.0.2d-1
 Depends: libc, zlib, libpthread
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
 
-Package: luci-app-hd-idle
-Version: 0.12+git-4d0a20b-1
-Depends: libc, hd-idle
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-
 Package: kmod-scsi-core
 Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -2466,6 +1256,7 @@ Installed-Time: 1448181150
 Package: kmod-slhc
 Version: 3.14.56-1
 Depends: kmod-lib-crc-ccitt
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
@@ -2474,33 +1265,23 @@ Auto-Installed: yes
 Package: kmod-cfg80211
 Version: 3.14.56+2015-06-22-1
 Depends: iw
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: 6to4
-Version: 12-1
-Depends: libc, kmod-ipv6, kmod-sit
-Status: install user installed
-Architecture: all
-Installed-Time: 1448181147
-
 Package: ppp-mod-pppoe
 Version: 2.4.7-8
 Depends: libc, kmod-pppoe
+Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: kmod-lib-crc-itu-t
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
 Package: kmod-sched-core
 Version: 3.14.56-1
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
@@ -2509,29 +1290,9 @@ Auto-Installed: yes
 Package: kmod-ipt-nat
 Version: 3.14.56-1
 Depends: kmod-ipt-core, kmod-ipt-conntrack
+Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
-
-Package: kmod-ledtrig-netdev
-Version: 3.14.56-1
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
-
-Package: kmod-ipt-iprange
-Version: 3.14.56-1
-Depends: kmod-ipt-core
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
-Package: kmod-usb-cm109
-Version: 3.14.56-1
-Depends: kmod-usb-core, kmod-input-core, kmod-input-evdev
-Status: install hold installed
-Architecture: ralink
-Installed-Time: 1448181150
 

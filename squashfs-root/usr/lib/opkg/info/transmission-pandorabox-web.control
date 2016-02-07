@@ -1,9 +1,0 @@
-Package: transmission-pandorabox-web
-Version: 2.84-4
-Depends: libc, transmission-pandorabox-daemon
-Source: package/pandorabox/network/transmission-pandorabox
-Section: net
-Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
-Architecture: ralink
-Installed-Size: 206149
-Description:  Webinterface resources for transmission.

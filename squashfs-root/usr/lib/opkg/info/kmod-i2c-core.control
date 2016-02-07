@@ -1,9 +1,0 @@
-Package: kmod-i2c-core
-Version: 3.14.56-1
-Source: package/kernel/linux
-License: GPLv2
-Section: kernel
-Status: unknown hold not-installed
-Architecture: ralink
-Installed-Size: 3946
-Description:  Kernel modules for I2C support

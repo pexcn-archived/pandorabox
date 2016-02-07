@@ -1,7 +1,0 @@
-/etc/init.d/phddns2
-/usr/lib/lua/luci/controller/phddns2.lua
-/usr/oray-app/bin/oraysl
-/usr/lib/lua/luci/model/cbi/phddns2.lua
-/usr/oray-app/bin/oraynewph
-/lib/upgrade/keep.d/phddns2
-/etc/uci-defaults/phddns2
