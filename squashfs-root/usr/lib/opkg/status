@@ -265,15 +265,6 @@ Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
 
-Package: kmod-rtlwifi
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-mac80211
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
-
 Package: luci-theme-bootstrap
 Version: 0.12+git-4d0a20b-1
 Depends: libc
@@ -509,15 +500,6 @@ Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
-
-Package: kmod-rtlwifi-usb
-Version: 3.14.56+2015-06-22-1
-Depends: kmod-usb-core, kmod-rtlwifi
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181150
-Auto-Installed: yes
 
 Package: tc
 Version: 3.15.0-1
