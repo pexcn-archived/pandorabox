@@ -128,7 +128,7 @@ config wifi-iface
 	option device   radio$devidx
 	option network  lan
 	option mode     ap
-	option ssid     PandoraBox${ssid_5ghz}-$(cat /sys/class/ieee80211/${dev}/macaddress | awk -F ":" '{print $4""$5""$6 }'| tr a-z A-Z)
+	option ssid     OpenWrt${ssid_5ghz}
 	option encryption none
 	option wds 1
 
