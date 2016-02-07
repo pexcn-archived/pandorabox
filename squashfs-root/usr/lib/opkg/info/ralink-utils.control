@@ -1,0 +1,8 @@
+Package: ralink-utils
+Version: 1
+Depends: libc, kmod-ipt-nathelper-extra
+Source: package/ralink/ralink-utils
+Section: ralink
+Architecture: ralink
+Installed-Size: 25842
+Description:  Ralink RT305x app tools

@@ -1,0 +1,2 @@
+/etc/modules.d/90-showspeed
+/lib/modules/3.14.56/showspeed.ko

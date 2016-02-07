@@ -1,0 +1,4 @@
+/sbin/usbmode
+/etc/usb-mode.json
+/etc/hotplug.d/usb/20-usb_mode
+/etc/init.d/usbmode

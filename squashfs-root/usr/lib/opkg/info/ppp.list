@@ -1,0 +1,9 @@
+/lib/upgrade/keep.d/ppp
+/usr/sbin/pppd
+/etc/ppp/filter
+/lib/netifd/ppp-up
+/etc/ppp/options
+/etc/ppp/chap-secrets
+/lib/netifd/ppp-down
+/lib/netifd/proto/ppp.sh
+/etc/ppp/resolv.conf

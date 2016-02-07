@@ -1,0 +1,11 @@
+/usr/sbin/aria2ctl
+/usr/lib/lua/luci/controller/aria2.lua
+/etc/config/aria2
+/usr/lib/lua/luci/i18n/aria2.zh-cn.lmo
+/etc/init.d/aria2
+/etc/aria2/post
+/etc/aria2/aria2.conf
+/lib/upgrade/keep.d/aria2
+/usr/lib/lua/luci/model/cbi/aria2.lua
+/usr/sbin/fetchsub
+/etc/uci-defaults/luci-aria2

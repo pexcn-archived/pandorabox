@@ -1,0 +1,6 @@
+/usr/lib/lua/luci/i18n/cpulimit.zh-cn.lmo
+/usr/lib/lua/luci/model/cbi/cpulimit.lua
+/etc/init.d/cpulimit
+/usr/lib/lua/luci/controller/cpulimit.lua
+/etc/uci-defaults/luci-app-cpulimit
+/etc/config/cpulimit

@@ -1,0 +1,9 @@
+Package: tc
+Version: 3.15.0-1
+Depends: libc, kmod-sched-core
+Source: package/network/utils/iproute2
+Section: net
+Maintainer: Russell Senior <russell@personaltelco.net>
+Architecture: ralink
+Installed-Size: 92537
+Description:  Traffic control utility

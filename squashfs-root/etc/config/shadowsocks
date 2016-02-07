@@ -1,0 +1,6 @@
+
+config shadowsocks
+	option ignore_list '/etc/chinadns_chnroute.txt'
+	option tunnel_port '1153'
+	option tunnel_forward '8.8.8.8:53'
+	option lan_ac_mode '0'

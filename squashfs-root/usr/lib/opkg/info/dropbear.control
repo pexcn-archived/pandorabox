@@ -1,0 +1,10 @@
+Package: dropbear
+Version: 2015.67-1
+Depends: libc
+Source: package/network/services/dropbear
+License: MIT
+LicenseFiles: LICENSE libtomcrypt/LICENSE libtommath/LICENSE
+Section: net
+Architecture: ralink
+Installed-Size: 81873
+Description:  A small SSH2 server/client designed for small memory environments.

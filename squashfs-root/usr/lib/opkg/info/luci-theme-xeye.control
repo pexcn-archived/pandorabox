@@ -1,0 +1,9 @@
+Package: luci-theme-xeye
+Version: 0.12+git-4d0a20b-1
+Depends: libc
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 6637
+Description:  Luci xeye Theme

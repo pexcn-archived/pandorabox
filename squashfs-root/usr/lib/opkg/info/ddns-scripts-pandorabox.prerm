@@ -1,0 +1,12 @@
+	#!/bin/sh
+	# if run within buildroot exit
+	[ -n "${IPKG_INSTROOT}" ] && exit 0
+
+	# stop running scripts
+	/etc/init.d/ddns disable
+	/etc/init.d/ddns stop
+
+	# clear LuCI indexcache
+	rm -f /tmp/luci-indexcache >/dev/null 2>&1
+
+	exit 0

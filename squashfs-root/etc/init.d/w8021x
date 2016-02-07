@@ -1,0 +1,105 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2005-2013 NowRush Studio
+# Author: hackpascal <hackpascal@gmail.com>
+
+START=50
+
+w8021x_check_status() {
+	local ifname=$1
+	local ret
+	local item
+	local ctrl_iface_all
+	local eap_status
+	local pae_status
+	local eap_str
+
+	ctrl_iface_all="/var/run/wpa_8021x-${ifname}_*"
+
+	for item in $ctrl_iface_all; do
+		if [ -d "$item" ]; then
+			# First status check
+			eap_str=`wpa_cli -i $ifname -p "$item" status 2>/dev/null | grep "EAP state="`
+			eap_status=${eap_str#*=}
+
+			[ x$eap_status = x"SUCCESS" ] && return 0
+			[ x$eap_status = x"FAILURE" ] && continue
+
+			eap_str=`wpa_cli -i $ifname -p "$item" status 2>/dev/null | grep "Supplicant PAE state="`
+			pae_status=${eap_str#*=}
+
+			while [ x"$pae_status" = x"CONNECTING" ] || [ x"$pae_status" = x"IDLE" ]; do
+				eap_str=`wpa_cli -i $ifname -p "$item" status 2>/dev/null | grep "Supplicant PAE state="`
+				pae_status=${eap_str#*=}
+				sleep 1
+			done
+
+			eap_str=`wpa_cli -i $ifname -p "$item" status 2>/dev/null | grep "EAP state="`
+			eap_status=${eap_str#*=}
+
+			[ x$eap_status = x"SUCCESS" ] && return 0
+
+		fi
+	done
+
+	return 1
+}
+
+w8021x_check_item() {
+	local cfg=$1
+	local iface
+	local ifname
+	local ret
+	local auto
+
+	config_get_bool auto "$cfg" auto 0
+	[ "$auto" -eq 0 ] && return 0
+
+	config_get iface "$cfg" interface ""
+	[ -z "$iface" ] && return 0
+
+	ifname=`uci get network.$iface.ifname`
+	[ -z "$ifname" ] && return 0
+
+	echo -n "Waiting for previous Wired 802.1X Auth result on $ifname: "
+	w8021x_check_status "$ifname"
+	ret=$?
+	[ $ret -eq 0 ] && echo "Succeeded" || echo "Failure"
+	[ $ret -eq 0 ] && return 0
+
+	echo "$cfg: Wired 802.1X Authentication on $ifname"
+	w8021x_auth "$cfg" >/dev/null
+	sleep 1
+
+	return $?
+}
+
+w8021x_logoff_all() {
+	local cfg=$1
+	local iface
+	local ifname
+	local ret
+
+	config_get iface "$cfg" interface ""
+	[ -z "$iface" ] && return 0
+
+	ifname=`uci get network.$iface.ifname`
+	[ -z "$ifname" ] && return 0
+
+	echo -n "Logging off on $ifname: "
+	w8021x_logoff "$cfg" >/dev/null
+	echo "OK"
+
+	return 0
+}
+
+start() {
+	config_load w8021x
+
+	config_foreach w8021x_check_item item
+}
+
+stop() {
+	config_load w8021x
+
+	config_foreach w8021x_logoff_all item
+}

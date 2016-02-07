@@ -1,0 +1,14 @@
+/lib/modules/3.14.56/xt_mark.ko
+/lib/modules/3.14.56/iptable_mangle.ko
+/lib/modules/3.14.56/xt_comment.ko
+/lib/modules/3.14.56/iptable_filter.ko
+/lib/modules/3.14.56/xt_time.ko
+/lib/modules/3.14.56/xt_limit.ko
+/lib/modules/3.14.56/ip_tables.ko
+/lib/modules/3.14.56/xt_LOG.ko
+/lib/modules/3.14.56/ipt_REJECT.ko
+/lib/modules/3.14.56/xt_mac.ko
+/lib/modules/3.14.56/xt_TCPMSS.ko
+/lib/modules/3.14.56/xt_id.ko
+/etc/modules.d/ipt-core
+/lib/modules/3.14.56/xt_multiport.ko

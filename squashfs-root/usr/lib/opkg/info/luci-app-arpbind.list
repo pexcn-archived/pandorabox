@@ -1,0 +1,6 @@
+/usr/lib/lua/luci/controller/arpbind.lua
+/usr/lib/lua/luci/model/cbi/arpbind.lua
+/usr/lib/lua/luci/i18n/arpbind.zh-cn.lmo
+/etc/init.d/arpbind
+/etc/uci-defaults/luci-arpbind
+/etc/hotplug.d/iface/50-arpbind

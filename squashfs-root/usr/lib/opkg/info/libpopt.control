@@ -1,0 +1,9 @@
+Package: libpopt
+Version: 1.16-1
+Depends: libc
+Source: package/libs/popt
+License: MIT
+Section: libs
+Architecture: ralink
+Installed-Size: 18227
+Description:  A command line option parsing library

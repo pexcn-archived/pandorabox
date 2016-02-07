@@ -1,0 +1,4 @@
+/lib/firmware/mt7662_patch_hdr.bin
+/etc/modules.d/91-mt76x2e
+/lib/firmware/mt7662_firmware.bin
+/lib/modules/3.14.56/mt76x2e.ko

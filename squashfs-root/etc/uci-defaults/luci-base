@@ -1,0 +1,6 @@
+#!/bin/sh
+uci -q batch <<-EOF >/dev/null
+	add_list uhttpd.main.index_page='cgi-bin/luci'
+	commit uhttpd
+EOF
+exit 0

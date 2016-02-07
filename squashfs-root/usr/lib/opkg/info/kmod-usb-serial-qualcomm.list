@@ -1,0 +1,2 @@
+/etc/modules.d/usb-serial-qualcomm
+/lib/modules/3.14.56/qcserial.ko

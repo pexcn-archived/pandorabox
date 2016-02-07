@@ -1,0 +1,19 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2013-2014 OpenWrt.org
+
+START=00
+
+boot() {
+	local curtime="$(date +%s)"
+	local maxtime="$(maxtime)"
+	[ $curtime -lt $maxtime ] && date -s @$maxtime
+}
+
+maxtime() {
+       local dir file
+
+       find /etc -type d | while read dir; do
+               file="$dir/$( ls -1t "$dir" | head -n1 )"
+               [ -e "$file" -a "$file" != '/etc/dnsmasq.time' ] && date -r "$file" +%s
+       done | sort -nr | head -n1
+}

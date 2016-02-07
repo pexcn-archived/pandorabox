@@ -1,0 +1,34 @@
+#!/bin/sh
+
+CFG=$1
+
+IFACE=`uci get w8021x.$CFG.interface 2>/dev/null`
+IFNAME=`uci get network.$IFACE.ifname 2>/dev/null`
+
+if [ -z $IFACE ] || [ -z $IFNAME ]; then
+	echo -n 'INVALID PARAMETER'
+	exit 1
+fi
+
+CTRL_IFACE="/var/run/wpa_8021x-${IFNAME}_${CFG}"
+IFACE_ALL="/var/run/wpa_8021x-${IFNAME}_*"
+CONF_FILE="${CTRL_IFACE}.conf"
+PID_FILE="${CTRL_IFACE}.pid"
+
+if [ -s "$CTRL_IFACE" ]; then
+	wpa_cli -i $IFNAME -p "$CTRL_IFACE" logoff 2>/dev/null >/dev/null
+	wpa_cli -i $IFNAME -p "$CTRL_IFACE" terminate 2>/dev/null >/dev/null
+	kill `cat "$PID_FILE" 2>/dev/null` 2>/dev/null >/dev/null
+	rm -f "$CONF_FILE" 2>/dev/null >/dev/null
+fi
+
+for item in ${IFACE_ALL}; do
+	if [ -d "$item" ]; then
+		wpa_cli -i $IFNAME -p "$item" logoff 2>/dev/null >/dev/null
+		wpa_cli -i $IFNAME -p "$item" terminate 2>/dev/null >/dev/null
+		kill `cat "${item}.pid" 2>/dev/null` 2>/dev/null >/dev/null
+		rm -f "${item}.conf" 2>/dev/null >/dev/null
+	fi
+done
+
+

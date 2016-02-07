@@ -1,0 +1,9 @@
+Package: luci-app-uhttpd
+Version: 0.12+git-4d0a20b-1
+Depends: libc
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 4820
+Description:  A simple uHttpd config page

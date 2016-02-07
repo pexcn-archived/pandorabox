@@ -1,0 +1,9 @@
+Package: ddns-scripts-pandorabox
+Version: 2.4.3-1
+Source: package/pandorabox/network/ddns-scripts-pandorabox
+License: GPL-2.0
+Section: net
+Maintainer: Christian Schoenebeck <christian.schoenebeck@gmail.com>
+Architecture: all
+Installed-Size: 10154
+Description:  Dynamic DNS Client scripts (with IPv6 support) - Info: http://wiki.openwrt.org/doc/howto/ddns.client

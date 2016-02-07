@@ -1,0 +1,10 @@
+Package: kmod-ralink-i2c
+Version: 3.14.56-1
+Depends: kmod-i2c-core
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 2132
+Description:  This package for Ralink I2C Drivers.

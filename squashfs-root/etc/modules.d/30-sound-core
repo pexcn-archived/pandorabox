@@ -1,0 +1,10 @@
+soundcore
+snd
+snd-hwdep
+snd-seq-device
+snd-rawmidi
+snd-timer
+snd-pcm
+snd-mixer-oss
+snd-pcm-oss
+snd-compress

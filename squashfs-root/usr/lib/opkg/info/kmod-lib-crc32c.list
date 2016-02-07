@@ -1,0 +1,2 @@
+/etc/modules.d/lib-crc32c
+/lib/modules/3.14.56/libcrc32c.ko

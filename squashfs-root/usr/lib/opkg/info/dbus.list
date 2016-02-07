@@ -1,0 +1,9 @@
+/usr/bin/dbus-launch.real
+/usr/share/dbus-1/session.conf
+/usr/share/dbus-1/system.conf
+/usr/lib/dbus-1/dbus-daemon-launch-helper
+/usr/sbin/dbus-daemon
+/usr/bin/dbus-uuidgen
+/etc/init.d/dbus
+/lib/upgrade/keep.d/dbus
+/usr/bin/dbus-launch

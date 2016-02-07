@@ -1,0 +1,11 @@
+#debug
+logfile /dev/null
+noipdefault
+noaccomp
+nopcomp
+nocrtscts
+lock
+maxfail 0
+#PPP超时参数设置
+lcp-echo-failure 15  #发送间隔秒
+lcp-echo-interval 3  #重复次数

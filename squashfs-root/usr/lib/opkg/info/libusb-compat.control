@@ -1,0 +1,10 @@
+Package: libusb-compat
+Version: 0.1.4-1
+Depends: libc, libusb-1.0
+Source: package/libs/libusb-compat
+Section: libs
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 5652
+Description:  libusb is a C library that gives applications easy access to USB devices on
+ many different operating systems.

@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -f /proc/lan_ip ]  && [ "$DEVICENAME" = "br-lan" ] && [ "$ACTION" = add ]; then
+       uci get network.lan.ipaddr > /proc/lan_ip
+fi
+
+

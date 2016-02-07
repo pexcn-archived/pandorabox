@@ -1,0 +1,8 @@
+Package: cpulimit-ng
+Version: 1.2-1
+Depends: libc
+Source: package/pandorabox/utils/cpulimit-ng
+Section: utils
+Architecture: ralink
+Installed-Size: 7930
+Description:  CPU Usage Limiter for Linux

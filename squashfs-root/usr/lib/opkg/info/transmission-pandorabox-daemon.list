@@ -1,0 +1,3 @@
+/etc/init.d/transmission
+/usr/bin/transmission-daemon
+/etc/config/transmission

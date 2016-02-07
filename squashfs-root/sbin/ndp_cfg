@@ -1,0 +1,18 @@
+#!/bin/sh
+# odhcpd IPv6 NDP代理自动配置脚本
+# Copyright (c) 2015 GuoGuo <gch981213@gmail.com>
+echo "Setting odhcpd NDP Proxy mode......"
+sh /rom/etc/uci-defaults/12_network-generate-ula 2>&1 > /dev/null
+uci set dhcp.lan.dhcpv6=relay
+uci set dhcp.lan.ndp=relay
+uci set dhcp.lan.ra=relay
+uci delete dhcp.lan.ra_management 2>&1 > /dev/null
+uci set dhcp.wan6=dhcp
+uci set dhcp.wan6.dhcpv6=relay
+uci set dhcp.wan6.ndp=relay
+uci set dhcp.wan6.ra=relay
+uci set dhcp.wan6.master=1
+uci commit
+/etc/init.d/odhcpd restart
+echo "odhcpd NDP Proxy enabled."
+

@@ -1,0 +1,10 @@
+Package: kmod-usb-acm
+Version: 3.14.56-1
+Depends: kmod-usb-core
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 9548
+Description:  Kernel support for USB ACM devices (modems/isdn controllers)

@@ -1,0 +1,9 @@
+Package: luci-app-syncdial
+Version: 0.12+git-4d0a20b-1
+Depends: libc, kmod-macvlan, luci-app-mwan3-pandorabox
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 6503
+Description:  Virtual WAN config generator

@@ -1,0 +1,11 @@
+Package: libexpat
+Version: 2.1.0-3
+Depends: libc
+Source: /home/user/src/openwrt/feeds/packages/libs/expat
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ralink
+Installed-Size: 52455
+Description:  A fast, non-validating, stream-oriented XML parsing library.

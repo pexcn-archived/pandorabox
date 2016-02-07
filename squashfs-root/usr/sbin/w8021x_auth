@@ -1,0 +1,123 @@
+#!/bin/sh
+
+CFG=$1
+
+IFACE=`uci get w8021x.$CFG.interface 2>/dev/null`
+IFNAME=`uci get network.$IFACE.ifname 2>/dev/null`
+
+if [ -z $IFACE ] || [ -z $IFNAME ]; then
+	echo -n 'UNKNOWN'
+	exit 3
+fi
+
+CTRL_IFACE="/var/run/wpa_8021x-${IFNAME}_${CFG}"
+CONF_FILE="${CTRL_IFACE}.conf"
+PID_FILE="${CTRL_IFACE}.pid"
+
+w8021x_logoff $CFG
+
+METHOD=`uci get w8021x.$CFG.method 2>/dev/null`
+IDENTITY=`uci get w8021x.$CFG.identity 2>/dev/null`
+PASSWORD=`uci get w8021x.$CFG.password 2>/dev/null`
+ANONIDENT=
+PHASE2=
+EAPVER=
+EAPLABEL=
+
+EAPTYPE=
+case $METHOD in
+md5)
+	EAPTYPE='MD5'
+	NETTYPE=`uci get w8021x.$CFG.net_type 2>/dev/null`
+
+# 	if ! [ -z ${IDENTITY#*@} ]; then
+# 		IDENTITY=`echo $IDENTITY | cut -d @ -f 1`
+# 	fi
+
+# 	case "$NETTYPE" in
+# 	net)
+# 		IDENTITY=${IDENTITY}@net
+# 	;;
+# 	local)
+# 		IDENTITY=${IDENTITY}@local
+# 	;;
+# 	esac
+;;
+peap)
+	EAPTYPE='PEAP'
+	ANONIDENT=`uci get w8021x.$CFG.anon_ident 2>/dev/null`
+	PHASE2=`uci get w8021x.$CFG.phase2 2>/dev/null`
+	EAPVER=`uci get w8021x.$CFG.eap_ver 2>/dev/null`
+	EAPLABEL=`uci get w8021x.$CFG.eap_label 2>/dev/null`
+
+	case $PHASE2 in
+	peap)
+		PHASE2="auth=MSCHAPV2"
+	;;
+	ttls)
+		PHASE2="autheap=MSCHAPV2 autheap=MD5"
+	;;
+	*)
+		PHASE2="auth=MSCHAPV2"
+	esac
+
+	case $EAPVER in
+	0)
+		EAPVER=0
+	;;
+	*)
+		EAPVER=1
+	esac
+
+	case $EAPLABEL in
+	0)
+		EAPLABEL=0
+	;;
+	*)
+		EAPLABEL=1
+	esac
+;;
+*)
+	echo "The $METHOD method has not been implemented!"
+	exit 1
+esac
+
+if [ -f $CONF_FILE ]; then
+	chmod 666 $CONF_FILE
+	rm -f $CONF_FILE
+fi
+
+echo "ctrl_interface=$CTRL_IFACE" > $CONF_FILE
+echo "ap_scan=0" >> $CONF_FILE
+echo "network={" >> $CONF_FILE
+echo "  key_mgmt=IEEE8021X" >> $CONF_FILE
+echo "  eap=${EAPTYPE}" >> $CONF_FILE
+echo "  identity=\"${IDENTITY}\"" >> $CONF_FILE
+echo "  password=\"${PASSWORD}\"" >> $CONF_FILE
+case $METHOD in
+md5)
+	echo "  eapol_flags=0" >> $CONF_FILE
+;;
+peap)
+	echo "  pairwise=CCMP TKIP" >> $CONF_FILE
+	echo "  anonymous_identity=\"${ANONIDENT}\"" >> $CONF_FILE
+	echo "  phase1=\"peapver=${EAPVER} peaplabel=${EAPLABEL}\"" >> $CONF_FILE
+	echo "  phase2=\"${PHASE2}\"" >> $CONF_FILE
+;;
+esac
+echo "}" >> $CONF_FILE
+
+if ! [ -f $CONF_FILE ]; then
+	echo 'Unable to write wpa_supplicant config file!'
+	exit 1
+fi
+
+wpa_supplicant -B -i $IFNAME -c $CONF_FILE -D wired -P $PID_FILE 2>/dev/null >/dev/null
+
+if [ $? -eq 0 ]; then
+	echo 'Operation succeed'
+	exit 0
+else
+	echo 'Operation failed'
+	exit 1
+fi

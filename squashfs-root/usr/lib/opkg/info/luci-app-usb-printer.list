@@ -1,0 +1,9 @@
+/etc/hotplug.d/usb/10-usb_printer
+/etc/init.d/usb_printer
+/usr/bin/usb_printer_hotplug
+/usr/lib/lua/luci/controller/usb_printer.lua
+/usr/lib/lua/luci/i18n/usb_printer.zh-cn.lmo
+/etc/uci-defaults/luci-usb-printer
+/usr/bin/detectlp
+/usr/lib/lua/luci/model/cbi/usb_printer.lua
+/etc/config/usb_printer

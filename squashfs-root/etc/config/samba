@@ -1,0 +1,7 @@
+config samba
+	option 'name'			'PandoraBox'
+	option 'workgroup'		'WORKGROUP'
+	option 'description'		'PandoraBox Share'
+	option 'homes'			'1'
+	option 'autoshare'		'1'
+

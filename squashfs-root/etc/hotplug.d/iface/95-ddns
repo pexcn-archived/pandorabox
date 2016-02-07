@@ -1,0 +1,11 @@
+#!/bin/sh
+case "$ACTION" in
+	ifup)
+		. /usr/lib/ddns/dynamic_dns_functions.sh
+		/etc/init.d/ddns enabled && start_daemon_for_all_ddns_sections "$INTERFACE"
+		;;
+	ifdown)
+		. /usr/lib/ddns/dynamic_dns_functions.sh
+		stop_daemon_for_all_ddns_sections "$INTERFACE"
+		;;
+esac

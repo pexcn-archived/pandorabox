@@ -1,0 +1,9 @@
+Package: kmod-gpio-dev
+Version: 3.14.56-1
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 1874
+Description:  Kernel module to allows control of GPIO pins using a character device.

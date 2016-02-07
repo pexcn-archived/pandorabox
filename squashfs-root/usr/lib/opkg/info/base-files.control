@@ -1,0 +1,9 @@
+Package: base-files
+Version: 157-r1696
+Depends: libc, netifd, procd, jsonfilter
+Source: package/base-files
+License: GPL-2.0
+Section: base
+Architecture: ralink
+Installed-Size: 50075
+Description:  This package contains a base filesystem and system scripts for OpenWrt.

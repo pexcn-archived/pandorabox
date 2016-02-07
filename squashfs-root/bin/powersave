@@ -1,0 +1,185 @@
+#!/bin/sh
+
+
+usage()
+{
+	echo "Usage:"
+	echo "  $0 cpu      1    - enable CPU autofrequency"
+	echo "  $0 cpu      0    - disable CPU autofrequency"
+	echo "  $0 sdr      1    - enable SDR precharge powersave"
+	echo "  $0 sdr      0    - disable SDR precharge powersave"
+	echo "  $0 ddr      1    - enable DDR self auto refresh"
+	echo "  $0 ddr      0    - disable DDR self auto refresh"
+	echo "  $0 ethernet 1 [port]   - enable Ralink ESW PHY powersave"
+	echo "  $0 ethernet 0 [port]   - disable Ralink ESW PHY powersave"
+	echo "  $0 usb      1    - enable usb powersave"
+	echo "  $0 usb      0    - disable usb powersave"
+	echo "  $0 wireless 1    - enable wireless powersave"
+	echo "  $0 wireless 0    - disable wireless powersave"
+	exit 0
+}
+
+
+
+powersave_ESW()
+{
+        mii_mgr -s -p $1 -r 0 -v 3900
+}
+
+restore_ESW()
+{
+        mii_mgr -s -p $1 -r 0 -v 3100
+}
+
+powersave_SDR()
+{
+	reg s b0000300
+	reg w 1c 1
+	reg m 4 1 28 1 
+}
+
+restore_SDR()
+{
+	reg s b0000300
+	reg w 1c 3FFFF
+	reg m 4 0 28 1 
+}
+
+
+powersave_DDR()
+{
+	reg s b0000300
+	reg w 1c 1
+	reg m 18 1 4 1
+}
+
+restore_DDR()
+{
+	reg s b0000300
+	reg w 1c 3ffff
+	reg m 18 0 4 1
+}
+
+
+dynamic_CPU()
+{
+	reg s b0000000
+        reg w 44 0x1f0112
+	reg w 3c 0x3040101
+	reg w 40 0x35f41
+	reg w 40 0x80035f41
+}
+
+restore_CPU()
+{
+	reg s b0000000
+	reg w 40 0x35f41
+}
+
+
+
+powersave_USB()
+{
+	ifconfig eth0 down
+	ifconfig rai0 down
+	rmmod ohci_hcd
+	rmmod ehci_hcd
+}
+
+restore_USB()
+{
+	insmod -q ehci-hcd
+	insmod -q ohci-hcd
+}
+
+
+powersave_WIFI()
+{
+	ifconfig ra0 down
+	rmmod rt2860v2_ap
+	reg s b0180000
+	reg m 400 0 9 3
+	reg w 1204 8
+	reg w 1004 3
+}
+
+restore_WIFI()
+{
+	insmod -q rt2860v2_ap
+	ifconfig ra0 up
+}
+
+
+
+if [ "$1" = "cpu" ]; then
+	#isc is used to distinguish between 175C and 175D
+	if [ "$2" = "1" ]; then
+			dynamic_CPU
+	elif [ "$2" = "0" ]; then
+			restore_CPU
+	else
+		echo "unknown command $2"
+		echo ""
+		usage $0
+	fi
+
+elif [ "$1" = "sdr" ]; then
+	if [ "$2" = "1" ]; then
+		powersave_SDR
+	elif [ "$2" = "0" ]; then
+		restore_SDR
+	else
+		echo "unknown command $2"
+		echo ""
+		usage $0
+	fi
+
+elif [ "$1" = "ddr" ]; then
+	if [ "$2" = "1" ]; then
+		powersave_DDR
+	elif [ "$2" = "0" ]; then
+		restore_DDR
+	else
+		echo "unknown command type $2"
+		echo ""
+		usage $0
+	fi
+
+elif [ "$1" = "ethernet" ]; then
+	if [ "$2" = "1" ]; then
+		powersave_ESW $3
+	elif [ "$2" = "0" ]; then
+		restore_ESW $3
+	else
+		echo "unknown command $2"
+		echo ""
+		usage $0
+	fi
+
+elif [ "$1" = "usb" ]; then
+	if [ "$2" = "1" ]; then
+		powersave_USB
+	elif [ "$2" = "0" ]; then
+		restore_USB
+	else
+		echo "unknown command $2"
+		echo ""
+		usage $0
+	fi
+
+elif [ "$1" = "wireless" ]; then
+	if [ "$2" = "1" ]; then
+		powersave_WIFI
+	elif [ "$2" = "0" ]; then
+		restore_WIFI
+	else
+		echo "unknown command $2"
+		echo ""
+		usage $0
+	fi
+	
+else
+	echo "unknown power save type $1"
+	echo ""
+	usage $0
+fi

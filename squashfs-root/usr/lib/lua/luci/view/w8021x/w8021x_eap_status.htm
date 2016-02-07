@@ -1,0 +1,34 @@
+<%+cbi/valueheader%>
+
+<script type="text/javascript" src="<%=resource%>/cbi.js"></script>
+<script type="text/javascript">//<![CDATA[
+	function refresh_<%=section%>_button()
+	{
+		XHR.poll(1, '<%=luci.dispatcher.build_url("admin", "network", "w8021x", "status", section)%>', null,
+			function(x, st)
+			{
+				if (st)
+				{
+					var status = st.status;
+					var status_html = "";
+					if (status == "success")
+						status_html = "<span style=\"color: green\"><%:Success%></span>";
+					else if (status == "failure")
+						status_html = "<span style=\"color: red\"><%:Failure%></span>";
+					else if (status == "connecting" || status == "idle")
+						status_html = "<span style=\"color: blue\"><%:Connecting%></span>";
+					else if (status == "free")
+						status_html = "<span style=\"color: gray\"><%:Not authorized%></span>";
+					else
+						status_html = "<span style=\"color: black\"><%:Unknown%></span>";
+
+					document.getElementById("luci-w8021x-<%=section%>-eapstatus").innerHTML = status_html;
+				}
+			}
+		);
+	}
+//]]></script>
+
+<div id="luci-w8021x-<%=section%>-eapstatus"></div>
+
+<script type="text/javascript">refresh_<%=section%>_button();</script>

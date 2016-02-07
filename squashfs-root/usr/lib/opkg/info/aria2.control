@@ -1,0 +1,12 @@
+Package: aria2
+Version: 1.18.7-1
+Depends: libc, zlib, libxml2, libstdcpp, libopenssl
+Source: /home/user/src/openwrt/feeds/packages/net/aria2
+License: GPLv2
+LicenseFiles: COPYING
+Section: net
+Maintainer: Imre Kaloz <kaloz@openwrt.org>
+Architecture: ralink
+Installed-Size: 946969
+Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
+ utility

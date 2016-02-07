@@ -1,0 +1,11 @@
+Package: kmod-usb-storage-extras
+Version: 3.14.56-1
+Depends: kmod-usb-storage
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 30663
+Description:  Say Y here if you want to have some more drivers,
+ such as for SmartMedia card readers

@@ -1,0 +1,12 @@
+Package: uhttpd
+Version: 2015-05-31-daeea305298197bb50c1e63cdd842ee1d9461d80
+Depends: libc, libubox
+Source: package/network/services/uhttpd
+License: ISC
+Section: net
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 21790
+Description:  uHTTPd is a tiny single threaded HTTP server with TLS, CGI and Lua
+ support. It is intended as a drop-in replacement for the Busybox
+ HTTP daemon.

@@ -1,0 +1,8 @@
+Package: uboot-envtools
+Version: 2014.04-4
+Depends: libc
+Source: package/boot/uboot-envtools
+Section: utils
+Architecture: ralink
+Installed-Size: 10698
+Description:  This package includes tools to read and modify U-Boot bootloader environment.

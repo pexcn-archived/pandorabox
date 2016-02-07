@@ -1,0 +1,9 @@
+Package: luci-proto-3g
+Version: 0.12+git-4d0a20b-1
+Depends: libc, comgt
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 2026
+Description:  Support for 3G

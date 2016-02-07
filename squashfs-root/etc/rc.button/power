@@ -1,0 +1,25 @@
+#!/bin/sh
+
+[ "${ACTION}" = "released" ] || exit 0
+
+#exec /sbin/poweroff
+
+. /lib/functions.sh
+
+. /lib/ralink.sh
+
+logger "$BUTTON pressed for $SEEN seconds"
+
+
+case $(ralink_board_name) in
+	m1-jd)
+		echo "Power Pressed" > /dev/console
+		echo 1 > /sys/class/leds/jd-led-blue-flush/brightness
+		sleep 2
+
+		sync && reboot
+		;;
+	*)
+		exec /sbin/poweroff
+		;;
+esac

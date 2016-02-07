@@ -1,0 +1,9 @@
+Package: luci-app-shadowsocks
+Version: 0.12+git-4d0a20b-1
+Depends: libc, shadowsocks-libev
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 3650
+Description:  Shadowsocks config page

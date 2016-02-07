@@ -1,0 +1,11 @@
+Package: libpcre
+Version: 8.37-2
+Depends: libc
+Source: /home/user/src/openwrt/feeds/packages/libs/pcre
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Section: libs
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Architecture: ralink
+Installed-Size: 83119
+Description:  A Perl Compatible Regular Expression library

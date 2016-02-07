@@ -1,0 +1,9 @@
+Package: kmod-mmc
+Version: 3.14.56-1
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 56667
+Description:  Kernel support for MMC/SD cards

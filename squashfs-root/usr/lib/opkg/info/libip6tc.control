@@ -1,0 +1,9 @@
+Package: libip6tc
+Version: 1.4.21-1
+Depends: libc, libxtables
+Source: package/network/utils/iptables
+License: GPL-2.0
+Section: libs
+Architecture: ralink
+Installed-Size: 16489
+Description:  IPv6 firewall - shared libiptc library

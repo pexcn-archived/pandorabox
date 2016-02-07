@@ -1,0 +1,3 @@
+/usr/lib/lua/luci/model/cbi/sqm.lua
+/etc/uci-defaults/luci-sqm
+/usr/lib/lua/luci/controller/sqm.lua

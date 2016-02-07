@@ -1,0 +1,8 @@
+/usr/lib/ddns/services_ipv6
+/usr/lib/ddns/dynamic_dns_updater.sh
+/etc/init.d/ddns
+/etc/hotplug.d/iface/95-ddns
+/usr/lib/ddns/services
+/etc/config/ddns
+/usr/lib/ddns/dynamic_dns_functions.sh
+/usr/lib/ddns/dynamic_dns_lucihelper.sh

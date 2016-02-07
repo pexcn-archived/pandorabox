@@ -1,0 +1,10 @@
+Package: terminfo
+Version: 5.9-1
+Depends: libc
+Source: package/libs/ncurses
+License: FREE
+LicenseFiles: README
+Section: libs
+Architecture: ralink
+Installed-Size: 5778
+Description:  Terminal Info Database (ncurses)

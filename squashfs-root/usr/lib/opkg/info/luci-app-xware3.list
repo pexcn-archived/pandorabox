@@ -1,0 +1,5 @@
+/etc/uci-defaults/luci-xware3
+/usr/lib/lua/luci/model/cbi/xware3.lua
+/usr/lib/lua/luci/controller/xware3.lua
+/etc/init.d/xware3
+/etc/config/xware3

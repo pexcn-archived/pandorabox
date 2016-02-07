@@ -1,0 +1,4 @@
+/etc/uci-defaults/luci-uhttpd
+/usr/lib/lua/luci/controller/uhttpd.lua
+/usr/lib/lua/luci/i18n/uhttpd.zh-cn.lmo
+/usr/lib/lua/luci/model/cbi/uhttpd.lua

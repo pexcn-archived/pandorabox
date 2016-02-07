@@ -1,0 +1,8 @@
+Package: agentx1
+Version: 1
+Depends: libc, libpthread
+Source: package/pandorabox/network/agentx1
+Section: net
+Architecture: ralink
+Installed-Size: 8252
+Description:  Agentx1 for  802.1X client

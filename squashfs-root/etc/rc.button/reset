@@ -1,0 +1,101 @@
+#!/bin/sh
+# Copyright (c) 2013 OpenWrt
+# Copyright (C) 2014 D-Team Technology Co.,Ltd. ShenZhen
+# Copyright (c) 2005-2015, lintel <lintel.huang@gmail.com>
+#   
+#   按键响应脚本
+#    
+#     警告:对着屏幕的哥们,我们允许你使用此脚本，但不允许你抹去作者的信息,请保留这段话。
+#
+
+[ "${ACTION}" = "released" ] || exit 0
+
+. /lib/functions.sh
+
+. /lib/ralink.sh
+
+
+reset_leds=`ls /sys/class/leds`
+	
+led_set_attr() {
+	[ -f "/sys/class/leds/$1/$2" ] && echo "$3" > "/sys/class/leds/$1/$2"
+}
+
+reset_led_set_timer() {
+	led_set_attr $1 "trigger" "timer"
+	led_set_attr $1 "delay_on" "$2"
+	led_set_attr $1 "delay_off" "$3"
+}
+
+reset_led_on() {
+	led_set_attr $1 "trigger" "none"
+	led_set_attr $1 "brightness" 255
+}
+
+reset_led_off() {
+	led_set_attr $1 "trigger" "none"
+	led_set_attr $1 "brightness" 0
+}
+
+reset_led_trigger() {
+  
+  local led;
+  for led in $reset_leds; do
+    reset_led_set_timer "$led" 50 50;
+  done
+	
+  sleep 1
+	
+  for led in $reset_leds; do
+    reset_led_off "$led";
+  done
+}
+
+case $(ralink_board_name) in
+      m1-jd)
+	reset_leds="jd-led-green-flush"
+	;;
+	*)
+	reset_leds=`ls /sys/class/leds`
+	;;
+esac
+
+logger "$BUTTON pressed for $SEEN seconds"
+
+if [ "$SEEN" -lt 2 ]
+then
+{
+	case $(ralink_board_name) in
+	vg100 | \
+	timecloud)
+		return
+		;;
+	*)
+		echo "WPS Pressed" > /dev/console
+		sync
+		wps_pbc
+		;;
+	esac
+
+}
+elif [ "$SEEN" -gt 2 ]
+then
+{
+	echo "FACTORY RESET" > /dev/console
+	case $(ralink_board_name) in
+	m1-jd)
+		reset_led_trigger
+		sleep 3
+		
+		reset_leds="jd-led-blue"
+		reset_led_on  $reset_leds
+		
+		sync && jffs2reset -y && reboot
+		;;
+	*)
+		reset_led_trigger
+		sync && jffs2reset -y && reboot
+		;;
+	esac
+}
+fi

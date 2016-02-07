@@ -1,0 +1,21 @@
+#!/bin/sh
+# Copyright (c) 2013 OpenWrt
+# Copyright (C) 2014 D-Team Technology Co.,Ltd. ShenZhen
+# Copyright (c) 2005-2014, lintel <lintel.huang@gmail.com>
+#
+#    WPS_PBC脚本
+#
+#     警告:对着屏幕的哥们,我们允许你使用此脚本，但不允许你抹去作者的信息,请保留这段话。
+#
+
+ifnames="ra0 rai0 rausb0"
+
+for ifname in $ifnames; do
+  logger -t "$ifname" "WPS PBC Started !"
+  iwpriv $ifname set WscConfMode=7
+  iwpriv $ifname set WscMode=2
+  iwpriv $ifname set WscGetConf=1
+done
+  
+
+

@@ -1,0 +1,2 @@
+/lib/modules/3.14.56/gspca_main.ko
+/etc/modules.d/video-gspca-core

@@ -1,0 +1,66 @@
+config bandwidth 'main'
+	option enabled      '0'
+	option download     '4096'
+	option upload       '1024'
+	option packets_frist     '0'
+	option packets_threshold '128'
+#每隔多久清零惩罚
+#for monthly
+#	option type 'monthly'
+#	option day '15'
+#	option hour '5'
+	
+#for weekly
+#	option type 'weekly'
+#	option week '2'
+#	option hour '5'
+
+#for daily
+	option type 'daily'
+	option hour '6'
+
+#for hour
+#	option type 'hourly'
+
+config client_ip
+	option priority 	'3'
+	
+	option ipaddr 		'192.168.1.100-192.168.1.200'
+#惩罚开始之后限速
+	option download		'1024'
+	option upload		'256'
+#多少KByte之后开始惩罚
+	option download_threshold '1024000'
+	option upload_threshold	'256000'
+	
+	option ports 		'20,25,80,443,53'
+	option comment		'ftp,smtp,http,dns'
+	
+config client_ip
+	option priority 	'3'
+	
+	option ipaddr 		'192.168.1.220'
+	
+	option upload		'256'
+	option download		'1024'
+	
+	option upload_threshold	'256'
+	option download_threshold '1024'
+	
+	option ports 		'20,25,80,443,53'
+	option comment		'ftp,smtp,http,dns'
+	
+config client_mac
+	option priority 	'4'
+	
+	option macaddr 		'00:e0:4c:41:24:2c'
+	
+	option upload		'256'
+	option download		'1024'
+	
+	option upload_threshold	'256'
+	option download_threshold '1024'
+	
+	option ports 		'20,25,80,443,53'
+	
+	option comment		'ftp,smtp,http,dns'

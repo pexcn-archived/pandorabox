@@ -1,0 +1,4 @@
+/usr/lib/lua/luci/controller/shadowsocks.lua
+/usr/lib/lua/luci/model/cbi/shadowsocks.lua
+/etc/uci-defaults/luci-shadowsocks
+/usr/lib/lua/luci/i18n/ss-spec.zh-cn.lmo

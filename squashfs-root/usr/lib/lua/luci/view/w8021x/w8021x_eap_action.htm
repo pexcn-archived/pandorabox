@@ -1,0 +1,60 @@
+<%+cbi/valueheader%>
+
+<script type="text/javascript" src="<%=resource%>/cbi.js"></script>
+<script type="text/javascript">//<![CDATA[
+
+	function do_<%=section%>_auth()
+	{
+		XHR.get('<%=luci.dispatcher.build_url("admin", "network", "w8021x", "auth", section)%>', null,
+			function(x, st)
+			{
+			}
+		);
+	}
+
+	function do_<%=section%>_logoff()
+	{
+		XHR.get('<%=luci.dispatcher.build_url("admin", "network", "w8021x", "logoff", section)%>', null,
+			function(x, st)
+			{
+			}
+		);
+	}
+
+	function refresh_<%=section%>_button()
+	{
+		XHR.poll(1, '<%=luci.dispatcher.build_url("admin", "network", "w8021x", "status", section)%>', null,
+			function(x, st)
+			{
+				if (st)
+				{
+					var status = st.status;
+					var button_name = "";
+					var button_action;
+					if (status == "success")
+					{
+						button_name = "<%:Logoff%>";
+						button_action = do_<%=section%>_logoff;
+					}
+					else if (status == "failure" || status == "free")
+					{
+						button_name = "<%:Authenticate%>";
+						button_action = do_<%=section%>_auth;
+					}
+					else
+					{
+						button_name = "<%:Abort%>";
+						button_action = do_<%=section%>_logoff;
+					}
+
+					document.getElementById("cbi-w8021x-<%=section%>-action").value = button_name;
+					document.getElementById("cbi-w8021x-<%=section%>-action").onclick = button_action;
+				}
+			}
+		);
+	}
+//]]></script>
+
+<input class="cbi-button cbi-input-save" id="cbi-w8021x-<%=section%>-action" type="button" value="<%:None%>" />
+
+<script type="text/javascript">refresh_<%=section%>_button();</script>

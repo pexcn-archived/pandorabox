@@ -1,0 +1,12 @@
+/usr/lib/lua/luci/i18n/w8021x.zh-cn.lmo
+/usr/lib/lua/luci/model/cbi/w8021x/item.lua
+/usr/lib/lua/luci/view/w8021x/w8021x_eap_status.htm
+/usr/sbin/w8021x_status
+/usr/sbin/w8021x_logoff
+/etc/init.d/w8021x
+/usr/lib/lua/luci/view/w8021x/w8021x_eap_action.htm
+/etc/config/w8021x
+/usr/sbin/w8021x_auth
+/usr/sbin/w8021x_ctrl
+/usr/lib/lua/luci/model/cbi/w8021x.lua
+/usr/lib/lua/luci/controller/w8021x.lua

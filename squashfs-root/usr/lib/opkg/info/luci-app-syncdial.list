@@ -1,0 +1,9 @@
+/usr/lib/lua/luci/model/cbi/syncdial.lua
+/bin/pppconnectcheck
+/bin/genwancfg
+/usr/lib/lua/luci/i18n/mwan3.zh-cn.lmo
+/usr/lib/lua/luci/view/syncdial/redial_button.htm
+/etc/uci-defaults/luci-syncdial
+/usr/lib/lua/luci/controller/syncdial.lua
+/etc/config/syncdial
+/etc/hotplug.d/iface/01-dialcheck

@@ -1,0 +1,7 @@
+Package: kmod-mt76x2e
+Version: 3.14.56-1
+Source: package/ralink/drivers/mt76x2e
+Section: kernel
+Architecture: ralink
+Installed-Size: 853149
+Description:  Ralink mt76x2e wifi AP driver

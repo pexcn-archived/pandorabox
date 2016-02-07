@@ -1,0 +1,9 @@
+Package: iptables-mod-geoip
+Version: 2.3-1
+Depends: libc, iptables, kmod-ipt-geoip
+Source: package/network/utils/xtables-addons
+Section: net
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ralink
+Installed-Size: 3095
+Description:  geoip iptables extension

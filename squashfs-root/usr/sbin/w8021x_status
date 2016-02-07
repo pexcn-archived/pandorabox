@@ -1,0 +1,56 @@
+#!/bin/sh
+
+CFG=$1
+
+IFACE=`uci get w8021x.$CFG.interface 2>/dev/null`
+IFNAME=`uci get network.$IFACE.ifname 2>/dev/null`
+
+if [ -z $IFACE ] || [ -z $IFNAME ]; then
+	echo -n 'UNKNOWN'
+	exit 3
+fi
+
+CTRL_IFACE=/var/run/wpa_8021x-${IFNAME}_${CFG}
+
+if ! [ -d "${CTRL_IFACE}" ]; then
+	echo -n 'NONE'
+	exit 4
+fi
+
+EAP_STATUS_STR=`wpa_cli -i $IFNAME -p "$CTRL_IFACE" status 2>/dev/null | grep "EAP state="`
+EAP_STATUS=${EAP_STATUS_STR#*=}
+if [ -z $EAP_STATUS ]; then
+	EAP_STATUS='UNKNOWN'
+fi
+
+case $EAP_STATUS in
+SUCCESS)
+	echo -n 'SUCCESS'
+	exit 0
+;;
+FAILURE)
+	echo -n 'FAILURE'
+	exit 1
+;;
+IDLE)
+	PAE_STATUS_STR=`wpa_cli -i $IFNAME -p "$CTRL_IFACE" status 2>/dev/null | grep "Supplicant PAE state="`
+	PAE_STATUS=${PAE_STATUS_STR#*=}
+
+	case $PAE_STATUS in
+	CONNECTING)
+		echo -n 'CONNECTING'
+	;;
+	HELD)
+		echo -n 'FAILURE'
+		exit 1
+	;;
+	*)
+		echo -n 'IDLE'
+	esac
+
+	exit 2
+;;
+*)
+	echo -n $EAP_STATUS
+	exit 3
+esac

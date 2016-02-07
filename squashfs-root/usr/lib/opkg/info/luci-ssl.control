@@ -1,0 +1,9 @@
+Package: luci-ssl
+Version: 0.12+git-4d0a20b-1
+Depends: libc, luci, libustream-polarssl, px5g
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 105
+Description:  Standard OpenWrt set with HTTPS support

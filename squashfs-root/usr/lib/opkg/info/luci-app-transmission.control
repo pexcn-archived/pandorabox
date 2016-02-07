@@ -1,0 +1,9 @@
+Package: luci-app-transmission
+Version: 0.12+git-4d0a20b-1
+Depends: libc, transmission-pandorabox-daemon
+Source: package/pandorabox/webs/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 26825
+Description:  LuCI Support for Transmission

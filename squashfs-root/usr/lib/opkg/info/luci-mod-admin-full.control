@@ -1,0 +1,9 @@
+Package: luci-mod-admin-full
+Version: 0.12+git-4d0a20b-1
+Depends: libc, luci-base, ipbandwidth-app
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 89156
+Description:  LuCI Administration - full-featured for full control

@@ -1,0 +1,12 @@
+/usr/lib/sqm/simplest.qos
+/etc/hotplug.d/iface/11-sqm
+/usr/lib/sqm/simple_pppoe.qos.help
+/usr/lib/sqm/run.sh
+/etc/init.d/sqm
+/usr/lib/sqm/simple.qos.help
+/usr/lib/sqm/simple.qos
+/usr/lib/sqm/stop.sh
+/usr/lib/sqm/simple_pppoe.qos
+/usr/lib/sqm/functions.sh
+/usr/lib/sqm/simplest.qos.help
+/etc/config/sqm

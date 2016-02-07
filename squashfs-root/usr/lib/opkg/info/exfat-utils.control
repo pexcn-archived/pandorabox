@@ -1,0 +1,8 @@
+Package: exfat-utils
+Version: 1.2.1-1
+Depends: libc, kmod-fs-exfat
+Source: package/pandorabox/utils/exfat-utils
+Section: utils
+Architecture: ralink
+Installed-Size: 67976
+Description:  exFAT file system utils

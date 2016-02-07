@@ -1,0 +1,10 @@
+Package: kmod-usb-serial-ftdi
+Version: 3.14.56-1
+Depends: kmod-usb-serial
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 10465
+Description:  Kernel support for FTDI USB-to-Serial converters

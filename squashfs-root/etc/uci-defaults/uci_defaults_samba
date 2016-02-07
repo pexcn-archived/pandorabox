@@ -1,0 +1,40 @@
+#!/bin/sh
+# Copyright (c) 2013 OpenWrt
+# Copyright (C) 2014 D-Team Technology Co.,Ltd. ShenZhen
+# Copyright (c) 2005-2014, lintel <lintel.huang@gmail.com>
+#
+#
+#     警告:对着屏幕的哥们,我们允许你使用此脚本，但不允许你抹去作者的信息,请保留这段话。
+# 
+
+. /lib/functions.sh
+
+[ -f /lib/ralink.sh ] &&  {
+  . /lib/ralink.sh
+  board=$(ralink_board_name)
+}
+
+lan_mac=$(cat /sys/class/net/eth0/address)
+
+[ -n "$lan_mac" ] || return
+
+case $board in
+  timecloud )
+  samba_name="TIMEPLUG${i#0}_$( echo $lan_mac | awk -F ":" '{print $5""$6 }'| tr a-z A-Z)"
+  [ -f /etc/config/samba ] && uci set samba.@samba[0].master="no"
+  ;;
+  
+  *)
+  samba_name="PandoraBox${i#0}_$( echo $lan_mac | awk -F ":" '{print $5""$6 }'| tr a-z A-Z)"
+  ;;
+esac
+
+[ -f /etc/config/samba ] && {
+uci set samba.@samba[0].name="$samba_name"
+uci commit samba
+}
+[ $(uci get system.@system[0].hostname) = "PandoraBox" ] && {
+uci set system.@system[0].hostname="$samba_name"
+uci commit system
+echo "$samba_name" > /proc/sys/kernel/hostname
+}

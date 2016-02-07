@@ -1,0 +1,37 @@
+#!/bin/sh
+
+if [ ! /etc/init.d/miniupnpd enabled ]
+then
+    exit 0
+fi
+
+. /lib/functions/service.sh
+
+# If miniupnpd is not running:
+# - check on _any_ event (even updates may contribute to network_find_wan*)
+
+# If miniupnpd _is_ running:
+# - check only on ifup (otherwise lease updates etc would cause
+#   miniupnpd state loss)
+
+[ ! "$ACTION" = "ifup" ] && service_check /usr/sbin/miniupnpd && exit 0
+
+# DEVICE is set only in ifup as of 20140625 netifd
+[ -z "$DEVICE" ] && network_get_device DEVICE $INTERFACE
+
+local iface
+local ext_iface
+local ext_iface6
+
+. /lib/functions/network.sh
+network_find_wan ext_iface
+network_find_wan6 ext_iface6
+
+for iface in $ext_iface $ext_iface6 $(uci_get upnpd config internal_iface; uci_get upnpd config external_iface); do
+    network_get_device device $iface
+    [ "$DEVICE" = "$device" ] && /etc/init.d/miniupnpd restart && exit 0
+done
+
+for device in $(fw3 -q zone `uci_get upnpd config external_zone`); do
+    [ "$DEVICE" = "$device" ] && /etc/init.d/miniupnpd restart && exit 0
+done

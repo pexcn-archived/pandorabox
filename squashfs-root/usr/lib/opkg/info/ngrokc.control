@@ -1,0 +1,8 @@
+Package: ngrokc
+Version: b123ae70b3-1
+Depends: libc, libpthread, libpolarssl, libstdcpp
+Source: package/pandorabox/network/ngrokc
+Section: net
+Architecture: ralink
+Installed-Size: 27928
+Description:  Secure tunnels to localhost(C++ port)

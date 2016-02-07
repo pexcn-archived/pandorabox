@@ -1,0 +1,2 @@
+/etc/modules.d/50-ledtrig-heartbeat
+/lib/modules/3.14.56/ledtrig-heartbeat.ko

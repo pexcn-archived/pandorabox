@@ -1,0 +1,47 @@
+#!/bin/sh
+
+[ -f /tmp/system_load ] && {
+echo "already running,restart..."
+killall cat
+rm -rf  /tmp/system_load
+}
+
+echo "system load starting..."
+
+cat /dev/zero > /dev/null &
+cat /dev/zero > /dev/null &
+cat /dev/zero > /dev/null &
+cat /dev/zero > /dev/null &
+
+
+leds=`ls /sys/class/leds/`
+for led in $leds; do
+echo "enable led:$led"
+echo timer >  /sys/class/leds/$led/trigger
+echo 500 >  /sys/class/leds/$led/delay_on
+echo 500 >  /sys/class/leds/$led/delay_off
+done
+
+vifs="ra0 rai0"
+
+for vif in $vifs ; do
+echo "Start WiFi($vif) TX..."
+iwpriv $vif set ATE=ATESTART
+iwpriv $vif set ATEDA=00:11:22:33:44:55
+iwpriv $vif set ATESA=00:aa:bb:cc:dd:ee
+iwpriv $vif set ATEBSSID=00:11:22:33:44:55
+iwpriv $vif set ATECHANNEL=1
+iwpriv $vif set ATETXMODE=1
+iwpriv $vif set ATETXMCS=7
+iwpriv $vif set ATETXBW=0
+iwpriv $vif set ATETXGI=0
+iwpriv $vif set ATETXLEN=1024
+iwpriv $vif set ATETXPOW0=18
+iwpriv $vif set ATETXPOW1=18
+iwpriv $vif set ATETXCNT=100000
+iwpriv $vif set ATE=TXFRAME
+iwpriv $vif set ATETXPOW0=19
+iwpriv $vif set ATETXPOW0=20
+done
+
+touch /tmp/system_load

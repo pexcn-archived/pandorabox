@@ -1,0 +1,16 @@
+Package: iptables-mod-tproxy
+Version: 1.4.21-1
+Depends: libc, iptables, kmod-ipt-tproxy
+Source: package/network/utils/iptables
+License: GPL-2.0
+Section: net
+Architecture: ralink
+Installed-Size: 2766
+Description:  Transparent proxy iptables extensions.
+ 
+ Matches:
+ - socket
+ 
+ Targets:
+ - TPROXY
+ 

@@ -1,0 +1,10 @@
+Package: ubi-utils
+Version: 1.5.1-2
+Depends: libc
+Source: package/utils/ubi-utils
+License: GPLv2
+Section: utils
+Maintainer: John Crispin <blogic@openwrt.org>
+Architecture: ralink
+Installed-Size: 75386
+Description:  Utilities for manipulating memory technology devices.

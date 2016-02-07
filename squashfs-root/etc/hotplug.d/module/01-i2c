@@ -1,0 +1,14 @@
+#!/bin/sh
+logger -t i2c "ACTION=$ACTION DEVICENAME=$DEVICENAME"
+
+[ $ACTION = "add" ] || break;
+
+case "$DEVICENAME" in
+    rtc*)
+        logger -t i2c "The (i2c) rtc chip:$DEVICENAME sync the time."
+		hwclock -s
+		;;
+    *)
+        logger -t i2c "The (i2c) rtc chip:$DEVICENAME is not support yet."
+		;;
+esac

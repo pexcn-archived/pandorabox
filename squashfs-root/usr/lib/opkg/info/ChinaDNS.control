@@ -1,0 +1,8 @@
+Package: ChinaDNS
+Version: 1.3.2-9e4261c78e-1
+Depends: libc
+Source: package/pandorabox/network/ChinaDNS
+Section: net
+Architecture: ralink
+Installed-Size: 26669
+Description:  A DNS forwarder that ignores incorrect(you knew it) responses.

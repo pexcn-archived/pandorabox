@@ -1,0 +1,7 @@
+Package: kmod-showspeed
+Version: 3.14.56-1
+Source: package/pandorabox/network/showspeed
+Section: kernel
+Architecture: ralink
+Installed-Size: 6375
+Description:  PandoraBox network speed display module
