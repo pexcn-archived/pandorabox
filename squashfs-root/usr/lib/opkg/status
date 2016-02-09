@@ -743,15 +743,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 
-Package: uclibcxx
-Version: 0.2.4-1
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181149
-Auto-Installed: yes
-
 Package: libblobmsg-json
 Version: 2015-09-15-136a5196266d03d537f822c4e67d2fde2ed59505
 Depends: libc, libjson-c, libubox
@@ -961,14 +952,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
-
-Package: usbreset
-Version: 4
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
 
 Package: kmod-nls-base
 Version: 3.14.56-1
