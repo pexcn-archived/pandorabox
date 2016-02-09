@@ -32,6 +32,14 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 
+Package: openssh-sftp-server
+Version: 6.6p1-1
+Depends: libc
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1455021335
+
 Package: luci-theme-xeye
 Version: 0.12+git-4d0a20b-1
 Depends: libc
@@ -179,6 +187,14 @@ Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
+
+Package: nano
+Version: 2.3.6-1
+Depends: libc, libncurses
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1455021323
 
 Package: kmod-tun
 Version: 3.14.56-1
@@ -525,6 +541,14 @@ Conffiles:
  /etc/config/dropbear 1a8a7b0ed5575b4cfd4deb42c3b0ed8a7f
 Installed-Time: 1448181148
 
+Package: curl
+Version: 7.38.0-1
+Depends: libc, libcurl
+Provides:
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1455021349
+
 Package: kmod-nls-utf8
 Version: 3.14.56-1
 Depends: kmod-nls-base
@@ -775,6 +799,15 @@ Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
+Auto-Installed: yes
+
+Package: libncurses
+Version: 5.9-1
+Depends: libc, terminfo
+Provides:
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1455021323
 Auto-Installed: yes
 
 Package: kmod-ipt-core
