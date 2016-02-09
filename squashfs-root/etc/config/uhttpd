@@ -15,12 +15,13 @@ config uhttpd main
 	#list interpreter ".cgi=/usr/bin/perl"
 	#option lua_prefix /luci
 	#option lua_handler /usr/lib/lua/luci/sgi/uhttpd.lua
-	#option ubus_prefix /ubus
 	#option ubus_socket /var/run/ubus.sock
 	option script_timeout 60
 	option network_timeout 30
 	option http_keepalive 20
 	option tcp_keepalive 1
+	option ubus_prefix /ubus
+	list index_page cgi-bin/luci
 	#option realm OpenWrt
 	#option config /etc/httpd.conf
 	#option no_symlinks 0
