@@ -558,14 +558,6 @@ Architecture: ralink
 Installed-Time: 1448181148
 Auto-Installed: yes
 
-Package: libstdcpp
-Version: 4.8-linaro-1
-Provides:
-Status: install hold installed
-Essential: yes
-Architecture: ralink
-Installed-Time: 1448181151
-
 Package: mtd
 Version: 20
 Depends: libc, libubox
