@@ -1,21 +1,10 @@
 #!/bin/sh
-#
-# Copyright (c) 2014 OpenWrt
-# Copyright (C) 2013-2015 D-Team Technology Co.,Ltd. ShenZhen
-# Copyright (c) 2005-2015, lintel <lintel.huang@gmail.com>
-# Copyright (c) 2013, Hoowa <hoowa.sun@gmail.com>
-# Copyright (c) 2015, GuoGuo <gch981213@gmail.com>
-#
-# 	描述:RT2860v2 2.4G无线驱动netifd配置脚本
-#
-# 	嘿，对着屏幕的哥们,为了表示对原作者辛苦工作的尊重，任何引用跟借用都不允许你抹去所有作者的信息,请保留这段话。
-#
+
 . /lib/netifd/netifd-wireless.sh
 . /lib/wifi/librt2860v2.sh
 
 init_wireless_driver "$@"
 
-#读取device相关设置项并写入json
 drv_rt2860v2_init_device_config() { 
 	config_add_string channel hwmode htmode country
 	config_add_int beacon_int chanbw frag rts txburst
@@ -48,7 +37,6 @@ drv_rt2860v2_init_device_config() {
 		short_preamble
 }
 
-#读取iface相关设置项并写入json
 drv_rt2860v2_init_iface_config() { 
 	config_add_boolean disabled
 	config_add_string mode bssid ssid encryption
@@ -75,7 +63,6 @@ rt2860v2_ap_vif_pre_config() {
 	echo "Ralink_AP:Generating ap config for interface ra${ApBssidNum}"
 	ifname="ra${ApBssidNum}"
 
-	#MAC过滤方式相关设定 由于编号问题......我扔在这了......
 	ra_maclist="${maclist// /;};"
 	case "$macpolicy" in
 	allow)
@@ -91,8 +78,8 @@ rt2860v2_ap_vif_pre_config() {
 	esac
 
 	let ApBssidNum+=1
-	echo "SSID$ApBssidNum=${ssid}" >> $CFG_FILES_1ST #SSID
-	case "$encryption" in #加密方式
+	echo "SSID$ApBssidNum=${ssid}" >> $CFG_FILES_1ST
+	case "$encryption" in
 	wpa*|psk*|WPA*|Mixed|mixed)
 		local enc
 		local crypto
@@ -218,7 +205,7 @@ rt2860v2_sta_vif_connect() {
 		return
 	}
 	
-#降低速率，默认以HT20连接保证最大兼容
+	# 降低速率 默认以HT20连接保证最大兼容
 	[ "$CFG_RT2860V2_1ST_FORCE_HT40" != "1" ] && {
 	  #rt2860v2_dbg "apcli:Auto Fall Back to HT20"
 	  iwpriv ra0 set AutoFallBack=1
@@ -240,7 +227,6 @@ rt2860v2_sta_vif_connect() {
 	wireless_add_vif "$name" "apcli0"
 }
 
-#cleanup 什么都不做
 drv_rt2860v2_cleanup() {
 
 #	[ $(is_mt76x2e) == "1" ] && return
@@ -254,13 +240,11 @@ drv_rt2860v2_cleanup() {
 	return
 }
 
-#下线全部接口
 drv_rt2860v2_teardown() {
 #	for_each_interface "sta" wireless_process_kill_all
 	rt2860v2_shutdown_if "2.4G"
 }
 
-#接口启动
 drv_rt2860v2_setup() {
 	json_select config
 	json_get_vars main_if channel mode hwmode wmm htmode \
@@ -273,9 +257,8 @@ drv_rt2860v2_setup() {
 #	echo "Ralink_Global:All json data here:"
 #	json_dump
 
-#检查配置文件目录是否存在，否则创建目录
 	[ ! -d $CFG_FILES_DIR ] && mkdir $CFG_FILES_DIR
-#默认无线模式为11b/g/n mixed
+	# 默认无线模式为11b/g/n mixed
 	WirelessMode=9
 
 	hwmode=${hwmode##11}
@@ -288,17 +271,17 @@ drv_rt2860v2_setup() {
 		;;
 	esac
 	
-#不存在HTMode设置时（即luci设置模式为Legacy）则切换到11b/g mixed
+	# 不存在HTMode设置时 (即luci设置模式为Legacy) 则切换到11b/g mixed
 	[ -z "$htmode" ] && WirelessMode=0
 	
-#HT默认模式设定
-	HT_BW=1  #允许HT40
-	HT_CE=1  #允许HT20/40共存
-	HT_AutoBA=1 #自动HT带宽
-	HT_DisallowTKIP=0 #是否允许TKIP加密
+	# HT默认模式设定
+	HT_BW=1  # 允许HT40
+	HT_CE=1  # 允许HT20/40共存
+	HT_AutoBA=1 # 自动HT带宽
+	HT_DisallowTKIP=0 # 是否允许TKIP加密
 
-	#HT_MIMOPSMode用于省电模式设置
-	#HT_MIMOPSMode=3
+	# HT_MIMOPSMode用于省电模式设置
+	# HT_MIMOPSMode=3
 	
 	case "$htmode" in
 		HT20) 
@@ -312,31 +295,30 @@ drv_rt2860v2_setup() {
 		;;
 	esac
 
-#仅HT20以外才需要设置的参数
+# 仅HT20以外才需要设置的参数
 [ "$htmode" != "HT20" ] && {
-  #强制HT40/VHT80
+    # 强制HT40/VHT80
 	[ "$noscan" == "1" ] && HT_CE=0 && CFG_RT2860V2_1ST_FORCE_HT40=1
-  #HT HTC
+    # HT HTC
 	[ "$ht_htc" == "1" ] && HT_HTC=1
 }
     
-#自动处理CountryRegion:指定信道的时候支持全频段
+	# 自动处理CountryRegion:指定信道的时候支持全频段
     [ "$channel" != "auto" ] && {
 	   countryregion=5
     }
 
-#第二信道自动切换
+	# 第二信道自动切换
     EXTCHA=0
     [ "$channel" != "auto" ] && [ "$channel" -lt "7" ] && EXTCHA=1
 
-#自动选择无线频道
+	# 自动选择无线频道
     [ "$channel" == "auto" ] && {
 	channel=6
-        AutoChannelSelect=2 #增强型自动频道选择
+        AutoChannelSelect=2 # 增强型自动频道选择
         countryregion=1
     }
     
-#设备配置文件生成
 	cat > $CFG_FILES_1ST <<EOF
 #The word of "Default" must not be removed
 Default
@@ -564,9 +546,9 @@ EDCCA=0
 HtMimoPs=0
 EOF
 
-#接口配置生成
-#	AP模式
-#	统一设置的内容:
+	# 接口配置生成
+	# AP模式
+	# 统一设置的内容
 	ApEncrypType=""
 	ApAuthMode=""
 	ApBssidNum=0
@@ -588,31 +570,27 @@ EOF
 	echo "Key3Type=${ApK3Tp}" >> $CFG_FILES_1ST
 	echo "Key4Type=${ApK4Tp}" >> $CFG_FILES_1ST
 
-#	STA模式
+	# STA模式
 	stacount=0
-#	for_each_interface "sta" rt2860v2_sta_vif_gen_enc_file
-#先这样吧。。。
-
-
-#配置文件生成结束,重载驱动
+	# for_each_interface "sta" rt2860v2_sta_vif_gen_enc_file
+	# 配置文件生成结束,重载驱动
 	echo "Ralink_24G:Config file ${CFG} generated.Start interfaces now."
 	drv_rt2860v2_teardown
 	drv_rt2860v2_cleanup
 
-#接口上线
-#加锁
+	# 接口上线
+	# 加锁
 	echo "Ralink_24G:Pending..."
 	lock $CFG_LOCK_FILE
-#AP模式
+	# AP模式
 	ApIfCNT=0
 	for_each_interface "ap" rt2860v2_ap_vif_post_config
-#STA模式
+	# STA模式
 	stacount=0
 	for_each_interface "sta" rt2860v2_sta_vif_connect
-#先这样吧。。。
-#解锁
+	# 解锁
 	lock -u $CFG_LOCK_FILE
-#结束
+	# 结束
 	wireless_set_up
 }
 add_driver rt2860v2

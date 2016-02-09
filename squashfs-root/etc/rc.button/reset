@@ -1,12 +1,4 @@
 #!/bin/sh
-# Copyright (c) 2013 OpenWrt
-# Copyright (C) 2014 D-Team Technology Co.,Ltd. ShenZhen
-# Copyright (c) 2005-2015, lintel <lintel.huang@gmail.com>
-#   
-#   按键响应脚本
-#    
-#     警告:对着屏幕的哥们,我们允许你使用此脚本，但不允许你抹去作者的信息,请保留这段话。
-#
 
 [ "${ACTION}" = "released" ] || exit 0
 

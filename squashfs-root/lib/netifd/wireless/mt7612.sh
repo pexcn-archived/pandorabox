@@ -1,21 +1,10 @@
 #!/bin/sh
-#
-# Copyright (c) 2014 OpenWrt
-# Copyright (C) 2013-2015 D-Team Technology Co.,Ltd. ShenZhen
-# Copyright (c) 2005-2015, lintel <lintel.huang@gmail.com>
-# Copyright (c) 2013, Hoowa <hoowa.sun@gmail.com>
-# Copyright (c) 2015, GuoGuo <gch981213@gmail.com>
-#
-# 	描述:RT2860v2 5G无线驱动netifd配置脚本
-#
-# 	嘿，对着屏幕的哥们,为了表示对原作者辛苦工作的尊重，任何引用跟借用都不允许你抹去所有作者的信息,请保留这段话。
-#
+
 . /lib/netifd/netifd-wireless.sh
 . /lib/wifi/librt2860v2.sh
 
 init_wireless_driver "$@"
 
-#读取device相关设置项并写入json
 drv_mt7612_init_device_config() { 
 	config_add_string channel hwmode htmode country
 	config_add_int beacon_int chanbw frag rts txburst
@@ -48,7 +37,6 @@ drv_mt7612_init_device_config() {
 		dsss_cck_40
 }
 
-#读取iface相关设置项并写入json
 drv_mt7612_init_iface_config() { 
 	config_add_boolean disabled
 	config_add_string mode bssid ssid encryption
@@ -75,7 +63,6 @@ mt7612_ap_vif_pre_config() {
 	echo "Ralink_5G_AP:Generating ap config for interface ra${ApBssidNum}"
 	ifname="rai${ApBssidNum}"
 
-	#MAC过滤方式相关设定 由于编号问题......我扔在这了......
 	ra_maclist="${maclist// /;};"
 	case "$macpolicy" in
 	allow)
@@ -228,7 +215,7 @@ mt7612_sta_vif_connect() {
 	
 	sleep 5
 	
-#降低速率，默认以HT20连接保证最大兼容
+	# 降低速率 默认以HT20连接保证最大兼容
 	[ "$CFG_RT2860V2_2ND_FORCE_HT40" != "1" ] && {
 	  #rt2860v2_dbg "apclii:Auto Fall Back to HT20"
 	  iwpriv rai0 set AutoFallBack=1
@@ -239,7 +226,6 @@ mt7612_sta_vif_connect() {
 	wireless_add_vif "$name" "apclii0"
 }
 
-#cleanup 如果不是MT7621则重载驱动
 drv_mt7612_cleanup() {
 #
 #	[ $(is_mt76x2e) == "1" ] && return
@@ -249,28 +235,25 @@ drv_mt7612_cleanup() {
 	return
 }
 
-#下线全部接口
 drv_mt7612_teardown() {
 	rt2860v2_shutdown_if "5G"
 }
 
-#接口启动
 drv_mt7612_setup() {
 	json_select config
 	json_get_vars main_if channel mode hwmode wmm htmode \
 		txpower country macpolicy maclist greenap \
 		diversity frag rts txburst distance hidden \
-		disabled maxassoc macpolicy maclist noscan #device所有配置项
+		disabled maxassoc macpolicy maclist noscan
 	json_select ..
 
 	wireless_set_data phy="rai0"
 #	echo "Ralink_5G_Global:All json data here:"
 #	json_dump
 
-#检查配置文件目录是否存在，否则创建目录
 	[ ! -d $CFG_FILES_DIR ] && mkdir $CFG_FILES_DIR
 	
-#默认无线模式为11an/ac only
+	# 默认无线模式为11an/ac only
 	WirelessMode=14
 	
 	hwmode=${hwmode##11}
@@ -286,18 +269,18 @@ drv_mt7612_setup() {
 		;;
 	esac
 	
-#HT默认模式设定
-	HT_BW=1  #允许HT40
-	HT_CE=1  #允许HT20/40共存
-	HT_AutoBA=1 #自动HT带宽
-	HT_DisallowTKIP=0 #是否允许TKIP加密
+	# HT默认模式设定
+	HT_BW=1  # 允许HT40
+	HT_CE=1  # 允许HT20/40共存
+	HT_AutoBA=1 # 自动HT带宽
+	HT_DisallowTKIP=0 # 是否允许TKIP加密
 
-	#HT_MIMOPSMode用于省电模式设置
-	#HT_MIMOPSMode=3
+	# HT_MIMOPSMode用于省电模式设置
+	# HT_MIMOPSMode=3
 	
-#VHT默认模式设定
-	VHT_BW=1 #允许VHT
-	VHT_DisallowNonVHT=0 #是否禁止非VHT客户端连接，VHT80 only
+	# VHT默认模式设定
+	VHT_BW=1 # 允许VHT
+	VHT_DisallowNonVHT=0 # 是否禁止非VHT客户端连接，VHT80 only
 
 	case "$htmode" in
 		HT20 |\
@@ -327,38 +310,36 @@ drv_mt7612_setup() {
 		;;
 	esac
 	
-#仅HT20以外才需要设置的参数
-     [ "$htmode" != "HT20" ] && {
-#强制HT40/VHT80
+	# 仅HT20以外才需要设置的参数
+    [ "$htmode" != "HT20" ] && {
+	# 强制HT40/VHT80
 	[ "$noscan" == "1" ] && HT_CE=0 && CFG_RT2860V2_2ND_FORCE_HT40=1
-#HT HTC
+	# HT HTC
 	[ "$ht_htc" == "1" ] && HT_HTC=1
-      }
+    }
 
-#自动处理CountryRegion:指定信道的时候支持全频段
-      [ "$channel" != "auto" ] && {
+	# 自动处理CountryRegion:指定信道的时候支持全频段
+    [ "$channel" != "auto" ] && {
 	#CountryRegion CN
 	countryregion=5
 	countryregion_a=7
-      }
+    }
 
-#第二信道自动切换
-      EXTCHA=1
-      [ "$channel" != "auto" ] && [ "$(( ($channel / 4) % 2 ))" == "0" ] && EXTCHA=0
-      [ "$channel" == "165" ] && EXTCHA=0
+	# 第二信道自动切换
+    EXTCHA=1
+    [ "$channel" != "auto" ] && [ "$(( ($channel / 4) % 2 ))" == "0" ] && EXTCHA=0
+    [ "$channel" == "165" ] && EXTCHA=0
 
-#自动选择无线频道
+	# 自动选择无线频道
     [ "$channel" == "auto" ] && {
 	#CountryRegion CN
 	countryregion=1
 	countryregion_a=4
         channel=149
-        AutoChannelSelect=2 #增强型自动频道选择
+        AutoChannelSelect=2 # 增强型自动频道选择
     }
 
-
-
-#设备配置文件生成
+# 设备配置文件生成
 	cat > $CFG_FILES_2ND <<EOF
 #The word of "Default" must not be removed
 Default
@@ -585,9 +566,9 @@ EDCCA=0
 HtMimoPs=0
 EOF
 
-#接口配置生成
-#	AP模式
-#	统一设置的内容:
+	# 接口配置生成
+	# AP模式
+	# 统一设置的内容
 	ApEncrypType=""
 	ApAuthMode=""
 	ApBssidNum=0
@@ -609,29 +590,29 @@ EOF
 	echo "Key3Type=${ApK3Tp}" >> $CFG_FILES_2ND
 	echo "Key4Type=${ApK4Tp}" >> $CFG_FILES_2ND
 
-#	STA模式数目
+	# STA模式数目
 	stacount=0
 
-#配置文件生成结束,重载驱动
+	# 配置文件生成结束,重载驱动
 	drv_mt7612_teardown
 	
-#FIXME:如果不重新加载驱动，apcli无法连接,MT7621却正常,BUG标记
+	#FIXME: 如果不重新加载驱动，apcli无法连接 MT7621却正常 BUG标记
 	drv_mt7612_cleanup
 	
-#接口上线
+	# 接口上线
 
-#加锁
+	# 加锁
 	echo "Ralink_5G:Pending..."
 	lock $CFG_LOCK_FILE
-#AP模式
+	# AP模式
 	ApIfCNT=0
 	for_each_interface "ap" mt7612_ap_vif_post_config
-#STA模式
+	# STA模式
 	stacount=0
 	for_each_interface "sta" mt7612_sta_vif_connect
-#解锁
+	# 解锁
 	lock -u $CFG_LOCK_FILE
-#设置无线上线
+	# 设置无线上线
 	wireless_set_up
 }
 add_driver mt7612

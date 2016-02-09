@@ -1,15 +1,4 @@
 #!/bin/sh
-#
-# Copyright (c) 2014 OpenWrt
-# Copyright (C) 2013-2015 D-Team Technology Co.,Ltd. ShenZhen
-# Copyright (c) 2005-2015, lintel <lintel.huang@gmail.com>
-# Copyright (c) 2013, Hoowa <hoowa.sun@gmail.com>
-# Copyright (c) 2015, GuoGuo <gch981213@gmail.com>
-#
-# 	RT2860v2/MT7603/MT7610E/MT76X2E 脚本函数库
-#
-# 	嘿，对着屏幕的哥们,为了表示对原作者辛苦工作的尊重，任何引用跟借用都不允许你抹去所有作者的信息,请保留这段话。
-#
 
 CFG_FILES_DIR="/tmp/profiles/"
 CFG_FILES_1ST=$CFG_FILES_DIR"rt2860v2_2g.dat"
@@ -88,12 +77,10 @@ rt2860v2_shutdown_if()
 		;;
 	esac
 }
-#获取随机的WPA密钥
+
 get_pre_wpa_key() {
 		echo $(hexdump -n 8 /dev/urandom |awk '{print $2$3$4$5;}' | tr a-z A-Z)
 }
-
-#判断密钥类型
 
 get_wep_key_type() {
 	local KeyLen=$(expr length "$1")

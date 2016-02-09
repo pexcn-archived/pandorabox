@@ -1,11 +1,4 @@
 #!/bin/sh
-# Copyright (c) 2013 OpenWrt
-# Copyright (C) 2014 D-Team Technology Co.,Ltd. ShenZhen
-# Copyright (c) 2005-2014, lintel <lintel.huang@gmail.com>
-#
-#
-#     警告:对着屏幕的哥们,我们允许你使用此脚本，但不允许你抹去作者的信息,请保留这段话。
-#
 
 . /lib/ralink.sh
 
@@ -115,7 +108,6 @@ get_status_led() {
 		status_led="asus:blue:power"
 		;;
 	m1-jd)
-#		status_led="jd:blue"
 		status_led="jd-led-blue"
 		;;
 	pbr-w3)
@@ -129,7 +121,6 @@ set_state() {
 
 	case "$1" in
 	preinit)
-# 		insmod leds-gpio
 		status_led_set_timer 200 200
 		;;
 	failsafe)
