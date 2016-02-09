@@ -41,7 +41,7 @@ cat <<EOF
 config wifi-device  ra0
 	option type rt2860v2
 	option hwmode 11g
-	option channel auto
+	option channel 1
 	option txpower 100
 	option htmode HT40
 	option country CN
@@ -55,9 +55,7 @@ config wifi-iface
 	option wps pbc
 	option ssid OpenWrt${i#0}
 	option encryption none
-	
-#	option encryption psk2
-#	option key $(get_pre_wpa_key)
+
 EOF
 	}
 }

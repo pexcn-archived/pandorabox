@@ -23,7 +23,7 @@ cat <<EOF
 config wifi-device  rai0
 	option type     mt7612
 	option hwmode	11a
-	option channel  auto
+	option channel  157
 	option txpower 	100
 	option htmode	VHT80
 	option country 	CN
@@ -34,11 +34,9 @@ config wifi-iface
 	option device   rai0
 	option network	lan
 	option mode     ap
-# 	option doth     1
+	# option doth     1
 	option ssid     OpenWrt-5G${i#0}
 	option encryption none
-#	option encryption psk2
-#	option key $(get_pre_wpa_key)
 
 EOF
 	}
