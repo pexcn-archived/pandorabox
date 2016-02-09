@@ -24,14 +24,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181151
 
-Package: luci-theme-material
-Version: 0.12+git-4d0a20b-1
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: iwinfo
 Version: 2015-06-01-ade8b1b299cbd5748db1acf80dd3e9f567938371
 Depends: libc, libiwinfo
@@ -665,14 +657,6 @@ Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: usb-modeswitch
-Version: 2014-07-18-01ecc3b9764d1dd89cf36ede0a2d98f9adb0cd33
-Depends: libc, libubox, libblobmsg-json, libusb-1.0
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: libip6tc
 Version: 1.4.21-1
 Depends: libc, libxtables
@@ -754,14 +738,6 @@ Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181150
-
-Package: libusb-1.0
-Version: 1.0.19-1
-Depends: libc, libpthread, librt
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
 
 Package: librt
 Version: 0.9.33.2-1
@@ -1083,14 +1059,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
 Auto-Installed: yes
-
-Package: libusb-compat
-Version: 0.1.4-1
-Depends: libc, libusb-1.0
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
 
 Package: jsonfilter
 Version: 2014-06-19-cdc760c58077f44fc40adbbe41e1556a67c1b9a9
