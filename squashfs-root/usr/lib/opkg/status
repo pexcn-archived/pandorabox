@@ -475,14 +475,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181152
 
-Package: libevent2
-Version: 2.0.21-1
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
 Package: libuci
 Version: 2015-04-09.1-1
 Depends: libc, libubox
@@ -1047,24 +1039,6 @@ Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181152
-Auto-Installed: yes
-
-Package: libext2fs
-Version: 1.42.4-1
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-Auto-Installed: yes
-
-Package: libexpat
-Version: 2.1.0-3
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
 Auto-Installed: yes
 
 Package: ubox
