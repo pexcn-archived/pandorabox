@@ -220,15 +220,6 @@ Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: libdbus
-Version: 1.10.0-1
-Depends: libc, libpthread
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-Auto-Installed: yes
-
 Package: libcurl
 Version: 7.38.0-1
 Depends: libc, libpolarssl
