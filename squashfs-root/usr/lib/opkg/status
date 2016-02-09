@@ -983,15 +983,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181148
 
-Package: ngrokc
-Version: b123ae70b3-1
-Depends: libc, libpthread, libpolarssl, libstdcpp
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-Auto-Installed: yes
-
 Package: ubox
 Version: 2015-07-14-907d046c8929fb74e5a3502a9498198695e62ad8
 Depends: libc, libubox, ubusd, ubus, libubus, libuci
