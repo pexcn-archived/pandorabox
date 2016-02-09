@@ -221,17 +221,6 @@ Architecture: ralink
 Installed-Time: 1448181148
 Auto-Installed: yes
 
-Package: openssl-util
-Version: 1.0.2d-1
-Depends: libc, libopenssl
-Provides:
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/ssl/openssl.cnf 06baa8f15992bacd3e5b113cd571d828c0
-Installed-Time: 1448181151
-Auto-Installed: yes
-
 Package: kmod-lib-crc-ccitt
 Version: 3.14.56-1
 Provides:
@@ -340,14 +329,6 @@ Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: uboot-envtools
-Version: 2014.04-4
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: kmod-usb-ohci
 Version: 3.14.56-1
 Depends: kmod-usb-core
@@ -376,15 +357,6 @@ Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: resolveip
-Version: 2
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181152
-Auto-Installed: yes
-
 Package: libblkid
 Version: 2.24.1-1
 Depends: libc, libuuid
@@ -401,17 +373,6 @@ Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: p910nd
-Version: 0.97-4
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Conffiles:
- /etc/config/p910nd a32ddc08a928ee8a5b6a4a3132004036c7
-Installed-Time: 1448181152
 Auto-Installed: yes
 
 Package: block-mount
@@ -868,14 +829,6 @@ Architecture: ralink
 Installed-Time: 1448181150
 Auto-Installed: yes
 
-Package: pbmsa-utils
-Version: 1.0-1
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-
 Package: kmod-ipt-ipset
 Version: 3.14.56+6.20.1-1
 Depends: kmod-ipt-core, kmod-nfnetlink
@@ -1016,15 +969,6 @@ Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181153
-
-Package: px5g
-Version: 3
-Depends: libc, libpolarssl
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-Auto-Installed: yes
 
 Package: kmod-nls-base
 Version: 3.14.56-1
