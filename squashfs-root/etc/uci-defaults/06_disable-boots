@@ -1,0 +1,7 @@
+#!/bin/sh
+
+[ -x /etc/init.d/cron ] && /etc/init.d/cron disable
+[ -x /etc/init.d/log ] && /etc/init.d/log disable
+[ -x /etc/init.d/sysntpd ] && /etc/init.d/sysntpd disable
+[ -x /etc/init.d/telnet ] && /etc/init.d/telnet disable
+
