@@ -798,14 +798,6 @@ Architecture: ralink
 Installed-Time: 1448181147
 Auto-Installed: yes
 
-Package: librpc
-Version: 0.9.32-rc2-0a2179bbc0844928f2a0ec01dba93d9b5d6d41a7
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
 Package: luci-proto-ipv6
 Version: 0.12+git-4d0a20b-1
 Depends: libc
@@ -855,15 +847,6 @@ Provides:
 Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: libncurses
-Version: 5.9-1
-Depends: libc, terminfo
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
 Auto-Installed: yes
 
 Package: kmod-ipt-core
@@ -925,14 +908,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
-
-Package: libnfnetlink
-Version: 1.0.1-1
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
 
 Package: maccalc
 Version: 1
@@ -1112,14 +1087,6 @@ Auto-Installed: yes
 Package: libusb-compat
 Version: 0.1.4-1
 Depends: libc, libusb-1.0
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181151
-
-Package: libpopt
-Version: 1.16-1
-Depends: libc
 Provides:
 Status: install user installed
 Architecture: ralink
