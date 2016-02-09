@@ -5,7 +5,7 @@ export PATH=/usr/bin:/usr/sbin:/bin:/sbin
 export HOME=$(grep -e "^${USER:-root}:" /etc/passwd | cut -d ":" -f 6)
 export HOME=${HOME:-/root}
 #export PS1='\u@\h:\w\$ '
-export PS1='[\[\033[35;1m\]\u\[\033[0m\]@\[\033[31;1m\]\h\[\033\[0m\]:\[\033[32;1m\]$PWD\[\033[0m\]]\$'
+export PS1='[\[\033[35;1m\]\u\[\033[0m\]@\[\033[31;1m\]\h\[\033\[0m\]:\[\033[32;1m\]$PWD\[\033[0m\]]\$ '
 
 [ -x /bin/more ] || alias more=less
 [ -x /usr/bin/vim ] && alias vi=vim || alias vim=vi
@@ -17,7 +17,6 @@ export PS1='[\[\033[35;1m\]\u\[\033[0m\]@\[\033[31;1m\]\h\[\033\[0m\]:\[\033[32;
 
 alias df='df -h'
 alias free='free -m'
-#alias ls='ls -hF --color=auto'
 alias ll='ls -alh'
 alias la='ll -A'
-#alias top='top -d1'
+

@@ -12,9 +12,6 @@ config firewall
 	list affects qos
 	list affects miniupnpd
 
-config olsr
-	option init olsrd
-
 config dhcp
 	option init dnsmasq
 	list affects odhcpd
@@ -31,27 +28,7 @@ config httpd
 config fstab
 	option init fstab
 
-config qos
-	option init qos
-
 config system
 	option init led
 	list affects luci_statistics
 
-config luci_splash
-	option init luci_splash
-
-config upnpd
-	option init miniupnpd
-
-config ntpclient
-	option init ntpclient
-
-config samba
-	option init samba
-
-config tinyproxy
-	option init tinyproxy
-
-config 6relayd
-	option init 6relayd

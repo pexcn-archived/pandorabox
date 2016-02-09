@@ -1,11 +1,11 @@
 config system
-	option hostname	PandoraBox
-	option timezone	CST-8
-        option zonename 'Asia/Shanghai'
+	option hostname PandoraBox
+	option timezone CST-8
+	option zonename 'Asia/Shanghai'
         
 config timeserver ntp
-	list server	0.pool.ntp.org
-	list server	1.pool.ntp.org
-	list server	2.pool.ntp.org
+	list server 0.pool.ntp.org
+	list server 1.pool.ntp.org
+	list server 2.pool.ntp.org
 	option enabled 1
 	option enable_server 1
