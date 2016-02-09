@@ -1,8 +1,0 @@
-Package: shellsync
-Version: 0.2-1
-Depends: libc, libpthread
-Source: package/pandorabox/network/shellsync
-Section: opt
-Architecture: ralink
-Installed-Size: 1988
-Description:  A tool to sync different shell scripts.Based on syncppp patch by morfast.

@@ -40,15 +40,6 @@ Status: install user installed
 Architecture: ralink
 Installed-Time: 1455021335
 
-Package: luci-theme-xeye
-Version: 0.12+git-4d0a20b-1
-Depends: libc
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
-Auto-Installed: yes
-
 Package: libc
 Version: 0.9.33.2-1
 Depends: libgcc
@@ -276,15 +267,6 @@ Provides:
 Status: install hold installed
 Architecture: ralink
 Installed-Time: 1448181147
-Auto-Installed: yes
-
-Package: shellsync
-Version: 0.2-1
-Depends: libc, libpthread
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181153
 Auto-Installed: yes
 
 Package: base-files
@@ -687,7 +669,7 @@ Auto-Installed: yes
 
 Package: ppp
 Version: 2.4.7-8
-Depends: libc, kmod-ppp, libpthread, shellsync, libubox, libubus, libblobmsg_json, ubusd, ubus, jshn
+Depends: libc, kmod-ppp, libpthread, libubox, libubus, libblobmsg_json, ubusd, ubus, jshn
 Provides:
 Status: install user installed
 Architecture: ralink
@@ -945,7 +927,7 @@ Auto-Installed: yes
 
 Package: luci
 Version: 0.12+git-4d0a20b-1
-Depends: libc, uhttpd, uhttpd-mod-ubus, luci-mod-admin-full, luci-theme-xeye, luci-app-firewall, luci-proto-ppp, libiwinfo-lua, luci-lib-nixio
+Depends: libc, uhttpd, uhttpd-mod-ubus, luci-mod-admin-full, luci-app-firewall, luci-proto-ppp, libiwinfo-lua, luci-lib-nixio
 Provides:
 Status: install user installed
 Architecture: ralink
