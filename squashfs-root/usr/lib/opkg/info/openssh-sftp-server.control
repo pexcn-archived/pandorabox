@@ -1,0 +1,9 @@
+Package: openssh-sftp-server
+Version: 6.6p1-1
+Depends: libc
+Source: feeds/packages/net/openssh
+Section: net
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: ralink
+Installed-Size: 28278
+Description:  OpenSSH SFTP server.
