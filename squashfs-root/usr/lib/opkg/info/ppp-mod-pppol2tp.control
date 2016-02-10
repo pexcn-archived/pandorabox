@@ -1,9 +1,0 @@
-Package: ppp-mod-pppol2tp
-Version: 2.4.7-2
-Depends: libc, kmod-pppol2tp
-Source: package/network/services/ppp
-Section: net
-Maintainer: Jo-Philipp Wich <xm@subsignal.org>
-Architecture: ralink
-Installed-Size: 4406
-Description:  This package contains a PPPoL2TP (PPP over L2TP) plugin for ppp.

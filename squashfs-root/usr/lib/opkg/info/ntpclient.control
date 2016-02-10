@@ -1,8 +1,0 @@
-Package: ntpclient
-Version: 2007_365-4
-Depends: libc, librt
-Source: feeds/oldpackages/net/ntpclient
-Section: net
-Architecture: ralink
-Installed-Size: 11204
-Description:  NTP client for setting system time from NTP servers.

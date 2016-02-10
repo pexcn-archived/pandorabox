@@ -1,9 +1,0 @@
-Package: luci-proto-relay
-Version: 0.12+svn-r1024-1
-Depends: libc, relayd
-Source: package/pandorabox/webs/luci
-Section: luci
-Maintainer: LuCI Development Team <luci@lists.subsignal.org>
-Architecture: ralink
-Installed-Size: 2569
-Description:  Support for relayd pseudo bridges

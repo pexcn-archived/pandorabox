@@ -1,3 +1,0 @@
-/etc/modules.d/32-l2tp
-/lib/modules/3.14.44/l2tp_core.ko
-/lib/modules/3.14.44/l2tp_netlink.ko

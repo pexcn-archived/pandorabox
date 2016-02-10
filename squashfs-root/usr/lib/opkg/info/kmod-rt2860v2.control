@@ -1,8 +1,0 @@
-Package: kmod-rt2860v2
-Version: 3.14.44-1
-Depends: wireless-tools, maccalc
-Source: package/ralink/drivers/rt2860v2
-Section: kernel
-Architecture: ralink
-Installed-Size: 529047
-Description:  Ralink RT2860v2 AP driver

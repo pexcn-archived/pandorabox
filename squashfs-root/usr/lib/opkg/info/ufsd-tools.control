@@ -1,9 +1,0 @@
-Package: ufsd-tools
-Version: 1
-Depends: libc
-Source: package/pandorabox/ufsd-driver
-Section: utils
-Maintainer: lintel<lintel.huang@gmail.com>
-Architecture: ralink
-Installed-Size: 470765
-Description:  ufsd-tools

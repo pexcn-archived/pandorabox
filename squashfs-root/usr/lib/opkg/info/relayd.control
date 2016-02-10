@@ -1,9 +1,0 @@
-Package: relayd
-Version: 2014-06-29-8b20ffae06b9b7fcc6fb52d3b8a80b45ed424e39
-Depends: libc, libubox
-Source: package/network/services/relayd
-Section: net
-Maintainer: Felix Fietkau <nbd@openwrt.org>
-Architecture: ralink
-Installed-Size: 8744
-Description:  Transparent routing / relay daemon
