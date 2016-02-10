@@ -1,3 +1,0 @@
-/etc/modules-boot.d/30-fs-ufsd
-/lib/modules/3.14.44/ufsd.ko
-/etc/modules.d/30-fs-ufsd

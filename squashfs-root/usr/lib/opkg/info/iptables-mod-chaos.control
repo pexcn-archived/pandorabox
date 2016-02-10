@@ -1,9 +1,0 @@
-Package: iptables-mod-chaos
-Version: 2.3-1
-Depends: libc, iptables, kmod-ipt-chaos
-Source: package/network/utils/xtables-addons
-Section: net
-Maintainer: Jo-Philipp Wich <jow@openwrt.org>
-Architecture: ralink
-Installed-Size: 1576
-Description:  CHAOS iptables extension

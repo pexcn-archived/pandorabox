@@ -1,3 +1,0 @@
-/etc/modules.d/30-gpio-button-pandorabox
-/lib/modules/3.14.44/gpio-button-pandorabox.ko
-/etc/modules-boot.d/30-gpio-button-pandorabox

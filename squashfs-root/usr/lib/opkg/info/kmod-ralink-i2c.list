@@ -1,2 +1,0 @@
-/etc/modules.d/52-ralink-i2c
-/lib/modules/3.14.44/i2c-ralink.ko

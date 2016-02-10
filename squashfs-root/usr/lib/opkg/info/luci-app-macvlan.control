@@ -1,9 +1,0 @@
-Package: luci-app-macvlan
-Version: 0.12+svn-r1024-1
-Depends: libc, kmod-macvlan, luci-app-mwan3-pandorabox
-Source: package/pandorabox/webs/luci-addons
-Section: luci
-Maintainer: LuCI Development Team <luci@lists.subsignal.org>
-Architecture: ralink
-Installed-Size: 6394
-Description:  LuCI Support for macvlan

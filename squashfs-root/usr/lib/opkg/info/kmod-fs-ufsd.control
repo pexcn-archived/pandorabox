@@ -1,7 +1,0 @@
-Package: kmod-fs-ufsd
-Version: 3.14.44-1
-Source: package/pandorabox/ufsd-driver
-Section: kernel
-Architecture: ralink
-Installed-Size: 186865
-Description:  Kernel module support NTFS,HPFS

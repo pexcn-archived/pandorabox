@@ -1,9 +1,0 @@
-Package: kmod-iptunnel4
-Version: 3.14.44-1
-Source: package/kernel/linux
-License: GPLv2
-Section: kernel
-Status: unknown hold not-installed
-Architecture: ralink
-Installed-Size: 2051
-Description:  Kernel modules for IPv4 tunneling
