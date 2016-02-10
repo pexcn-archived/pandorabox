@@ -1,9 +1,0 @@
-Package: iw
-Version: 3.15-1
-Depends: libc, libnl-tiny
-Source: package/network/utils/iw
-Section: net
-Maintainer: Felix Fietkau <nbd@openwrt.org>
-Architecture: ralink
-Installed-Size: 38036
-Description:  cfg80211 interface configuration utility
