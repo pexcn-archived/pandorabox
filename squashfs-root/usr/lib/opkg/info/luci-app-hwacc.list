@@ -1,0 +1,4 @@
+/usr/lib/lua/luci/i18n/hwacc.zh-cn.lmo
+/usr/lib/lua/luci/model/cbi/hwacc/hwacc.lua
+/etc/uci-defaults/luci-hwacc
+/usr/lib/lua/luci/controller/hwacc.lua

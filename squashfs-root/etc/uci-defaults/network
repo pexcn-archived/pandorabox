@@ -1,0 +1,202 @@
+#!/bin/sh
+# Copyright (c) 2013 OpenWrt
+# Copyright (C) 2014 D-Team Technology Co.,Ltd. ShenZhen
+# Copyright (c) 2005-2014, lintel <lintel.huang@gmail.com>
+#
+#
+#     警告:对着屏幕的哥们,我们允许你使用此脚本，但不允许你抹去作者的信息,请保留这段话。
+#
+
+. /lib/functions.sh
+. /lib/ralink.sh
+. /lib/functions/uci-defaults.sh
+. /lib/functions/system.sh
+
+if [ ! -x /usr/sbin/maccalc ]; then
+	echo "$0: maccalc not found!"
+	return
+fi
+
+ralink_setup_mt7620_vlans_wllll()
+{
+	if [ ! -x /sbin/swconfig ]; then
+		# legacy default
+		echo "$0: swconfig not found!"
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+		return
+	fi
+	ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+	ucidef_add_switch "mt762x" "1" "1"
+	ucidef_add_switch_vlan "mt762x" "1" "1 2 3 4 5 6t 7t "
+	ucidef_add_switch_vlan "mt762x" "2" "0 6t 7t"
+}
+
+ralink_setup_mt7620_vlans_llllw()
+{
+	if [ ! -x /sbin/swconfig ]; then
+		# legacy default
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+		return
+	fi
+	ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+	ucidef_add_switch "mt762x" "1" "1"
+	ucidef_add_switch_vlan "mt762x" "1" "0 1 2 3 5 6t 7t"
+	ucidef_add_switch_vlan "mt762x" "2" "4 6t 7t"
+}
+
+ralink_setup_mt7621_vlans_wllll()
+{
+	if [ ! -x /sbin/swconfig ]; then
+		# legacy default
+		echo "$0: swconfig not found!"
+		ucidef_set_interfaces_lan_wan "eth0.2" "eth0.2"
+		return
+	fi
+	ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+	ucidef_add_switch "mt762x" "1" "1"
+	ucidef_add_switch_vlan "mt762x" "1" "1 2 3 4 5 6t 7t "
+	ucidef_add_switch_vlan "mt762x" "2" "0 6t 7t"
+}
+
+ralink_setup_mt7621_vlans_llllw()
+{
+	if [ ! -x /sbin/swconfig ]; then
+		# legacy default
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+		return
+	fi
+	ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+	ucidef_add_switch "mt762x" "1" "1"
+	ucidef_add_switch_vlan "mt762x" "1" "0 1 2 3 5 6t 7t"
+	ucidef_add_switch_vlan "mt762x" "2" "4 6t 7t"
+}
+
+ralink_setup_rt305x_vlans_wllll()
+{
+	if [ ! -x /sbin/swconfig ]; then
+		# legacy default
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+		return
+	fi
+	ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+	ucidef_add_switch "rt305x" "1" "1"
+	ucidef_add_switch_vlan "rt305x" "1" "1 2 3 4 6t"
+	ucidef_add_switch_vlan "rt305x" "2" "0 5 6t"
+}
+
+ralink_setup_rt305x_vlans_llllw()
+{
+	if [ ! -x /sbin/swconfig ]; then
+		# legacy default
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+		return
+	fi
+	ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+	ucidef_add_switch "rt305x" "1" "1"
+	ucidef_add_switch_vlan "rt305x" "1" "0 1 2 3 6t"
+	ucidef_add_switch_vlan "rt305x" "2" "4 5 6t"
+}
+
+ap7620a_setup_wwan()
+{
+uci set network.wwan=interface
+uci set network.wwan.proto=3g
+uci set network.wwan.device=/dev/ttyUSB0
+uci set network.wwan.service=umts_only
+uci set network.wwan.apn=3gnet
+uci set network.wwan.pincode=1234
+uci set network.wwan.username=card
+uci set network.wwan.password=card
+
+uci set firewall.@zone[1].network="wan wwan"
+uci commit firewall
+}
+
+ralink_setup_interfaces()
+{
+	local board="$1"
+	
+	ucidef_set_interface_loopback
+	
+	case $board in
+	dir620 | \
+	wr8305rt | \
+	xiaomi-mini | \
+	y1 | \
+	yk1 | \
+	oye-0001 | \
+	br100)
+		ralink_setup_mt7620_vlans_llllw
+		;;
+	mw305r | \
+	mt7620a-evb | \
+	ry1 | \
+	ji2 | \
+	wrtnode | \
+	microwrt | \
+	q7 | \
+	superdisk_mini | \
+	y1s)
+		ralink_setup_mt7620_vlans_wllll
+		;;
+	ap7620a )
+		ralink_setup_mt7620_vlans_wllll
+		ap7620a_setup_wwan
+		;;
+	rt-n56u)
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+		ucidef_add_switch "switch0" "1" "1"
+		ucidef_add_switch_vlan "switch0" "1" "0 1 2 3 8t"
+		ucidef_add_switch_vlan "switch0" "2" "4 8t"
+		;;
+	hg255d | \
+	hg256)
+		ralink_setup_rt305x_vlans_wllll
+		;;
+	mt7621a-evb | \
+	timecloud | \
+	pbr-m1 | \
+	m1-jd | \
+	y2s)
+		ralink_setup_mt7621_vlans_wllll
+		;;
+	abox)
+		ralink_setup_mt7621_vlans_llllw
+		;;
+	mt7628a-evb)
+		ralink_setup_rt305x_vlans_llllw
+		;;
+	rt-n13u)
+		ralink_setup_rt305x_vlans_llllw
+		;;
+	*)
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+	esac
+}
+
+ralink_setup_macs()
+{
+	local lan_mac=""
+	local wan_mac=""
+
+	lan_mac=$(cat /sys/class/net/eth0/address)
+	wan_mac=$(/usr/sbin/maccalc add "$lan_mac" 1)
+
+
+	[ -n "$lan_mac" ] && ucidef_set_interface_macaddr lan $lan_mac
+	[ -n "$wan_mac" ] && ucidef_set_interface_macaddr wan $wan_mac
+}
+
+[ -e /etc/config/network ] && exit 0
+
+touch /etc/config/network
+
+board=$(ralink_board_name)
+
+ralink_setup_interfaces $board
+
+ralink_setup_macs
+
+uci commit network
+
+exit 0

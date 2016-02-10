@@ -1,0 +1,8 @@
+Package: gpioctl
+Version: 1.0-1
+Depends: libc
+Source: package/pandorabox/gpioctl
+Section: utils
+Architecture: ralink
+Installed-Size: 1552
+Description:  Tool for controlling gpio pins

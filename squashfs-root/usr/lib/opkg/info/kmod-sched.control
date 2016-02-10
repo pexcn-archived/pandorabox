@@ -1,0 +1,10 @@
+Package: kmod-sched
+Version: 3.14.44-1
+Depends: kmod-sched-core, kmod-ipt-core
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 50055
+Description:  Extra kernel schedulers modules for IP traffic

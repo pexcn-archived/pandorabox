@@ -1,0 +1,2 @@
+/etc/modules.d/91-mt76x2e
+/lib/modules/3.14.44/mt76x2e.ko

@@ -1,0 +1,10 @@
+Package: kmod-ipt-u32
+Version: 3.14.44-1
+Depends: kmod-ipt-core
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 1266
+Description:  Kernel modules for U32

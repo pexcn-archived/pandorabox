@@ -1,0 +1,196 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2006-2011 OpenWrt.org
+
+START=50
+
+mkuserlist() {
+  echo $1 >> /var/etc/vsftpd/users.txt
+}
+
+
+start() {
+
+  config_load "vsftpd"
+  
+  local enabled ftpd_banner max_clients local_enable write_enable chown_uploads chroot_local_user local_umask
+  local userlist_enable userlist_type anonymous_enable anon_upload_enable anon_mkdir_write_enable userlist
+  ########## Since Ver 2.0 ##########
+  local dirmessage_enable connect_from_port_20 idle_session_timeout data_connection_timeout async_abor_enable
+  local ascii ls_recurse_enable ascii_download ascii_upload
+  
+  config_get enabled                 main enabled
+  config_get ftpd_banner             main ftpd_banner
+  config_get max_clients             main max_clients
+  config_get local_enable            main local_enable
+  config_get write_enable            main write_enable
+  config_get chown_uploads           main chown_uploads
+  config_get chroot_local_user       main chroot_local_user
+  config_get local_umask             main local_umask
+  config_get userlist_enable         main userlist_enable
+  config_get userlist_type           main userlist_type
+  config_get anonymous_enable        main anonymous_enable
+  config_get anon_upload_enable      main anon_upload_enable
+  config_get anon_mkdir_write_enable main anon_mkdir_write_enable
+  ########## Since Ver 2.0 ##########
+  config_get dirmessage_enable       main dirmessage_enable
+  config_get connect_from_port_20    main connect_from_port_20
+  config_get idle_session_timeout    main idle_session_timeout
+  config_get data_connection_timeout main data_connection_timeout
+  config_get async_abor_enable       main async_abor_enable
+  config_get ascii                   main ascii
+  config_get ls_recurse_enable       main ls_recurse_enable
+  ########## Since Ver 3.0 ##########
+  config_get anon_root               main anon_root
+  
+
+  local userlist_deny
+  
+  if [ $anonymous_enable -eq 1 ]; then
+    anonymous_enable="YES"
+  else
+    anonymous_enable="NO"
+  fi
+
+  if [ $anon_upload_enable -eq 1 ]; then
+    anon_upload_enable="YES"
+  else
+    anon_upload_enable="NO"
+  fi
+
+  if [ $anon_mkdir_write_enable -eq 1 ]; then
+    anon_mkdir_write_enable="YES"
+  else
+    anon_mkdir_write_enable="NO"
+  fi
+
+  if [ $local_enable -eq 1 ]; then
+    local_enable="YES"
+  else
+    local_enable="NO"
+  fi
+
+  if [ $write_enable -eq 1 ]; then
+    write_enable="YES"
+  else
+    write_enable="NO"
+  fi
+  
+  if [ $chown_uploads -eq 1 ]; then
+    chown_uploads="YES"
+  else
+    chown_uploads="NO"
+  fi
+
+  if [ $chroot_local_user -eq 1 ]; then
+    chroot_local_user="YES"
+  else
+    chroot_local_user="NO"
+  fi
+
+  if [ $userlist_enable -eq 1 ]; then
+    userlist_enable="YES"
+  else
+    userlist_enable="NO"
+  fi
+  
+  if [ $userlist_type == "allow" ]; then
+    userlist_deny="NO"
+  else
+    userlist_deny="YES"
+  fi
+  
+  ########## Since Ver 2.0 ##########
+  if [ $dirmessage_enable -eq 1 ]; then
+    dirmessage_enable="YES"
+  else
+    dirmessage_enable="NO"
+  fi
+  
+  if [ $connect_from_port_20 -eq 1 ]; then
+    connect_from_port_20="YES"
+    pasv_enable="NO"
+  else
+    connect_from_port_20="NO"
+    pasv_enable="YES"
+  fi
+
+  if [ $async_abor_enable -eq 1 ]; then
+    async_abor_enable="YES"
+  else
+    async_abor_enable="NO"
+  fi
+
+  if [ $ls_recurse_enable -eq 1 ]; then
+    ls_recurse_enable="YES"
+  else
+    ls_recurse_enable="NO"
+  fi
+
+  case $ascii in
+    "both")
+        ascii_download="YES"
+        ascii_upload="YES"
+        ;;
+    "download")
+        ascii_download="YES"
+        ascii_upload="NO"
+        ;;
+    "upload")
+        ascii_download="NO"
+        ascii_upload="YES"
+        ;;
+    "none")
+        ascii_download="NO"
+        ascii_upload="NO"
+        ;;
+    *)
+        ascii_download="YES"
+        ascii_upload="YES"
+        ;;
+  esac
+
+  
+  mkdir -p /var/etc
+  sed -e "s#|MAX_CLIENTS|#$max_clients#g" \
+      -e "s#|ANONYMOUS_ENABLE|#$anonymous_enable#g" \
+      -e "s#|ANON_UPLOAD_ENABLE|#$anon_upload_enable#g" \
+      -e "s#|ANON_MKDIR_WRITE_ENABLE|#$anon_mkdir_write_enable#g" \
+      -e "s#|ANON_ROOT|#$anon_root#g" \
+      -e "s#|LOACL_ENABLE|#$local_enable#g" \
+      -e "s#|WRITE_ENABLE|#$write_enable#g" \
+      -e "s#|LOCAL_UMASK|#$local_umask#g" \
+      -e "s#|CHOWN_UPLOADS|#$chown_uploads#g" \
+      -e "s#|CHROOT_LOCAL_USER|#$chroot_local_user#g" \
+      -e "s#|FTPD_BANNER|#$ftpd_banner#g" \
+      -e "s#|USERLIST_ENABLE|#$userlist_enable#g" \
+      -e "s#|USERLIST_DENY|#$userlist_deny#g" \
+      -e "s#|DIRMESSAGE_ENABLE|#$dirmessage_enable#g" \
+      -e "s#|CONNECT_FROM_PORT_20|#$connect_from_port_20#g" \
+      -e "s#|PASV_ENABLE|#$pasv_enable#g" \
+      -e "s#|ASYNC_ABOR_ENABLE|#$async_abor_enable#g" \
+      -e "s#|LS_RECURSE_ENABLE|#$ls_recurse_enable#g" \
+      -e "s#|ASCII_DOWNLOAD_ENABLE|#$ascii_download#g" \
+      -e "s#|ASCII_UPLOAD_ENABLE|#$ascii_upload#g" \
+      -e "s#|IDLE_SESSION_TIMEOUT|#$idle_session_timeout#g" \
+      -e "s#|DATA_CONNECTION_TIMEOUT|#$data_connection_timeout#g" \
+      /etc/vsftpd.conf.template > /var/etc/vsftpd.conf
+
+
+      [ -f /etc/vsftpd.conf ] && [ ! -L /etc/vsftpd.conf ] && mv -f /etc/vsftpd.conf /etc/vsftpd.conf.bak
+      ln -nsf /var/etc/vsftpd.conf /etc/vsftpd.conf
+      
+      rm -rf /var/etc/vsftpd/users.txt
+      mkdir -p /var/etc/vsftpd
+      config_list_foreach main userlist mkuserlist
+      
+	mkdir -m 0755 -p /var/run/vsftpd
+	service_start /usr/sbin/vsftpd
+}
+
+stop() {
+	service_stop /usr/sbin/vsftpd
+}
+
+restart() {
+	stop;sleep 2;start
+}

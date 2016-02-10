@@ -1,0 +1,186 @@
+#!/bin/sh
+
+. /lib/functions/uci-defaults.sh
+. /lib/ralink.sh
+
+hg255d_set_leds() {
+	uci batch <<EOF
+set system.usb_led=led
+set system.usb_led.name='USB'
+set system.usb_led.sysfs='hg255d:usb'
+set system.usb_led.trigger='usbdev'
+set system.usb_led.dev='1-1'
+set system.usb_led.interval='50'
+
+set system.wlan_led=led
+set system.wlan_led.name='WLAN'
+set system.wlan_led.sysfs='hg255d:wlan'
+set system.wlan_led.trigger='netdev'
+set system.wlan_led.dev='ra0'
+set system.wlan_led.mode='link tx'
+
+set system.internet_led=led
+set system.internet_led.name='INTERNET'
+set system.internet_led.sysfs='hg255d:internet'
+set system.internet_led.trigger='netdev'
+set system.internet_led.dev='eth0.2'
+set system.internet_led.mode='tx rx'
+
+commit system
+EOF
+}
+
+ry2_set_leds() {
+	uci batch <<EOF
+set system.usb_led=led
+set system.usb_led.name='USB0'
+set system.usb_led.sysfs='usb:blue'
+set system.usb_led.trigger='usbdev'
+set system.usb_led.dev='1-1'
+set system.usb_led.interval='50'
+
+set system.wlan_led=led
+set system.wlan_led.name='WLAN'
+set system.wlan_led.sysfs='wifi:yellow'
+set system.wlan_led.trigger='netdev'
+set system.wlan_led.dev='ra0'
+set system.wlan_led.mode='link tx'
+
+set system.wlan_led_5g=led
+set system.wlan_led_5g.name='WLAN_5G'
+set system.wlan_led_5g.sysfs='wifi:blue'
+set system.wlan_led_5g.trigger='netdev'
+set system.wlan_led_5g.dev='rai0'
+set system.wlan_led_5g.mode='link tx'
+
+set system.internet_led=led
+set system.internet_led.name='INTERNET'
+set system.internet_led.sysfs='internet:blue'
+set system.internet_led.trigger='netdev'
+set system.internet_led.dev='pppoe-wan'
+set system.internet_led.mode='tx rx'
+
+commit system
+EOF
+}
+
+y1_set_leds() {
+	uci batch <<EOF
+set system.usb_led=led
+set system.usb_led.name='USB0'
+set system.usb_led.sysfs='usb:blue'
+set system.usb_led.trigger='usbdev'
+set system.usb_led.dev='1-1'
+set system.usb_led.interval='50'
+
+set system.wlan_led=led
+set system.wlan_led.name='WLAN'
+set system.wlan_led.sysfs='wifi:blue:2.4g'
+set system.wlan_led.trigger='netdev'
+set system.wlan_led.dev='ra0'
+set system.wlan_led.mode='link tx'
+
+set system.wlan_led_5g=led
+set system.wlan_led_5g.name='WLAN_5G'
+set system.wlan_led_5g.sysfs='wifi:blue:5g'
+set system.wlan_led_5g.trigger='netdev'
+set system.wlan_led_5g.dev='rai0'
+set system.wlan_led_5g.mode='link tx'
+
+set system.lan_led=led
+set system.lan_led.name='LAN'
+set system.lan_led.sysfs='lan:blue'
+set system.lan_led.trigger='netdev'
+set system.lan_led.dev='eth0.1'
+set system.lan_led.mode='rx'
+
+set system.internet_led=led
+set system.internet_led.name='INTERNET'
+set system.internet_led.sysfs='internet:blue'
+set system.internet_led.trigger='netdev'
+set system.internet_led.dev='pppoe-wan'
+set system.internet_led.mode='tx rx'
+
+commit system
+EOF
+}
+
+set_usb_led() {
+	ucidef_set_led_usbdev "usb" "USB" "$1" "1-1"
+}
+
+set_wifi_led() {
+	ucidef_set_led_netdev "wifi_led" "wifi" "$1" "ra0"
+}
+
+set_wifi_led_5g() {
+	ucidef_set_led_netdev "wifi_led" "wifi" "$1" "rai0"
+}
+
+case $(ralink_board_name) in
+	fonera20n)
+		set_usb_led "fonera20n:amber:usb"
+		;;
+	ji2| \
+	superdisk_mini| \
+	br100)
+		set_wifi_led "wifi"
+		;;
+	wr8305rt)
+		set_wifi_led "wr8305rt:wifi"
+		set_usb_led "wr8305rt:usb"
+		;;
+	yk1)
+		set_wifi_led "wifi:blue"
+		set_usb_led "acc:blue"
+		;;
+	wrtnode)
+		set_wifi_led "wrtnode:sys"
+		;;
+	abox)
+		ucidef_set_led_usbdev "usb2" "USB2" "usb2:green" "1-2"
+		ucidef_set_led_usbdev "usb3" "USB3" "usb3:green" "2-1"
+		;;
+	q7)
+		set_wifi_led "zte_q7:wifi"
+		;;
+	dir620)
+		set_wifi_led "d-link:green:wifi"
+		set_usb_led "d-link:green:usb"
+		;;
+	ry1)
+		set_wifi_led "ry1:wifi"
+		set_usb_led "ry1:usb"
+		;;
+	xiaomi-mini)
+		set_wifi_led "culiang:blue"
+		set_usb_led "culiang:yellow"
+		;;
+	y1s)
+		ry2_set_leds
+		;;
+	y1)
+		y1_set_leds
+		;;
+	mt7620a-evb)
+		set_wifi_led "wifi"
+		set_usb_led "usb"
+		;;
+        ap7620a)
+                set_wifi_led "wifi"
+                set_usb_led "usb"
+                ;;
+	nw718)
+		set_usb_led "nw718:amber:usb"
+		;;
+	hg255d)
+		hg255d_set_leds
+		;;
+	oye-0001)
+		set_wifi_led "oye:green:wlan"
+		;;
+esac
+
+ucidef_commit_leds
+
+exit 0

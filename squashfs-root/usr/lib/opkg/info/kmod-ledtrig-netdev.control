@@ -1,0 +1,9 @@
+Package: kmod-ledtrig-netdev
+Version: 3.14.44-1
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 105
+Description:  Kernel module to drive LEDs based on network activity

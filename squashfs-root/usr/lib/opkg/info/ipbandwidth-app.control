@@ -1,0 +1,9 @@
+Package: ipbandwidth-app
+Version: 1
+Depends: libc, kmod-showspeed
+Source: package/pandorabox/showspeed
+Section: net
+Maintainer: vic
+Architecture: ralink
+Installed-Size: 1771
+Description:  ipbandwidth-app helps you do something.

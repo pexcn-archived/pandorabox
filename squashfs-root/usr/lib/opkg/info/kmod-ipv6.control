@@ -1,0 +1,9 @@
+Package: kmod-ipv6
+Version: 3.14.44-1
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 177512
+Description:  Kernel modules for IPv6 support

@@ -1,0 +1,17 @@
+/etc/l7-protocols/msnmessenger.pat
+/etc/l7-protocols/jabber.pat
+/etc/l7-protocols/vnc.pat
+/etc/l7-protocols/ntp.pat
+/etc/l7-protocols/http.pat
+/usr/lib/iptables/libxt_string.so
+/etc/l7-protocols/irc.pat
+/etc/l7-protocols/smtp.pat
+/etc/l7-protocols/bittorrent.pat
+/etc/l7-protocols/gnutella.pat
+/etc/l7-protocols/ssl.pat
+/etc/l7-protocols/ident.pat
+/etc/l7-protocols/aim.pat
+/etc/l7-protocols/ftp.pat
+/etc/l7-protocols/edonkey.pat
+/etc/l7-protocols/fasttrack.pat
+/etc/l7-protocols/pop3.pat

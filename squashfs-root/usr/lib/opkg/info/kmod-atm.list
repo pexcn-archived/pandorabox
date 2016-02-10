@@ -1,0 +1,3 @@
+/etc/modules.d/30-atm
+/lib/modules/3.14.44/atm.ko
+/lib/modules/3.14.44/br2684.ko

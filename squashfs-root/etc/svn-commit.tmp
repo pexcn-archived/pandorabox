@@ -1,0 +1,5 @@
+package:
+*netifd恢复set proc ip
+--此行及以下内容将会被忽略--
+
+M    init.d/network

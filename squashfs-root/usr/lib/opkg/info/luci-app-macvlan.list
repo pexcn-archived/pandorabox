@@ -1,0 +1,12 @@
+/bin/pppconnectcheck
+/bin/genwancfg
+/etc/init.d/ppp_syncdiag
+/usr/lib/lua/luci/controller/macvlan.lua
+/etc/init.d/macvlan
+/etc/hotplug.d/iface/01-macvlan
+/usr/lib/lua/luci/i18n/mwan3.zh-cn.lmo
+/usr/lib/lua/luci/model/cbi/macvlan.lua
+/etc/uci-defaults/luci-macvlan
+/usr/lib/lua/luci/view/macvlan/macvlan_rediag.htm
+/usr/lib/lua/luci/i18n/macvlan.zh-cn.lmo
+/etc/config/macvlan

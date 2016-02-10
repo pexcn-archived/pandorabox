@@ -1,0 +1,10 @@
+Package: kmod-l2tp
+Version: 3.14.44-1
+Depends: kmod-ipv6
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 15185
+Description:  Kernel modules for L2TP V3 Support

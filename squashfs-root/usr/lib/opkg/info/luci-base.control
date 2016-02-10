@@ -1,0 +1,9 @@
+Package: luci-base
+Version: 0.12+svn-r1024-1
+Depends: libc, lua, libuci-lua, libubus-lua
+Source: package/pandorabox/webs/luci
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 150427
+Description:  LuCI core libraries

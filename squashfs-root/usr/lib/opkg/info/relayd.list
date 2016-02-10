@@ -1,0 +1,3 @@
+/usr/sbin/relayd
+/etc/init.d/relayd
+/etc/hotplug.d/iface/30-relay

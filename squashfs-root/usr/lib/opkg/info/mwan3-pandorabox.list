@@ -1,0 +1,5 @@
+/etc/hotplug.d/iface/15-mwan3
+/usr/sbin/mwan3
+/lib/upgrade/keep.d/mwan3-pandorabox
+/usr/sbin/mwan3track
+/etc/config/mwan3

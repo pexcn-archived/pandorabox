@@ -1,0 +1,9 @@
+Package: kmod-ipt-iface
+Version: 3.14.44+2.3-1
+Depends: kmod-ipt-core
+Source: package/network/utils/xtables-addons
+Section: kernel
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ralink
+Installed-Size: 1137
+Description:  iface netfilter module

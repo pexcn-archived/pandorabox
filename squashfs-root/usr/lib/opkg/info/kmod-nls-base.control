@@ -1,0 +1,9 @@
+Package: kmod-nls-base
+Version: 3.14.44-1
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 3223
+Description:  Kernel module for NLS (Native Language Support)

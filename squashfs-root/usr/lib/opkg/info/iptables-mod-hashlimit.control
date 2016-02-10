@@ -1,0 +1,12 @@
+Package: iptables-mod-hashlimit
+Version: 1.4.21-1
+Depends: libc, iptables, kmod-ipt-hashlimit
+Source: package/network/utils/iptables
+Section: net
+Architecture: ralink
+Installed-Size: 5020
+Description:  iptables extensions for hashlimit matching
+ 
+ Matches:
+ - hashlimit
+ 

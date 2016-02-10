@@ -1,0 +1,10 @@
+Package: kmod-fs-ext4
+Version: 3.14.44-1
+Depends: kmod-lib-crc16, kmod-crypto-hash
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 241381
+Description:  Kernel module for EXT4 filesystem support

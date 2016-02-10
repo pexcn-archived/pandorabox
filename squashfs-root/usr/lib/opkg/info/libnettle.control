@@ -1,0 +1,11 @@
+Package: libnettle
+Version: 2.7.1-1
+Depends: libc, libgmp
+Source: package/libs/nettle
+License: LGPLv2
+LicenseFiles: COPYING
+Section: libs
+Maintainer: Nikos Mavrogiannopoulos <nmav@gnutls.org>
+Architecture: ralink
+Installed-Size: 220652
+Description:  GNU crypto library

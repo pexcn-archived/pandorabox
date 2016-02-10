@@ -1,0 +1,10 @@
+/usr/lib/lua/luci/model/cbi/admin_network/proto_dslite.lua
+/usr/lib/lua/luci/model/cbi/admin_network/proto_6rd.lua
+/usr/lib/lua/luci/model/network/proto_hnet.lua
+/usr/lib/lua/luci/model/cbi/admin_network/proto_6to4.lua
+/usr/lib/lua/luci/model/network/proto_dhcpv6.lua
+/usr/lib/lua/luci/model/cbi/admin_network/proto_hnet.lua
+/usr/lib/lua/luci/model/network/proto_4x6.lua
+/usr/lib/lua/luci/model/network/proto_6x4.lua
+/usr/lib/lua/luci/model/cbi/admin_network/proto_6in4.lua
+/usr/lib/lua/luci/model/cbi/admin_network/proto_dhcpv6.lua

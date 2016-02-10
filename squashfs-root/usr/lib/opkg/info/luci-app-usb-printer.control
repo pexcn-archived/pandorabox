@@ -1,0 +1,9 @@
+Package: luci-app-usb-printer
+Version: 0.12+svn-r1024-1
+Depends: libc, p910nd, kmod-usb-printer
+Source: package/pandorabox/webs/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 3705
+Description:  USB Printer Share via TCP/IP

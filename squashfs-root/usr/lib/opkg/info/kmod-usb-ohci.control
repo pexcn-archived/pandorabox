@@ -1,0 +1,10 @@
+Package: kmod-usb-ohci
+Version: 3.14.44-1
+Depends: kmod-usb-core
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 19321
+Description:  Kernel support for USB OHCI controllers

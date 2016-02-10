@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$(uci get wireless.@wifi-device[0].disabled)" in
+    1)
+        uci set wireless.@wifi-device[0].disabled=0
+	uci commit
+        wifi
+    ;;
+    *)
+        uci set wireless.@wifi-device[0].disabled=1
+        wifi
+    ;;
+esac 

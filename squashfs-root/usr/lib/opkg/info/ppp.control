@@ -1,0 +1,9 @@
+Package: ppp
+Version: 2.4.7-2
+Depends: libc, kmod-ppp, libpthread, shellsync
+Source: package/network/services/ppp
+Section: net
+Maintainer: Jo-Philipp Wich <xm@subsignal.org>
+Architecture: ralink
+Installed-Size: 96802
+Description:  This package contains the PPP (Point-to-Point Protocol) daemon.

@@ -1,0 +1,8 @@
+Package: huaweiaktbbo
+Version: 1
+Depends: libc, libusb-compat
+Source: feeds/oldpackages/utils/huaweiaktbbo
+Section: utils
+Architecture: ralink
+Installed-Size: 1992
+Description:  Huawei E156/E169/E220 activation tool

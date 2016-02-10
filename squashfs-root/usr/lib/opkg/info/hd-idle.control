@@ -1,0 +1,8 @@
+Package: hd-idle
+Version: 1.04-1
+Depends: libc
+Source: feeds/oldpackages/utils/hd-idle
+Section: utils
+Architecture: ralink
+Installed-Size: 4281
+Description:  Another idle-daemon for attached hard drives

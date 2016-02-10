@@ -1,0 +1,8 @@
+Package: kmod-fs-exfat
+Version: 3.14.44-1
+Depends: kmod-nls-cp936, kmod-nls-utf8, kmod-nls-cp437, kmod-nls-iso8859-1
+Source: package/pandorabox/exfat-driver
+Section: kernel
+Architecture: ralink
+Installed-Size: 49750
+Description:  Kernel module support exFAT,FAT16,FAT32,VFAT.

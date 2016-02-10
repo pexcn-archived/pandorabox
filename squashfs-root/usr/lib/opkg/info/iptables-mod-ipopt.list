@@ -1,0 +1,14 @@
+/usr/lib/iptables/libxt_dscp.so
+/usr/lib/iptables/libxt_length.so
+/usr/lib/iptables/libipt_TTL.so
+/usr/lib/iptables/libxt_statistic.so
+/usr/lib/iptables/libipt_ttl.so
+/usr/lib/iptables/libxt_CLASSIFY.so
+/usr/lib/iptables/libxt_ecn.so
+/usr/lib/iptables/libxt_TOS.so
+/usr/lib/iptables/libip6t_HL.so
+/usr/lib/iptables/libxt_tos.so
+/usr/lib/iptables/libxt_DSCP.so
+/usr/lib/iptables/libip6t_hl.so
+/usr/lib/iptables/libipt_ECN.so
+/usr/lib/iptables/libxt_tcpmss.so

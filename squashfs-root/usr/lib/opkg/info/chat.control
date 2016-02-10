@@ -1,0 +1,10 @@
+Package: chat
+Version: 2.4.7-2
+Depends: libc
+Source: package/network/services/ppp
+Section: net
+Maintainer: Jo-Philipp Wich <xm@subsignal.org>
+Architecture: ralink
+Installed-Size: 7644
+Description:  This package contains an utility to establish conversation with other PPP servers
+ (via a modem).

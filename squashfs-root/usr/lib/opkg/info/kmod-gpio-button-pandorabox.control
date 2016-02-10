@@ -1,0 +1,10 @@
+Package: kmod-gpio-button-pandorabox
+Version: 3.14.44-1
+Source: package/pandorabox/gpio-button-pandoraobx
+Section: kernel
+Architecture: ralink
+Installed-Size: 4279
+Description:  This is a replacement for the following in-kernel drivers:
+ 1) gpio_keys (KEYBOARD_GPIO)
+ 2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
+ 

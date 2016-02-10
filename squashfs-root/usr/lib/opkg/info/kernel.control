@@ -1,0 +1,10 @@
+Package: kernel
+Version: 3.14.44-1-b92df558198d5493188a693a7bc06991
+Depends: libc
+Source: package/kernel/linux
+License: GPLv2
+Section: sys
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 105
+Description:  Virtual kernel package

@@ -1,0 +1,9 @@
+Package: mkdosfs
+Version: 3.0.12-1
+Depends: libc
+Source: feeds/oldpackages/utils/dosfstools
+Section: utils
+Architecture: ralink
+Installed-Size: 11498
+Description:  Utilities to create and check MS-DOS FAT filesystems.
+ (mkfs.vfat and mkfs.msdos for creating FAT volumes)

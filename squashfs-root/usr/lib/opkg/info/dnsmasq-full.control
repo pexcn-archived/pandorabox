@@ -1,0 +1,12 @@
+Package: dnsmasq-full
+Version: 2.71-4
+Depends: libc, kmod-ipv6, libnettle
+Source: package/network/services/dnsmasq
+License: GPLv2
+LicenseFiles: COPYING
+Section: net
+Architecture: ralink
+Installed-Size: 119471
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+ 
+ This is a variant with DHCPv6, DNSSEC, Authroitative DNS and IPSET support

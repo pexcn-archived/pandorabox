@@ -1,0 +1,10 @@
+Package: kmod-nls-cp936
+Version: 3.14.44-1
+Depends: kmod-nls-base
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 85711
+Description:  Codepage 936 (Chinese GBK)

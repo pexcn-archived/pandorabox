@@ -1,0 +1,5 @@
+/usr/lib/iptables/libxt_pkttype.so
+/usr/lib/iptables/libxt_addrtype.so
+/usr/lib/iptables/libxt_physdev.so
+/usr/lib/iptables/libxt_quota.so
+/usr/lib/iptables/libxt_owner.so

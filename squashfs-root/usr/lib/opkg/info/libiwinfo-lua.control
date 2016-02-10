@@ -1,0 +1,11 @@
+Package: libiwinfo-lua
+Version: 2015-03-23-40f2844fadc05f4a4de7699dbc12fee295b7057b
+Depends: libc, libiwinfo, liblua
+Source: package/network/utils/iwinfo
+License: GPL-2.0
+Section: lang
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ralink
+Installed-Size: 6540
+Description:  This is the Lua binding for the iwinfo library. It provides access to all enabled
+ backends.

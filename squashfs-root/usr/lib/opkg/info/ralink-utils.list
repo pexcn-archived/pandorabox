@@ -1,0 +1,12 @@
+/sbin/i2scmd
+/sbin/switch
+/sbin/apctrl
+/sbin/ated
+/sbin/spicmd
+/sbin/i2ccmd
+/sbin/mii_mgr
+/sbin/ra_apctrl
+/sbin/reg
+/sbin/rai_apctrl
+/sbin/pciephy
+/sbin/mmap

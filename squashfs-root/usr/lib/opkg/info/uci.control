@@ -1,0 +1,10 @@
+Package: uci
+Version: 2015-04-09.1-1
+Depends: libc, libuci
+Source: package/system/uci
+License: LGPL-2.1
+Section: base
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 6513
+Description:  Utility for the Unified Configuration Interface (UCI)

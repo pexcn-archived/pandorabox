@@ -1,0 +1,179 @@
+<%#
+LuCI - Lua Configuration Interface
+Copyright 2008-2009 Steven Barth <steven@midlink.org>
+Copyright 2008-2009 Jo-Philipp Wich <xm@subsignal.org>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+$Id: routes.htm 7168 2011-06-17 12:34:28Z jow $
+
+-%>
+
+<%-
+	require "bit"
+	require "luci.sys"
+	require "luci.tools.webadmin"
+	require "nixio.fs"
+
+	local style = true
+
+	local bwc = io.popen("cat /proc/bandwidth 2>/dev/null")
+	local rv = {}
+	if bwc then
+		while true do
+			local ln = bwc:read("*l")
+			if not ln then break end
+			rv[#rv+1] = ln
+		end
+	end
+
+	if luci.http.formvalue("status") == "1" then
+		local data = rv
+		rv = {}
+		rv.date = os.time()
+		rv.data = data
+		luci.http.prepare_content("application/json")
+		luci.http.write_json(rv)
+		return
+	end
+
+-%>
+<%+header%>
+
+<div class="cbi-map" id="cbi-network">
+	<h2><a id="content" name="content"><%:ipbandwidth%></a></h2>
+	<div class="cbi-map-descr"><%:The following rules are currently active on this system.%></div>
+
+	<fieldset class="cbi-section" id="cbi-table-table">
+		<legend>IP Bandwidth</legend>
+		<div class="cbi-section-node">
+			<table class="cbi-section-table">
+				<tr class="cbi-section-table-titles">
+					<th class="cbi-section-table-cell"><%_<abbr title="Internet Protocol Version 4">IPv4</abbr>-Address%></th>
+					<th class="cbi-section-table-cell"><%_<abbr title="Media Access Control">MAC</abbr>-Address%></th>
+					<th class="cbi-section-table-cell"><%:Total Download%></th>
+					<th class="cbi-section-table-cell"><%:Total Upload%></th>
+					<th class="cbi-section-table-cell"><%:Download/Sec%></th>
+					<th class="cbi-section-table-cell"><%:Upload/Sec%></th>
+				</tr>
+			</table>
+		</div>
+	</fieldset>
+	<br />
+</div>
+
+<script src="<%=resource%>/xhr.js"></script>
+<script>
+	var data = <% luci.http.write_json(rv) %>,
+		_data = {};
+	var newDate = <%= os.time() %>,
+		oldDate = 0;
+	for (var i in data) {
+		var _arr = data[i].split(" ");
+		var _obj = {};
+		_obj.ip = _arr[0];
+		_obj.mac = _arr[1];
+		_obj.down = _obj._down = _arr[2] / 1024; // Bype -> KB
+		_obj.up = _obj._up = _arr[3] / 1024; // Bype -> KB
+		_obj.sdown = 0;
+		_obj.sup = 0;
+		_data[_obj.mac] = _obj;
+	}
+	data = _data;
+	var table = document.getElementsByTagName("table");
+	for (var i in table) {
+		if (/cbi-section-table/.test(table[i].className)) {
+			table = table[i]
+			break;
+		}
+	}
+	window.onload = function () {
+		injectTable(table, data);
+	}
+	var injectTable = function (t, d) {
+		var trs = t.getElementsByTagName("tr");
+		var _trs = [];
+		for (var i in trs) {
+			if (trs[i].nodeType != 1) continue;
+			_trs.push(trs[i]);
+		}
+		trs = _trs;
+		for (var i in d) {
+			var mac = d[i].mac;
+			while (/\W/.test(mac))
+				mac = mac.replace(/\W/, "");
+			var reg = new RegExp("cbi-mac-" + mac);
+			var tr = null;
+			for (var j in trs) {
+				if (reg.test(trs[j].className))
+					tr = trs[j];
+			}
+			if (tr) {
+				tds = tr.getElementsByTagName("td");
+				tds[0].innerHTML = d[i].ip;
+				tds[2].innerHTML =
+					(d[i].down > 1024?d[i].down / 1024:d[i].down).toFixed(2) + (d[i].down > 1024?" MB":" KB");
+				tds[3].innerHTML =
+					(d[i].up > 1024?d[i].up / 1024: d[i].up).toFixed(2) + (d[i].up > 1024?" MB":" KB");
+				tds[4].innerHTML =
+					(d[i].sdown > 1024?d[i].sdown / 1024:d[i].sdown).toFixed(2) + (d[i].sdown > 1024?" MB/s":" KB/s");
+				tds[5].innerHTML =
+					(d[i].sup > 1024?d[i].sup / 1024:d[i].sup).toFixed(2) + (d[i].sup > 1024?" MB/s":" KB/s");
+			} else {
+				var itemNames = ["ip", "mac", "down", "up", "sdown", "sup"];
+				var ele = document.createElement("tr")
+				ele.className = "cbi-section-table-row cbi-rowstyle-<%=(style and 1 or 2)%>";
+				ele.className += " cbi-mac-" + mac;
+				for (var j in itemNames) {
+					var item = document.createElement("td");
+					item.className = "cbi-value-field";
+					item.className += " cbi-value-" + j;
+					item.innerHTML = d[i][itemNames[j]] + (j > 1? " Bype": "");
+					ele.appendChild(item);
+				}
+				table.appendChild(ele);
+			}
+		}
+	};
+	var second = 1;
+	XHR.poll(second, '<%=REQUEST_URI%>', {status: 1},
+		function (x, info) {
+			var _data = {};
+			oldDate = newDate;
+			newDate = info.date;
+			for (var i in info.data) {
+				var _arr = info.data[i].split(" ");
+				var _obj = {};
+				_obj.ip = _arr[0];
+				_obj.mac = _arr[1];
+				_obj.down = _arr[2] / 1024; // Bype -> KB
+				_obj.up = _arr[3] / 1024; // Bype -> KB
+				_data[_obj.mac] = _obj;
+			}
+			for (var i in _data) {
+				var item = data[_data[i].mac];
+				if (item) {
+					item.ip = _data[i].ip;
+					item._down = item.down;
+					item._up = item.up;
+					item.down = _data[i].down;
+					item.up = _data[i].up;
+					item.sdown = (item.down - item._down) / (newDate - oldDate);
+					item.sup = (item.up - item._up) / (newDate - oldDate);
+				} else {
+					_data[i]._down = _data[i].down;
+					_data[i]._up = _data[i].up;
+					_data[i].sdown = 0;
+					_data[i].sup = 0;
+					data[_data[i].mac] = _data[i];
+				}
+			}
+			injectTable(table, data);
+		})
+</script>
+
+<%+footer%>

@@ -1,0 +1,9 @@
+Package: kmod-tun
+Version: 3.14.44-1
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 12904
+Description:  Kernel support for the TUN/TAP tunneling device

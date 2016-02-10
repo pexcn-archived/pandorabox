@@ -1,0 +1,3 @@
+/lib/modules/3.14.44/usb-storage.ko
+/etc/modules-boot.d/usb-storage
+/etc/modules.d/usb-storage

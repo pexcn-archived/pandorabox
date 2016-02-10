@@ -1,0 +1,8 @@
+Package: maccalc
+Version: 1
+Depends: libc
+Source: package/network/utils/maccalc
+Section: utils
+Architecture: ralink
+Installed-Size: 2066
+Description:  This package contains a MAC address manipulation utility.

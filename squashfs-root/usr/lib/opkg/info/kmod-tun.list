@@ -1,0 +1,2 @@
+/etc/modules.d/30-tun
+/lib/modules/3.14.44/tun.ko

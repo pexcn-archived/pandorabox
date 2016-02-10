@@ -1,0 +1,9 @@
+Package: iptables-mod-ipmark
+Version: 2.3-1
+Depends: libc, iptables, kmod-ipt-ipmark
+Source: package/network/utils/xtables-addons
+Section: net
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Architecture: ralink
+Installed-Size: 2194
+Description:  IPMARK iptables extension

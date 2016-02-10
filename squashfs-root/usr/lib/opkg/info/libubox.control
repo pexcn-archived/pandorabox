@@ -1,0 +1,10 @@
+Package: libubox
+Version: 2015-03-22-b8d9b382e39823850331edc2a92379173daf1be3
+Depends: libc
+Source: package/libs/libubox
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: ralink
+Installed-Size: 16440
+Description:  Basic utility library

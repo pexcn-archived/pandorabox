@@ -1,0 +1,9 @@
+Package: luci-app-ntpc
+Version: 0.12+svn-r1024-1
+Depends: libc, ntpclient
+Source: package/pandorabox/webs/luci-addons
+Section: luci
+Maintainer: LuCI Development Team <luci@lists.subsignal.org>
+Architecture: ralink
+Installed-Size: 7778
+Description:  NTP time synchronisation configuration module
