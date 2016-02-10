@@ -61,8 +61,7 @@ case $(ralink_board_name) in
 		set_usb_led "ry1:usb"
 		;;
 	xiaomi-mini)
-		set_wifi_led "culiang:blue"
-		set_usb_led "culiang:yellow"
+		set_wifi_led "culiang:red"
 		;;
 	xiaomi-r1cl)
 		set_wifi_led "status:blue"
