@@ -1,4 +1,0 @@
-/lib/functions/fsck/dosfsck.sh
-/usr/sbin/fsck.vfat
-/usr/sbin/fsck.msdos
-/usr/sbin/dosfsck

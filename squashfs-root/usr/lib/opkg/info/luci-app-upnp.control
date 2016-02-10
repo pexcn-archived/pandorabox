@@ -1,9 +1,0 @@
-Package: luci-app-upnp
-Version: 0.12+svn-r1024-1
-Depends: libc, miniupnpd-pandorabox
-Source: package/pandorabox/webs/luci-addons
-Section: luci
-Maintainer: LuCI Development Team <luci@lists.subsignal.org>
-Architecture: ralink
-Installed-Size: 19759
-Description:  Universal Plug & Play configuration module

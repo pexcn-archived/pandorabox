@@ -1,4 +1,0 @@
-/etc/uci-defaults/luci-bandwidth
-/usr/lib/lua/luci/model/cbi/bandwidth/bandwidth.lua
-/usr/lib/lua/luci/i18n/bandwidth.zh-cn.lmo
-/usr/lib/lua/luci/controller/bandwidth.lua

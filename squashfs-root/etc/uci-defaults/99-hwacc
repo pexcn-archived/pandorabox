@@ -1,5 +1,0 @@
-#!/bin/sh
-[ -f /etc/config/hwacc ] && exit 0
-[ -f /lib/modules/`uname -r`/hw_nat.ko ] && echo "config hwnat" > /etc/config/hwacc
-[ -f /lib/modules/`uname -r`/hw_crypto.ko ] && echo "config hwcrypto" >> /etc/config/hwacc
-exit 0

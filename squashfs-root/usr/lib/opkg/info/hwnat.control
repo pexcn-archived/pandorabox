@@ -1,8 +1,0 @@
-Package: hwnat
-Version: 4320
-Depends: libc, kmod-ralink-hwnat
-Source: package/ralink/hwnat
-Section: Ralink
-Architecture: ralink
-Installed-Size: 11452
-Description:  An program to query info from hwnat driver

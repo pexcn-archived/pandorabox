@@ -1,9 +1,0 @@
-Package: miniupnpd-pandorabox
-Version: 1.8.20140523-4
-Depends: libc, iptables, libip4tc, libip6tc, ip6tables, libnfnetlink
-Source: package/pandorabox/miniupnpd-pandorabox
-Section: net
-Maintainer: Markus Stenberg <fingon@iki.fi>
-Architecture: ralink
-Installed-Size: 46740
-Description:  Lightweight UPnP IGD, NAT-PMP & PCP daemon

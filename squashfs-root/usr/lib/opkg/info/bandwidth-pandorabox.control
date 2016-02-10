@@ -1,9 +1,0 @@
-Package: bandwidth-pandorabox
-Version: 2
-Depends: libc, kmod-showspeed, tc, kmod-sched-core, kmod-sched-connmark, kmod-ifb, iptables, iptables-mod-filter, iptables-mod-conntrack-extra, kmod-sched-esfq, libnl-tiny, libuci, iptables-mod-u32, iptables-mod-nat-extra, iptables-mod-iface, iptables-mod-ipmark, iptables-mod-nat-extra
-Source: package/pandorabox/bandwidth
-Section: net
-Maintainer: vic
-Architecture: all
-Installed-Size: 7387
-Description:  pandorabox bandwidth-pandorabox control.
