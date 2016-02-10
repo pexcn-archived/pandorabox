@@ -13,5 +13,5 @@ config led 'led_wifi_led'
 	option trigger 'netdev'
 	option dev 'ra0'
 	option default '0'
-	option sysfs 'culiang:red'
+	option sysfs 'culiang:yellow'
 
