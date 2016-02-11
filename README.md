@@ -8,7 +8,7 @@
 mkdir -p \
 	squashfs-root/dev/ \
 	squashfs-root/etc/crontabs \
-	squashfs-root/lib/uci/ \
+	squashfs-root/lib/uci/upload \
 	squashfs-root/mnt/ \
 	squashfs-root/overlay/ \
 	squashfs-root/proc/ \
