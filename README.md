@@ -5,8 +5,9 @@
 
 ```bash
 # 由于 git 不能索引空目录，所以必须还原空目录
-mkdir \
+mkdir -p \
 	squashfs-root/dev/ \
+	squashfs-root/etc/crontabs \
 	squashfs-root/lib/uci/ \
 	squashfs-root/mnt/ \
 	squashfs-root/overlay/ \
@@ -15,7 +16,11 @@ mkdir \
 	squashfs-root/sys/ \
 	squashfs-root/tmp/ \
 	squashfs-root/usr/lib/lua/luci/model/cbi/admin_services/ \
-	squashfs-root/usr/lib/opkg/lists/
+	squashfs-root/usr/lib/opkg/lists/ \
+	squashfs-root/usr/share/dbus-1/services/ \
+	squashfs-root/usr/share/dbus-1/session.d/ \
+	squashfs-root/usr/share/dbus-1/system.d/ \
+	squashfs-root/usr/share/dbus-1/system-services/
 
 # 打包
 openwrt-repack.sh -R pandorabox.bin
