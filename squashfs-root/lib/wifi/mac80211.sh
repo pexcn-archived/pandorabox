@@ -122,7 +122,7 @@ $dev_id
 $ht_capab
 	option noscan   1
 	option smps	0
-	option country CN
+	option country US
 
 config wifi-iface
 	option device   radio$devidx
