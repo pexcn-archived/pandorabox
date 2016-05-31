@@ -444,14 +444,6 @@ Architecture: ralink
 Installed-Time: 1448181151
 Auto-Installed: yes
 
-Package: pdnsd
-Version: 1.2.9a-par-1
-Depends: libc, libpthread
-Provides:
-Status: install user installed
-Architecture: ramips_24kec
-Installed-Time: 1455118465
-
 Package: libip4tc
 Version: 1.4.21-1
 Depends: libc, libxtables
