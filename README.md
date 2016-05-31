@@ -1,5 +1,5 @@
 
-# Pandorabox 纯洁版 for MiWiFi mini
+# Pandorabox 纯净版 for MiWiFi mini
 
 基于 Pandorabox for MiWiFi mini 的 r1696 版。并使用 [@rssnsj](https://github.com/rssnsj) 的 [firmware-tools](https://github.com/rssnsj/firmware-tools) 工具进行解包，若需要打包，则需要这里的版本：[firmware-tools](https://github.com/pexcn/firmware-tools).
 
