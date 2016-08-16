@@ -219,15 +219,6 @@ Architecture: ralink
 Installed-Time: 1448181149
 Auto-Installed: yes
 
-Package: libcurl
-Version: 7.38.0-1
-Depends: libc, libpolarssl
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1448181148
-Auto-Installed: yes
-
 Package: kmod-lib-crc-ccitt
 Version: 3.14.56-1
 Provides:
@@ -522,14 +513,6 @@ Conffiles:
  /etc/dropbear/dropbear_dss_host_key e3b0c44298fc1c149afbf4c8996fb92427
  /etc/config/dropbear 1a8a7b0ed5575b4cfd4deb42c3b0ed8a7f
 Installed-Time: 1448181148
-
-Package: curl
-Version: 7.38.0-1
-Depends: libc, libcurl
-Provides:
-Status: install user installed
-Architecture: ralink
-Installed-Time: 1455021349
 
 Package: kmod-nls-utf8
 Version: 3.14.56-1
