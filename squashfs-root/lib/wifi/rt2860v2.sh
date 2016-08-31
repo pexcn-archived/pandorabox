@@ -44,7 +44,7 @@ config wifi-device  ra0
 	option channel 1
 	option txpower 100
 	option htmode HT40
-	option country 00
+	option country CN
 	option noscan 1
 	option txburst 1
 

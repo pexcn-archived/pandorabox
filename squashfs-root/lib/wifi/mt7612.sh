@@ -26,7 +26,7 @@ config wifi-device  rai0
 	option channel  157
 	option txpower 	100
 	option htmode	VHT80
-	option country 	00
+	option country 	CN
 	option noscan 	1
 	option txburst 	1
 
