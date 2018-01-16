@@ -1,0 +1,15 @@
+Package: shtool
+Version: 2.0.8-1
+Depends: libc
+Source: feeds/management/shtool
+License: GPL-2.0+
+Section: utils
+Architecture: ralink
+Installed-Size: 33526
+Filename: shtool_2.0.8-1_ralink.ipk
+Size: 34207
+MD5Sum: 35ff1ee78a80b74a63ab122d5f744a9a
+SHA256sum: 9572e05ffeffc4d1cedb86c706ae2954b548b0cf82a8cf896c2443d3e829d45f
+Description:  GNU shtool is a compilation of small but very stable and portable shell
+ scripts into a single shell tool.
+

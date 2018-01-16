@@ -1,0 +1,181 @@
+Package: babels
+Version: 2014-07-04-bc5d60e58e7ebd1694cef23d798df08b3b8f216f-1
+Depends: libc, kmod-ipv6
+Source: feeds/routing/babels
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ralink
+Installed-Size: 46389
+Filename: babels_2014-07-04-bc5d60e58e7ebd1694cef23d798df08b3b8f216f-1_ralink.ipk
+Size: 47424
+MD5Sum: 2c88b9e2b73f2ce4ab9e333cf2fcfd23
+SHA256sum: 70f799da7f686bffb999314c1aa7384edfa0e2500666e9c6d30da5e75c7b81bd
+Description:  Babel is a loop-avoiding distance-vector routing protocol roughly based
+ on DSDV and AODV, but with provisions for link cost estimation and
+ redistribution of routes from other routing protocols.
+ While it is optimised for wireless mesh networks, Babel will also work
+ efficiently on wired networks. It will generate between 1.2 and 2.4 times
+ the amount of routing traffic that RIPng would generate, while
+ never counting to infinity.
+ This is experimental source routing branch, and should be only used if you
+ know what you are doing.
+
+Package: batctl
+Version: 2014.2.0-1
+Depends: libc, kmod-batman-adv, libnl-tiny
+Source: feeds/routing/batctl
+Section: net
+Maintainer: Marek Lindner <mareklindner@neomailbox.ch>
+Architecture: ralink
+Installed-Size: 20119
+Filename: batctl_2014.2.0-1_ralink.ipk
+Size: 20812
+MD5Sum: 6cf0635e2c4084bf9574cb1b3be24075
+SHA256sum: e03f619555097eb4140b78a9c76628563c5f5281a1bd597174c1a467fda7e3d5
+Description:  batctl is a more intuitive managment utility for B.A.T.M.A.N.-Advanced.
+ It is an easier method for configuring batman-adv and provides some
+ additional tools for debugging as well. This package builds
+ version 2014.2.0 of the user space utility.
+
+Package: hnet-full
+Version: 2014-09-26-0c1d55d03983c726aaad010738236c2da64ca7df-1
+Depends: libc, hnetd, luci-app-hnet, babels, ohybridproxy, miniupnpd, minimalist-pcproxy
+Source: feeds/routing/hnetd
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ralink
+Installed-Size: 104
+Filename: hnet-full_2014-09-26-0c1d55d03983c726aaad010738236c2da64ca7df-1_ralink.ipk
+Size: 720
+MD5Sum: efa088771ec015b214bba9d46c70b9f4
+SHA256sum: d8689492ac3a869e07fb50ef77f603aa535c95c57a65be3c96efb3ab0bbd215a
+Description:  HNCP Homenet metapackage
+
+Package: hnetd
+Version: 2014-09-26-0c1d55d03983c726aaad010738236c2da64ca7df-1
+Depends: libc, odhcpd, odhcp6c, netifd
+Source: feeds/routing/hnetd
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ralink
+Installed-Size: 68439
+Filename: hnetd_2014-09-26-0c1d55d03983c726aaad010738236c2da64ca7df-1_ralink.ipk
+Size: 69459
+MD5Sum: 59d284663767bd625a6208b9a2c487f8
+SHA256sum: acb0d12e63c9f15af18e0bb5ebc9acde077e84eb3bf8ff21d775aeb077a7a7f9
+Description:  This package provides a daemon which implementats distributed prefix assignment
+ and service discovery for a home network consisting of multiple routers
+ connected to multiple service providers. It provides a netifd protocol "hnet"
+ for use in /etc/config/network.
+
+Package: kmod-batman-adv
+Version: 3.14.44+2014.2.0-1
+Depends: kmod-lib-crc16, kmod-crypto-core, kmod-crypto-crc32c, kmod-lib-crc32c
+Source: feeds/routing/batman-adv
+Section: kernel
+Maintainer: Marek Lindner <mareklindner@neomailbox.ch>
+Architecture: ralink
+Installed-Size: 74965
+Filename: kmod-batman-adv_3.14.44+2014.2.0-1_ralink.ipk
+Size: 75429
+MD5Sum: c1fd8f97e1f9109fdb6d7ef1ea4c2072
+SHA256sum: 0b77cc730499e34dc257fe32e4f14a3ec7add44bd117d58ae5860e792bfae2c2
+Description:  B.A.T.M.A.N. advanced is a kernel module which allows to
+ build layer 2 mesh networks. This package builds
+ version 2014.2.0 of the kernel module.
+
+Package: luci-app-hnet
+Version: 2014-09-26-0c1d55d03983c726aaad010738236c2da64ca7df-1
+Depends: libc, hnetd
+Source: feeds/routing/hnetd
+Section: luci
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ralink
+Installed-Size: 56906
+Filename: luci-app-hnet_2014-09-26-0c1d55d03983c726aaad010738236c2da64ca7df-1_ralink.ipk
+Size: 57594
+MD5Sum: 09a9ef960494e5324ce670d017341fd8
+SHA256sum: fbdaeb9a50e1737ca1239d5a8668f496cfe02fad14544ddd80fa779fe235d664
+Description:  HNCP Homenet configuration and visualization
+
+Package: minimalist-pcproxy
+Version: 2014-06-02-c8d47ff42c4354f502830faeae13bd8f269401af-2
+Depends: libc, libubox
+Source: feeds/routing/minimalist-pcproxy
+Section: net
+Maintainer: Markus Stenberg <fingon@iki.fi>
+Architecture: ralink
+Installed-Size: 5066
+Filename: minimalist-pcproxy_2014-06-02-c8d47ff42c4354f502830faeae13bd8f269401af-2_ralink.ipk
+Size: 5955
+MD5Sum: 9f846ba105c0cdd98250708d318b6c3d
+SHA256sum: b3b0a9e95ba5ce397ce7e3f1fbd8a54662f0ffa04c35e0b10580225614b36a8b
+Description:  This package contains a daemon which can be used to forward
+ PCP (Port Control Protocol - RFC6887) requests requests to PCP remote servers.
+ 
+ In and of itself, it is not very useful, but combined with hnetd+miniupnpd
+ it allows for control of NAT forwarding and firewall pinholes from multiple
+ hops away.
+
+Package: miniupnpd
+Version: 1.8.20140523-4
+Depends: libc, iptables, libip4tc, libip6tc, ip6tables, libnfnetlink
+Source: feeds/routing/miniupnpd
+Section: net
+Maintainer: Markus Stenberg <fingon@iki.fi>
+Architecture: ralink
+Installed-Size: 46369
+Filename: miniupnpd_1.8.20140523-4_ralink.ipk
+Size: 47208
+MD5Sum: 061d97dc2a9687eea6f2aa4ec18ff7e4
+SHA256sum: 1824ba9ef5c89c432e087b8796bee9d658c78a94b63ddc323cc9f09d87779daf
+Description:  Lightweight UPnP IGD, NAT-PMP & PCP daemon
+
+Package: mrd6
+Version: 2013-11-30-c805eb33255dbc0b6647d463c6c67d1c9d3105a0-1
+Depends: libc, libstdcpp
+Source: feeds/routing/mrd6
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ralink
+Installed-Size: 264788
+Filename: mrd6_2013-11-30-c805eb33255dbc0b6647d463c6c67d1c9d3105a0-1_ralink.ipk
+Size: 265384
+MD5Sum: 93cc632826dd5aff92f410257b6aa76d
+SHA256sum: 1eb4d972db0962920e74bba9ff2c8dc309b03955f099651c3bb8df88fcf32216
+Description:  Multicast is becoming a major component in next generation networks, used 
+ in several scenarios, from video broadcasting to multimedia conferencing. 
+ In order to be implemented, new technology needs supporting hardware and 
+ software across a set of devices and systems. MRD6 is an implementation of 
+ a modular IPv6 Multicast Routing Framework for the Linux operating system 
+ and provides MLDv2 (as well as MLDv1), PIM-SM and MBGP support.
+
+Package: nodogsplash
+Version: 0.9_beta9.9.8-2
+Depends: libc, libpthread, iptables-mod-ipopt
+Source: feeds/routing/nodogsplash
+Section: net
+Architecture: ralink
+Installed-Size: 43727
+Filename: nodogsplash_0.9_beta9.9.8-2_ralink.ipk
+Size: 44394
+MD5Sum: ab311e71df3834d2646fcfc1a1ec6896
+SHA256sum: b257749df1e3eb41f337da9963b9955b0f4f5185376de2e291d345855aa950aa
+Description:  Nodogsplash offers a simple way to open a free hotspot providing
+ restricted access to an internet connection.
+
+Package: ohybridproxy
+Version: 2014-06-19-3a9489615c488afa85a823a40aea89b39bbac391-1
+Depends: libc, libubox, mdnsd
+Source: feeds/routing/ohybridproxy
+Section: net
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: ralink
+Installed-Size: 8886
+Filename: ohybridproxy_2014-06-19-3a9489615c488afa85a823a40aea89b39bbac391-1_ralink.ipk
+Size: 9558
+MD5Sum: 7fb0ef6252f315dd9f0abc1536b607fc
+SHA256sum: 115e25b947e6061478fa1c5528352da615ab6cf94eb1c38f90203424c5262d78
+Description:  This package provides a statically configured daemon for translating DNS
+ requests to Multicast DNS and back again.
+

@@ -1,0 +1,961 @@
+Package: asterisk18-app-alarmreceiver
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 6727
+Filename: asterisk18-app-alarmreceiver_1.8.30.0-2_ralink.ipk
+Size: 7543
+MD5Sum: c77da0a05a712107100548d53df3a203
+SHA256sum: d7254044928e9ff80a02133144f4df291b9a3ee3536e1c30138319ac1f18448a
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Central Station Alarm receiver for Ademco Contact ID in Asterisk.
+
+Package: asterisk18-app-authenticate
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3238
+Filename: asterisk18-app-authenticate_1.8.30.0-2_ralink.ipk
+Size: 3979
+MD5Sum: 0c5658c79cddc8e0316ff8288afd847c
+SHA256sum: e01c3e4eb5b9afe1bb26099cfff612a4f9f7bc37180e42ddde16e6fff1aec2a3
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Execute arbitrary authenticate commands in Asterisk.
+
+Package: asterisk18-app-directed_pickup
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3820
+Filename: asterisk18-app-directed_pickup_1.8.30.0-2_ralink.ipk
+Size: 4563
+MD5Sum: 57cce35575a8f4ba16b89806e7b1982f
+SHA256sum: fd4465a54328e592425a7e2eb1ad02797cb9bd187dceebc163e068a6fb319817
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for directed call pickup in Asterisk.
+
+Package: asterisk18-app-disa
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 5023
+Filename: asterisk18-app-disa_1.8.30.0-2_ralink.ipk
+Size: 5783
+MD5Sum: c81d3a33252cf0a7061b6bbe76ffc7b4
+SHA256sum: a605fcd23ddca9c80cbb00a15e4a6abbc2bd2e3d33b297139ebfbb550e3e3299
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Direct Inward System Access in Asterisk.
+
+Package: asterisk18-app-exec
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3067
+Filename: asterisk18-app-exec_1.8.30.0-2_ralink.ipk
+Size: 3840
+MD5Sum: 135ff9fa0e49727009c662f53553a31f
+SHA256sum: 72062bc0e635979f9d867c49bdc349bd37b38f604f9767162a87efa5d1c72af1
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for application execution in Asterisk.
+
+Package: asterisk18-app-playtones
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2031
+Filename: asterisk18-app-playtones_1.8.30.0-2_ralink.ipk
+Size: 2799
+MD5Sum: 843a85bd2695f69b5a54ff44f715b9e4
+SHA256sum: 6bd3ff0e1f00ba532a390066c0c40b328826f4c0af520ab7385972ecdc6857c4
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support play a tone list in Asterisk.
+
+Package: asterisk18-app-record
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 4613
+Filename: asterisk18-app-record_1.8.30.0-2_ralink.ipk
+Size: 5364
+MD5Sum: 11bc9c01f8300af178aae5d65f291896
+SHA256sum: 3638a3b5cb39f2ce2a16bbd861c1d583fad578749c292c841fce9da3df7667ac
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support to record a sound file in Asterisk.
+
+Package: asterisk18-app-sayunixtime
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2084
+Filename: asterisk18-app-sayunixtime_1.8.30.0-2_ralink.ipk
+Size: 2858
+MD5Sum: 03d0a245a0444d70ed048b3e93ac68bc
+SHA256sum: 73d6d7d9a88bad1fcbc56d048d089060f66251862645fed79b60baa63a63aad1
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support an application to say Unix time in Asterisk.
+
+Package: asterisk18-app-senddtmf
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2651
+Filename: asterisk18-app-senddtmf_1.8.30.0-2_ralink.ipk
+Size: 3442
+MD5Sum: df38bd3d40f82a17376cb06966683370
+SHA256sum: 68aaab0d8d6e5d00f02fe0e392731bf798e4323bd876ab7e596581d785fa26f7
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Sends arbitrary DTMF digits in Asterisk.
+
+Package: asterisk18-app-setcallerid
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 1988
+Filename: asterisk18-app-setcallerid_1.8.30.0-2_ralink.ipk
+Size: 2754
+MD5Sum: 80885afef94fef8447758b47269ba28c
+SHA256sum: a016b5c2fb13993a69361697d2e9df882220238a34a33c10447d275409c92890
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Support for setting callerid in Asterisk.
+
+Package: asterisk18-app-sms
+Version: 1.8.30.0-2
+Depends: libc, asterisk18, libpopt, libstdcpp
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 23569
+Filename: asterisk18-app-sms_1.8.30.0-2_ralink.ipk
+Size: 24349
+MD5Sum: d842207dd94bef0799a5503d4bb05f14
+SHA256sum: 4979f0ecff29b3a72ca081623b961e61115b9ee500775ed6180b93bf777be1b9
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support SMS support (ETSI ES 201 912 protocol 1) in Asterisk.
+
+Package: asterisk18-app-stack
+Version: 1.8.30.0-2
+Depends: libc, asterisk18, asterisk18-res-agi
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 10811
+Filename: asterisk18-app-stack_1.8.30.0-2_ralink.ipk
+Size: 11589
+MD5Sum: c47aafa9644923253487747f106d6c2c
+SHA256sum: 228d23d391f945323beb90c99a6a2c08a87e4286216ca1d371532776db3210a2
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support  stack applications Gosub Return etc. in Asterisk.
+
+Package: asterisk18-app-system
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2512
+Filename: asterisk18-app-system_1.8.30.0-2_ralink.ipk
+Size: 3294
+MD5Sum: 97839506a267f1722b1a00f1bb9df3d0
+SHA256sum: 1390815450fd7c5ddc745703b13e0890f96d5e1ecd4832e0305b891260f9842d
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for executing system commands in Asterisk.
+
+Package: asterisk18-app-talkdetect
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3929
+Filename: asterisk18-app-talkdetect_1.8.30.0-2_ralink.ipk
+Size: 4666
+MD5Sum: c820a68588187da976f7ec3840688f8c
+SHA256sum: 6da0b944feaf7a4452fc55fc4e902cb99cbe6bc864da4587af422586c56f3a15
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support for file playback with audio detect in Asterisk.
+
+Package: asterisk18-app-waituntil
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2302
+Filename: asterisk18-app-waituntil_1.8.30.0-2_ralink.ipk
+Size: 3073
+MD5Sum: 3f92e3cfeb2e6b96100f2373d1a94d82
+SHA256sum: 7318acdaa35a9e082ca0b5732c4aa98c9b2ded0de83dd43652340d3263a3b714
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support sleeping until the given epoch in Asterisk.
+
+Package: asterisk18-app-while
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 4210
+Filename: asterisk18-app-while_1.8.30.0-2_ralink.ipk
+Size: 4949
+MD5Sum: f4fa94e3bc7d53f3f5f055d5bf9d6d8c
+SHA256sum: 38f9b15d68f6a9c1f804bdb89c6d67a9a6c0583b2a08c1535ecae12fb7d0c5c5
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a while loop implementation in Asterisk.
+
+Package: asterisk18-chan-agent
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 22654
+Filename: asterisk18-chan-agent_1.8.30.0-2_ralink.ipk
+Size: 23422
+MD5Sum: 8f42c9718d3e3055e728fd43a1378991
+SHA256sum: 973e23758ace159ab7fe54f6acd1c58e0208de8ef1179606b4bb8a1984e3f66b
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support An implementation of agents proxy channel in Asterisk.
+
+Package: asterisk18-chan-gtalk
+Version: 1.8.30.0-2
+Depends: libc, asterisk18, libiksemel
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 60954
+Filename: asterisk18-chan-gtalk_1.8.30.0-2_ralink.ipk
+Size: 61792
+MD5Sum: 9d7cf80bf3d8c76e5dddfe8e8b2b73ac
+SHA256sum: c2b5c689fa3225fcd6821a4f0c36e583c481135ea029a99553e7ebe957a2460c
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support An implementation of chan_gtalk and res_jabber for GTalk support in Asterisk.
+
+Package: asterisk18-chan-local
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 11052
+Filename: asterisk18-chan-local_1.8.30.0-2_ralink.ipk
+Size: 11823
+MD5Sum: a65216c19ad5f55a684d224bcf319fe0
+SHA256sum: 9211dfa3ff0e172b35cfd88c8e93d97fdead8dccde4a4c36e7576b8f51eb7866
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support An implementation of local proxy channel in Asterisk.
+
+Package: asterisk18-chan-mgcp
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 43249
+Filename: asterisk18-chan-mgcp_1.8.30.0-2_ralink.ipk
+Size: 44053
+MD5Sum: 4319a14754a269a35d8a78c827e1b41f
+SHA256sum: 4179fe5b3c7680e7da59296164abcaaf01dd50dccf1bf2a4d4e10cabb63b34f4
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support the channel chan_mgcp in Asterisk.
+
+Package: asterisk18-codec-a-mu
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2151
+Filename: asterisk18-codec-a-mu_1.8.30.0-2_ralink.ipk
+Size: 2929
+MD5Sum: b206eb058019aba6effc5fd108245490
+SHA256sum: a26462f23ff163a42402186c440421cdc93af7bb142cfdd607ff19342afebf6a
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support translation between alaw and ulaw codecs in Asterisk.
+
+Package: asterisk18-codec-alaw
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2255
+Filename: asterisk18-codec-alaw_1.8.30.0-2_ralink.ipk
+Size: 3043
+MD5Sum: 71a1905b7a68c1cb09420eafa00f115d
+SHA256sum: c63a48756ad90ea0f5985620639c5d3d9e28289abc0d7d2644e5b1f8ea050f52
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support translation between signed linear and alaw codecs in Asterisk.
+
+Package: asterisk18-codec-g722
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 5513
+Filename: asterisk18-codec-g722_1.8.30.0-2_ralink.ipk
+Size: 6281
+MD5Sum: 5537b442490d8339e4f195c66793f34e
+SHA256sum: 6d5125c1caf95ab9e90c6e89bc6bedb67f2d63ef0b1e56af5d32e038b8e6f431
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a high bit rate 48/56/64Kbps ITU standard codec in Asterisk.
+
+Package: asterisk18-codec-g726
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3929
+Filename: asterisk18-codec-g726_1.8.30.0-2_ralink.ipk
+Size: 4702
+MD5Sum: 33b011f40d600a2c1bcc19373d68cc8a
+SHA256sum: d4990819e51074d0ba4ca49a5b1b75048b6c8ff8f3752777a5dc3ecc96e658f2
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support translation between signed linear and ITU G.726-32kbps codecs in Asterisk.
+
+Package: asterisk18-format-g726
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2912
+Filename: asterisk18-format-g726_1.8.30.0-2_ralink.ipk
+Size: 3684
+MD5Sum: 0d35a745889cfc006b5ca2f51fa509b2
+SHA256sum: 33c1b8476694f88488f0dce2026405658fbf620ad29515ec88869ae8d31a3eef
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for headerless G.726 16/24/32/40kbps data format in Asterisk.
+
+Package: asterisk18-format-g729
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2822
+Filename: asterisk18-format-g729_1.8.30.0-2_ralink.ipk
+Size: 3613
+MD5Sum: 595c6e801ce95415209ec40be3338d52
+SHA256sum: 2d9c05d6e56aabf119423472750381385dffd01df60f1fde2cb8b94e17d00953
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for raw headerless G729 data in Asterisk.
+
+Package: asterisk18-format-sln
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2749
+Filename: asterisk18-format-sln_1.8.30.0-2_ralink.ipk
+Size: 3529
+MD5Sum: dd011f3eb00a64051ce95784a1721f6e
+SHA256sum: 98d73be2b94fbc8aea38945b2b681204fcb82fe4336317678c4e744832c53f5e
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for raw slinear format in Asterisk.
+
+Package: asterisk18-func-base64
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2369
+Filename: asterisk18-func-base64_1.8.30.0-2_ralink.ipk
+Size: 3147
+MD5Sum: 179111b4533e459feeda282ef4b62dd3
+SHA256sum: 63272faa6644d390e99438f5341ea89668fd8377fbd2f5e2a1c3540a69b62f89
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support of base64 function in Asterisk.
+
+Package: asterisk18-func-blacklist
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2182
+Filename: asterisk18-func-blacklist_1.8.30.0-2_ralink.ipk
+Size: 2970
+MD5Sum: cadbd3e254344adc1c85b36d72c5cf52
+SHA256sum: e6723c1fea4ed6b02f29ac9171303288d927a045d59eb1f601b7c997a49bfa92
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support looking up the callerid number and see if it is blacklisted in Asterisk.
+
+Package: asterisk18-func-channel
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 6546
+Filename: asterisk18-func-channel_1.8.30.0-2_ralink.ipk
+Size: 7360
+MD5Sum: 95ff750108db9e57b9b5e874baf9a06e
+SHA256sum: bf88e261ea0d463b7f6d45f45603d7639f54e2e7b0765b4b7496c42461ba4b63
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Channel info dialplan function in Asterisk.
+
+Package: asterisk18-func-cut
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3691
+Filename: asterisk18-func-cut_1.8.30.0-2_ralink.ipk
+Size: 4419
+MD5Sum: c4bee00bd65406ea406757779a879b65
+SHA256sum: 939bf9b1284e09049b2adc45e013272b1b4ccf4d92a63ed9f94b4a7fde01b6e1
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support CUT function in Asterisk.
+
+Package: asterisk18-func-db
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2770
+Filename: asterisk18-func-db_1.8.30.0-2_ralink.ipk
+Size: 3551
+MD5Sum: dddca6f05f837c4861c1eefd075037a8
+SHA256sum: e2d9c42d74861eac78e6bdd7cb565cc623dd6dd217edfccbc9578d61146d7c7d
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support functions for interaction with the database in Asterisk.
+
+Package: asterisk18-func-extstate
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2075
+Filename: asterisk18-func-extstate_1.8.30.0-2_ralink.ipk
+Size: 2868
+MD5Sum: 3e3d0092baf7569ff57df803daa186e1
+SHA256sum: f48ccb06e32de8a12a3e5eb9c5fd9965b915e6db005d6197cafbeedc098555b9
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support retrieving the state of a hinted extension for dialplan control in Asterisk.
+
+Package: asterisk18-func-global
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3649
+Filename: asterisk18-func-global_1.8.30.0-2_ralink.ipk
+Size: 4392
+MD5Sum: e71986dc87bc62d83b8eed73212414a2
+SHA256sum: 66ad05245d85deffdc1a542f8dd0ea459086448c07e31a5487cd7954569cefbc
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support global variable dialplan functions in Asterisk.
+
+Package: asterisk18-func-groupcount
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3011
+Filename: asterisk18-func-groupcount_1.8.30.0-2_ralink.ipk
+Size: 3812
+MD5Sum: 680f1e279809b9698d10586d1905d8b7
+SHA256sum: 86df805a3c6bc879fb5f7169342fb518b9f79a018f20e34c8c06d36eafeccf54
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support for counting number of channels in the specified group in Asterisk.
+
+Package: asterisk18-func-shell
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 2149
+Filename: asterisk18-func-shell_1.8.30.0-2_ralink.ipk
+Size: 2922
+MD5Sum: 2a20dac97888da606a2aee3986fbedc1
+SHA256sum: a659d7d785bb12223b0b1d35547df5ad5f9eb1b80245393bbee4d09499ef6f78
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for shell execution in Asterisk.
+
+Package: asterisk18-func-uri
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 1891
+Filename: asterisk18-func-uri_1.8.30.0-2_ralink.ipk
+Size: 2669
+MD5Sum: c94417fa73cb5c8c33e7b7d6907fe7e6
+SHA256sum: f09fd1f2c314f5218134a3e5cbb8696aa592992f748acc60d8a472cb04e3c975
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Encodes and decodes URI-safe strings in Asterisk.
+
+Package: asterisk18-gui
+Version: 2.1.0-rc1
+Depends: libc, asterisk18-chan-local, asterisk18-app-exec, asterisk18-app-system
+Source: feeds/telephony/admin/asterisk18-gui
+Section: admin
+Architecture: ralink
+Installed-Size: 500876
+Filename: asterisk18-gui_2.1.0-rc1_ralink.ipk
+Size: 501628
+MD5Sum: 3d781ba67d8a42be7f3767d29f472ffe
+SHA256sum: 3c98ec8c07d09e140ebd01afc7757c960a317afe2eff48256a1a134b7209fd1b
+Description:  Asterisk18 GUI is a framework for the creation of graphical interfaces 
+ for configuring Asterisk-1.8.x package.
+
+Package: asterisk18-pbx-ael
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 8616
+Filename: asterisk18-pbx-ael_1.8.30.0-2_ralink.ipk
+Size: 9409
+MD5Sum: 77511493603b0dabda51214070de9c7c
+SHA256sum: 71968bc71311ec37e890df9ac19361adfcd1517e9090d7785cad94134fc0db7b
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for symbolic Asterisk Extension Logic in Asterisk.
+
+Package: asterisk18-res-agi
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 25571
+Filename: asterisk18-res-agi_1.8.30.0-2_ralink.ipk
+Size: 26195
+MD5Sum: b2c814c8f4cd47d6452b252e0eadc43b
+SHA256sum: 023af398f6e55b240a6d1edb9d7a951468f2d525d4db26414775da158ce5036f
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for the Asterisk Gateway Interface extension in Asterisk.
+
+Package: asterisk18-res-clioriginate
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3454
+Filename: asterisk18-res-clioriginate_1.8.30.0-2_ralink.ipk
+Size: 4197
+MD5Sum: 7c8ca146a472fe9940f51a11632ec4e4
+SHA256sum: df40e2494ac642694673034ae049f5ace7f8bc84a8ef440e9e22e35fa5e2ead0
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Originate calls via the CLI in Asterisk.
+
+Package: asterisk18-res-crypto
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 6584
+Filename: asterisk18-res-crypto_1.8.30.0-2_ralink.ipk
+Size: 7385
+MD5Sum: 5406a173a5b8cf60f3728bf759c23936
+SHA256sum: 015468fbd0c4a422f8a60a312e2c2f11fc5d464c3beffe5eac2ec940b69e4ed9
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Cryptographic Signature capability in Asterisk.
+
+Package: asterisk18-res-fax
+Version: 1.8.30.0-2
+Depends: libc, asterisk18, asterisk18-res-timing-pthread
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 24222
+Filename: asterisk18-res-fax_1.8.30.0-2_ralink.ipk
+Size: 25055
+MD5Sum: 39f73723d4e17da15c9e6d3f01ca1e57
+SHA256sum: d2d9c5069aa4aac28270f14a3933a7723edad840d91df311ec8cccbd859cb431
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Generic FAX resource for FAX technology resource modules in Asterisk.
+
+Package: asterisk18-res-monitor
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 7477
+Filename: asterisk18-res-monitor_1.8.30.0-2_ralink.ipk
+Size: 8293
+MD5Sum: 65749552409763d6f15fc370af3a53e8
+SHA256sum: 762e59923ab985bca39d020413be321fb1aed6a4ad77fa6eb1cbfd8df2d903d2
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Cryptographic Signature capability in Asterisk.
+
+Package: asterisk18-res-pktccops
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 14443
+Filename: asterisk18-res-pktccops_1.8.30.0-2_ralink.ipk
+Size: 15255
+MD5Sum: a4a0b85f3addabcae7dd64326bc7a8ea
+SHA256sum: df0b1a3ed90d1ebb00a30e00d621c7e9cb76ed7c7f9380ba8d07f31a1c74b8ac
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support simple client/server model for supporting policy control over QoS signaling protocols in Asterisk.
+
+Package: asterisk18-res-smdi
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 16805
+Filename: asterisk18-res-smdi_1.8.30.0-2_ralink.ipk
+Size: 17645
+MD5Sum: 219106de59070c84ab1b86895b960aa2
+SHA256sum: b94c36bbe4f33927837693c563ab7d712a933edfca5c8c934f1c1ad56d8f1dd3
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Simple Message Desk Interface capability in Asterisk.
+
+Package: asterisk18-res-timing-pthread
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 4691
+Filename: asterisk18-res-timing-pthread_1.8.30.0-2_ralink.ipk
+Size: 5427
+MD5Sum: 09a76271d6512c302797eea49e49561b
+SHA256sum: e3f55c5f003613f0af13588804d807b8c65d764c8a298e1d3f7d7da9ea7f78b9
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support  in Asterisk.
+
+Package: asterisk18-res-timing-timerfd
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 3925
+Filename: asterisk18-res-timing-timerfd_1.8.30.0-2_ralink.ipk
+Size: 4652
+MD5Sum: 9d3e2995834616196af81d5b8cfbfe8b
+SHA256sum: 53d2629afbc3375b790adc88d134e5fad065bd9813769bf46664069f545fc794
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support  in Asterisk.
+
+Package: asterisk18-sounds
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 1323777
+Filename: asterisk18-sounds_1.8.30.0-2_ralink.ipk
+Size: 1324465
+MD5Sum: 87a1fe364ef5d9819c79baf9f55bdb5a
+SHA256sum: a74646da8dc9b87d4c617c8a2867411f0d7d52cac0240b4c99e4725c65f1ceed
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides sounds for Asterisk.
+
+Package: asterisk18-voicemail
+Version: 1.8.30.0-2
+Depends: libc, asterisk18
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 603702
+Filename: asterisk18-voicemail_1.8.30.0-2_ralink.ipk
+Size: 604616
+MD5Sum: cef356448c22b9d58cf733359e18af85
+SHA256sum: a8276ad8625d43b07a5053b55c9f317486a2795397108f5c8812384b7a2ee442
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support voicemail related modules in Asterisk.
+
+Package: asterisk18
+Version: 1.8.30.0-2
+Depends: libc, libopenssl, libncurses, libpopt, libpthread, zlib
+Source: feeds/telephony/net/asterisk-1.8.x
+Section: net
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 973337
+Filename: asterisk18_1.8.30.0-2_ralink.ipk
+Size: 973666
+MD5Sum: 789ebddaabb9c1b28435bbdd14b2b3fa
+SHA256sum: de646b81c6e13136bcd276d80ebfede5bafd61511e35836fe8e2db4be112351f
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+
+Package: libiksemel
+Version: 1.4-1
+Depends: libc, libgnutls, libtasn1, libgcrypt, libgpg-error
+Source: feeds/telephony/libs/iksemel
+Section: libs
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 18164
+Filename: libiksemel_1.4-1_ralink.ipk
+Size: 18910
+MD5Sum: 99584126798dff380a380b8cb9b3c402
+SHA256sum: 3663631f1487cca856103583467964cca14dd0fb91d4fa7e0641710138c94068
+Description:  Iksemel is an XML parser library mainly designed for Jabber applications.
+ It provides SAX, DOM, and special Jabber stream APIs. Library is coded
+ in ANSI C except the network code (which is POSIX compatible), thus
+ highly portable.
+
+Package: libsrtp
+Version: 1.4.4-1
+Depends: libc
+Source: feeds/telephony/libs/libsrtp
+Section: libs
+Maintainer: Jiri Slachta <slachta@cesnet.cz>
+Architecture: ralink
+Installed-Size: 30620
+Filename: libsrtp_1.4.4-1_ralink.ipk
+Size: 30870
+MD5Sum: 9465d61311dad5b8e2922ac2927aaed5
+SHA256sum: 08d9bd14d4c0ec9c5e5cbd95be51a28253ebad2f3aa0a5b5943dbaff2fd3a1b9
+Description:  Open-source implementation of the Secure Real-time Transport
+ Protocol (SRTP) originally authored by Cisco Systems, Inc.
+ It is available under a BSD-style license.
+
+Package: smap
+Version: 0.6.0-2
+Depends: libc, libpthread
+Source: feeds/telephony/net/smap
+Section: net
+Maintainer: Daniel Dickinson <openwrt@cshore.neomailbox.net>
+Architecture: ralink
+Installed-Size: 19896
+Filename: smap_0.6.0-2_ralink.ipk
+Size: 20521
+MD5Sum: 544d110f2b214a2e38f1941790022bf5
+SHA256sum: 6bff9e0ba619a38332e158077843cc1beaf8a0100e7456b636f023f7043ed535
+Description:  Discovers and identifies SIP devices on the network including hardware
+ phones, softphones, PBX software, and PBX equipment.
+
