@@ -26,3 +26,6 @@ mkdir -p \
 openwrt-repack.sh -R pandorabox.bin
 ```
 
+## Packages
+
+https://github.com/pexcn/pandorabox-packages
