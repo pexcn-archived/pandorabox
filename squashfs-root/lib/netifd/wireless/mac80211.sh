@@ -132,7 +132,7 @@ mac80211_hostapd_setup_base() {
 
 		json_get_vars \
 			ldpc:1 \
-			greenfield:0 \
+			greenfield:1 \
 			short_gi_20:1 \
 			short_gi_40:1 \
 			tx_stbc:1 \
