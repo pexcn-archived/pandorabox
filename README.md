@@ -28,4 +28,4 @@ openwrt-repack.sh -R pandorabox.bin
 
 ## Packages
 
-https://github.com/pexcn/pandorabox-packages
+https://github.com/pexcn/pandorabox/tree/gh-pages
